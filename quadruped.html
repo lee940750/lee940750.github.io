@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quadruped Robot | Cheng-Hsuan Lee</title>
+  <meta name="description" content="Quadruped robot project case study by Cheng-Hsuan Lee.">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html"><span class="brand-mark">CL</span><span>Cheng-Hsuan Lee</span></a>
+      <nav class="nav-links">
+        <a href="index.html">Home</a><a class="active" href="quadruped.html">Quadruped</a><a href="uav.html">UAV</a><a href="strain-analysis.html">Analysis</a><a href="reports.html">Reports</a><a class="nav-cta" href="resume.html">Resume</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <div class="eyebrow">Featured Project · Legged Robotics</div>
+        <h1>Quadruped Robot Platform</h1>
+        <p class="hero-copy">A hands-on robotics project integrating leg mechanism design, inverse kinematics, gait generation, actuator control, and iterative stability debugging.</p>
+        <div class="meta-grid">
+          <div class="meta-item"><strong>Role</strong><span>Mechanical design, gait tuning, control integration</span></div>
+          <div class="meta-item"><strong>Tools</strong><span>CAD, ROS, Arduino/ESP32, MATLAB/Python</span></div>
+          <div class="meta-item"><strong>Focus</strong><span>Robotics, IK, motor control</span></div>
+          <div class="meta-item"><strong>Status</strong><span>Replace with current demo status</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container content-grid">
+        <aside class="toc">
+          <strong>On this page</strong>
+          <a href="#summary">Summary</a>
+          <a href="#problem">Problem</a>
+          <a href="#approach">Technical Approach</a>
+          <a href="#results">Results</a>
+          <a href="#media">Media</a>
+          <a href="#reflection">Reflection</a>
+        </aside>
+        <article class="article">
+          <section id="summary" class="panel">
+            <h2>Project Summary</h2>
+            <p>Designed and implemented a small quadruped robot platform that connects mechanical structure, leg kinematics, gait planning, and motor control. The project focused on making a physical robot walk reliably while solving real integration issues such as asymmetric torque, leg lift height, backward drift, and center-of-mass stability during single-leg gestures.</p>
+            <div class="tags"><span class="tag">Legged Robotics</span><span class="tag">Inverse Kinematics</span><span class="tag">Gait Generation</span><span class="tag">Actuator Control</span><span class="tag">System Integration</span></div>
+          </section>
+
+          <section id="problem" class="panel">
+            <h2>Problem and Motivation</h2>
+            <p>Legged locomotion is challenging because the robot must coordinate mechanical geometry, actuator limitations, contact timing, and body stability. The goal of this project was to build a compact quadruped platform that could perform basic forward and backward walking while remaining mechanically simple and low-cost.</p>
+            <p>The project also explored how gait parameters affect stability, including foot trajectory height, step length, phase timing, and weight shifting.</p>
+          </section>
+
+          <section id="approach" class="panel">
+            <h2>Technical Approach</h2>
+            <ul class="list-clean">
+              <li><span class="bullet"></span><span><strong>Leg kinematics:</strong> Defined a geometric model for each leg and mapped desired foot positions to motor angles through inverse kinematics.</span></li>
+              <li><span class="bullet"></span><span><strong>Gait generation:</strong> Tuned step length, foot lift height, stance timing, and leg phase differences for forward and backward motion.</span></li>
+              <li><span class="bullet"></span><span><strong>Motor control:</strong> Integrated actuator commands and adjusted tracking behavior through repeated physical testing.</span></li>
+              <li><span class="bullet"></span><span><strong>Stability debugging:</strong> Reduced backward walking drift and improved gesture stability by modifying gait parameters and shifting the body posture.</span></li>
+            </ul>
+          </section>
+
+          <section id="results" class="panel">
+            <h2>Results and Engineering Iteration</h2>
+            <p>The robot was tested through walking and gesture motions. Several issues were identified during testing, including rear-leg lift problems, rightward drift during backward walking, and instability while raising the left front leg. These problems were treated as engineering debugging tasks rather than only software errors.</p>
+            <p>Key improvements included adjusting the rear-leg trajectory, compensating asymmetric motion during backward walking, and shifting the center of mass toward the right-rear side during the waving motion.</p>
+          </section>
+
+          <section id="media" class="panel">
+            <h2>Media and Evidence</h2>
+            <div class="placeholder">
+              <div>
+                <strong>Replace this block with a robot demo video, GIF, or image.</strong>
+                <p>Recommended files: <code>images/quadruped-demo.gif</code>, <code>images/quadruped-cad.png</code>, and <code>images/gait-timing.png</code>.</p>
+              </div>
+            </div>
+            <p style="margin-top:18px">Suggested additions: walking demo video, CAD render, system architecture diagram, gait timing diagram, motor angle plot, and before/after debugging comparison.</p>
+          </section>
+
+          <section id="reflection" class="panel">
+            <h2>Reflection</h2>
+            <p>This project showed that legged robotics is not only a kinematics problem. Stable walking depends on the interaction between actuator torque, mechanical compliance, foot contact, body posture, and gait timing. The most valuable part of the project was learning how to debug a complete physical robot by connecting observed motion errors to mechanical and control-level causes.</p>
+            <p><a class="button primary" href="reports/quadruped-final-report.pdf">Download Full Technical Report</a> <a class="button" href="https://github.com/lee940750">View GitHub</a></p>
+          </section>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-grid"><div><strong>Cheng-Hsuan Lee</strong><p>Mechanical Engineering · Robotics · Control Systems</p></div><div><a href="mailto:lee940750@gmail.com">lee940750@gmail.com</a></div></div></footer>
+</body>
+</html>
