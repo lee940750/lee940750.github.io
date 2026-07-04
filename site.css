@@ -148,16 +148,14 @@ h3 {
   font-size: clamp(1.05rem, 2vw, 1.34rem);
 }
 
-.hero-actions,
-.report-toolbar {
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-top: 26px;
 }
 
-.button,
-.filter-button {
+.button {
   display: inline-flex;
   min-height: 44px;
   align-items: center;
@@ -300,28 +298,18 @@ h3 {
 
 .feature-media {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
   gap: 12px;
+  align-items: center;
 }
 
-.project-card,
 .award-list,
 .skills-layout article,
-.download-callout,
-.report-card,
+.file-placeholder,
 .contact-card {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: var(--panel);
-}
-
-.project-card {
-  display: grid;
-  align-content: start;
-  gap: 16px;
-  min-height: 100%;
-  padding: 28px;
-  box-shadow: 0 10px 34px rgba(23, 35, 38, 0.04);
 }
 
 .compact-list {
@@ -352,8 +340,12 @@ h3 {
   background: #fff;
 }
 
-.media-placeholder.large {
+.media-placeholder.media-primary {
   min-height: 360px;
+}
+
+.media-placeholder.media-secondary {
+  min-height: 230px;
 }
 
 .media-placeholder strong {
@@ -380,7 +372,7 @@ h3 {
 
 .awards-layout,
 .skills-layout,
-.report-grid {
+.file-placeholder-grid {
   display: grid;
   gap: 16px;
 }
@@ -451,74 +443,35 @@ h3 {
   width: min(1280px, calc(100% - 48px));
 }
 
-.download-callout {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
+.file-placeholder-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.file-placeholder {
+  min-height: 220px;
   padding: 24px;
-  margin-bottom: 24px;
+  border: 2px solid #111;
+  background: #fff;
 }
 
-.download-callout p {
-  margin-bottom: 0;
-  color: var(--muted);
-}
-
-.filter-button {
-  color: var(--muted);
-  background: var(--field);
-}
-
-.filter-button.active {
-  color: #fff;
-  background: var(--ink);
-}
-
-.report-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  margin-top: 24px;
-}
-
-.report-card {
-  min-height: 160px;
-  padding: 18px;
-  text-decoration: none;
-  transition:
-    transform 180ms ease,
-    border-color 180ms ease,
-    box-shadow 180ms ease;
-}
-
-.report-card:hover,
-.report-card:focus-visible {
-  transform: translateY(-3px);
-  border-color: rgba(15, 118, 110, 0.55);
-  box-shadow: 0 14px 32px rgba(23, 35, 38, 0.1);
-  outline: none;
-}
-
-.report-card[hidden] {
-  display: none;
-}
-
-.report-card span {
+.file-placeholder span {
   display: block;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.report-card strong {
+.file-placeholder strong {
   display: block;
-  line-height: 1.25;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  line-height: 1.2;
 }
 
-.report-card small {
-  display: block;
-  margin-top: 16px;
+.file-placeholder p {
+  margin-bottom: 0;
   color: var(--muted);
 }
 
@@ -576,12 +529,16 @@ h3 {
 
   .stat-row,
   .skills-layout,
-  .report-grid {
+  .file-placeholder-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .media-placeholder.large {
+  .media-placeholder.media-primary {
     min-height: 280px;
+  }
+
+  .media-placeholder.media-secondary {
+    min-height: 190px;
   }
 }
 
@@ -627,7 +584,7 @@ h3 {
 
   .stat-row,
   .skills-layout,
-  .report-grid,
+  .file-placeholder-grid,
   .feature-media,
   .placeholder-row,
   .placeholder-strip {
@@ -639,11 +596,15 @@ h3 {
     padding: 36px 0;
   }
 
-  .media-placeholder.large {
+  .media-placeholder.media-primary {
     min-height: 230px;
   }
 
-  .download-callout,
+  .media-placeholder.media-secondary,
+  .file-placeholder {
+    min-height: 180px;
+  }
+
   .site-footer {
     align-items: flex-start;
     flex-direction: column;
