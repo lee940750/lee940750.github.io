@@ -318,19 +318,17 @@ h3 {
   min-height: 148px;
   place-items: center;
   padding: 18px;
-  color: var(--muted);
+  color: #333;
   text-align: center;
-  border: 1.5px dashed #b7c7c3;
+  border: 2px solid #111;
   border-radius: 8px;
-  background:
-    linear-gradient(135deg, rgba(15, 118, 110, 0.08), transparent 46%),
-    #f8faf8;
+  background: #fff;
 }
 
 .media-placeholder strong {
   display: block;
   margin-bottom: 4px;
-  color: var(--accent-dark);
+  color: #111;
   font-size: 0.95rem;
 }
 
