@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Quadruped Robot Dog | Cheng-Hsuan Lee</title>
+    <link rel="stylesheet" href="site.css" />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body class="project-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="Cheng-Hsuan Lee home">CHL</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#competitions">Competitions</a>
+        <a href="index.html#skills">Skills</a>
+        <a href="index.html#reports">Reports</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="project-hero">
+        <a href="index.html#projects">Back to portfolio</a>
+        <p class="section-kicker">Microprocessor Controlled Systems</p>
+        <h1>Quadruped Robot Dog</h1>
+        <p>
+          A one-semester project that combined mechanical design, 3D printing, embedded control,
+          inverse kinematics, servo calibration, and team coordination into a working four-legged robot.
+        </p>
+      </section>
+
+      <section class="detail-layout">
+        <div class="detail-grid">
+          <aside class="detail-panel">
+            <h2>Project Facts</h2>
+            <dl>
+              <div>
+                <dt>Role</dt>
+                <dd>Team lead, mechanical designer, controls developer</dd>
+              </div>
+              <div>
+                <dt>Hardware</dt>
+                <dd>ESP32, PCA9685, eight MG90S servos, 3D-printed body and legs</dd>
+              </div>
+              <div>
+                <dt>Software</dt>
+                <dd>MATLAB simulation, Arduino implementation, mobile web control interface</dd>
+              </div>
+              <div>
+                <dt>Outcome</dt>
+                <dd>Walking, standing, sitting, waving, rocking motions; course grade A+</dd>
+              </div>
+            </dl>
+          </aside>
+
+          <article class="detail-story">
+            <h2>Engineering Focus</h2>
+            <p>
+              I designed the robot as a maintainable system rather than a one-time demonstration. The
+              body and leg modules were arranged so broken parts could be replaced, wires could be routed
+              cleanly, and the center of gravity stayed practical for walking. The mechanical design had
+              to balance stiffness, weight, assembly convenience, and motor torque limits.
+            </p>
+
+            <h2>Control Approach</h2>
+            <p>
+              Before moving to hardware, I used MATLAB to test inverse kinematics and walking gait logic.
+              After the simulated motion became reliable, I translated the logic into Arduino code for
+              the ESP32 and PCA9685 servo driver. The final program handled motor calibration, foot
+              trajectory generation, inverse kinematics, gait updates, and angle output to eight servos.
+            </p>
+
+            <h2>What I Learned</h2>
+            <ul>
+              <li>Mechanical geometry and control logic must be developed together for legged robots.</li>
+              <li>Serviceability matters: a robot that is easy to repair can be tested more aggressively.</li>
+              <li>Clear task division and frequent integration tests are essential when mechanical, electrical, and software work move in parallel.</li>
+            </ul>
+
+            <div class="media-strip" aria-label="Robot dog media">
+              <img src="照片/機器狗/S__112795655.jpg" alt="Quadruped robot dog assembled on a table" />
+              <video src="照片/機器狗/起立.mp4" controls preload="metadata" aria-label="Robot dog standing up"></video>
+              <video src="照片/機器狗/揮右手.mp4" controls preload="metadata" aria-label="Robot dog waving its right leg"></video>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

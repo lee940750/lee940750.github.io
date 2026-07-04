@@ -1,0 +1,137 @@
+.project-page {
+  background: #fafbf8;
+}
+
+.project-hero {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 86px 0 56px;
+}
+
+.project-hero a {
+  display: inline-flex;
+  margin-bottom: 28px;
+  color: var(--accent-dark);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.project-hero h1 {
+  max-width: 980px;
+  color: var(--ink);
+  font-size: clamp(2.8rem, 8vw, 6.2rem);
+}
+
+.project-hero p {
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 1.15rem;
+}
+
+.detail-layout {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding-bottom: 90px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.75fr) minmax(300px, 1.25fr);
+  gap: 38px;
+  align-items: start;
+}
+
+.detail-panel,
+.detail-story,
+.media-strip {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.detail-panel {
+  position: sticky;
+  top: 86px;
+  padding: 24px;
+}
+
+.detail-panel h2,
+.detail-story h2 {
+  margin-bottom: 16px;
+  font-size: 1.35rem;
+}
+
+.detail-panel dl {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.detail-panel dt {
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.detail-panel dd {
+  margin: 4px 0 0;
+  font-weight: 750;
+}
+
+.detail-story {
+  padding: 30px;
+}
+
+.detail-story p,
+.detail-story li {
+  color: var(--muted);
+}
+
+.detail-story ul {
+  margin: 0 0 28px;
+  padding-left: 20px;
+}
+
+.detail-story li + li {
+  margin-top: 8px;
+}
+
+.media-strip {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+  padding: 12px;
+}
+
+.media-strip img,
+.media-strip video {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #11191a;
+}
+
+.media-strip video {
+  object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .detail-grid,
+  .media-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 720px) {
+  .project-hero,
+  .detail-layout {
+    width: calc(100% - 32px);
+  }
+}
