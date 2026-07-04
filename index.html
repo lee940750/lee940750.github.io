@@ -23,16 +23,14 @@
     </header>
 
     <main>
-      <section id="home" class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" aria-hidden="true"></div>
+      <section id="home" class="hero text-hero" aria-labelledby="hero-title">
         <div class="hero-content">
-          <p class="eyebrow">National Taiwan University · Mechanical Engineering</p>
+          <p class="eyebrow">National Taiwan University - Mechanical Engineering</p>
           <h1 id="hero-title">Cheng-Hsuan Lee</h1>
           <p class="hero-copy">
-            Mechanical engineering student focused on robotics, mechanism design, actuator control,
-            prototyping, and experimental validation. I build systems from first principles, connect
-            mechanical structure with embedded control, and lead teams through messy engineering problems
-            until the final machine works.
+            I build mechanical systems that must actually move, carry loads, survive testing, and be
+            debugged under time pressure. My strongest work connects mechanism design, fabrication,
+            embedded control, data analysis, and team leadership.
           </p>
           <div class="hero-actions" aria-label="Key actions">
             <a class="button primary" href="#projects">View Projects</a>
@@ -45,28 +43,28 @@
         <div class="section-grid">
           <div>
             <p class="section-kicker">Profile</p>
-            <h2 id="profile-title">Hands-on robotics, disciplined analysis, and calm team leadership.</h2>
+            <h2 id="profile-title">Robotics-minded mechanical engineering, from prototype to tested system.</h2>
           </div>
           <div class="profile-copy">
             <p>
-              My interest in mechanism design began with LEGO EV3 projects in elementary school and grew
-              through science fairs, FRC robotics, and university-level mechanical engineering projects.
-              At National Taiwan University, I have led teams in quadruped robot, quadcopter, and ball
-              transfer mechanism projects, combining CAD, fabrication, electronics, programming, and
-              testing into complete working prototypes.
+              My interest in mechanisms began with LEGO EV3 projects and grew through science fairs, FRC
+              robotics, and university-level engineering projects. At National Taiwan University, I have
+              led teams in quadruped robot, quadcopter, and ball-transfer mechanism projects. These
+              projects trained me to connect design intent with manufacturing constraints, electrical
+              layout, control logic, and test results.
             </p>
             <p>
-              I am especially drawn to projects where mechanical design decisions affect controls,
-              manufacturability, reliability, and team workflow at the same time. Many of my strongest
-              learning moments came from debugging unstable motion, redesigning weak structures, and
-              turning incomplete information into practical test plans.
+              I enjoy the part of engineering where uncertainty becomes a list of concrete tests. When a
+              mechanism shakes, a motor behaves unexpectedly, or a team is running out of time, I try to
+              break the problem into measurable causes, assign work clearly, and keep the system moving
+              toward a reliable final result.
             </p>
           </div>
         </div>
         <div class="stat-row" aria-label="Portfolio highlights">
           <article>
             <strong>4+</strong>
-            <span>team projects led</span>
+            <span>team projects led across robotics and mechanisms</span>
           </article>
           <article>
             <strong>A+</strong>
@@ -74,11 +72,11 @@
           </article>
           <article>
             <strong>FRC</strong>
-            <span>programming, strategy, scouting leadership</span>
+            <span>programming, strategy, and scouting leadership</span>
           </article>
           <article>
             <strong>CAD + Code</strong>
-            <span>Inventor, SolidWorks, MATLAB, Python, C++</span>
+            <span>Inventor, SolidWorks, MATLAB, Python, C++, LabVIEW</span>
           </article>
         </div>
       </section>
@@ -86,102 +84,131 @@
       <section id="projects" class="section" aria-labelledby="projects-title">
         <div class="section-heading">
           <p class="section-kicker">Featured Engineering Work</p>
-          <h2 id="projects-title">Projects built through design, fabrication, control, and testing.</h2>
+          <h2 id="projects-title">Four projects that show how I design, test, debug, and lead.</h2>
+          <p>
+            Photos and videos have been temporarily removed. Each project is now presented as a concise
+            engineering case study, with deeper detail available on its own page.
+          </p>
         </div>
 
-        <div class="project-feature">
-          <div class="project-text">
-            <p class="tag">Microprocessor Controlled Systems · Team Lead</p>
+        <div class="project-card-grid">
+          <article class="project-card">
+            <p class="tag">Microprocessor Controlled Systems - Team Lead</p>
             <h3>Quadruped Robot Dog</h3>
             <p>
-              Designed and fabricated a complete four-legged robot from scratch, including a 3D-printed
-              body, replaceable leg modules, power layout, and servo-driven actuation. The control system
-              used an ESP32 with a PCA9685 servo driver to coordinate eight MG90S motors, with gait logic
-              first simulated in MATLAB and then implemented in Arduino.
+              Designed a 3D-printed quadruped body and leg modules, planned power and servo layout, and
+              implemented gait control with ESP32, PCA9685, MATLAB simulation, and Arduino code.
             </p>
-            <p>
-              The project required balancing weight reduction, structural stiffness, center-of-gravity
-              placement, wiring serviceability, and motor torque limitations. The final robot performed
-              walking, standing, sitting, waving, and rocking motions, and the course project received an
-              A+.
-            </p>
-            <a class="text-link" href="robot-dog.html">Open project detail</a>
-          </div>
-          <div class="media-grid">
-            <img src="照片/機器狗/S__112795657.jpg" alt="Top view of the 3D-printed quadruped robot dog electronics and leg modules" />
-            <video src="照片/機器狗/前進.mp4" controls preload="metadata" aria-label="Quadruped robot walking forward"></video>
-          </div>
-        </div>
+            <ul class="compact-list">
+              <li>Balanced structural stiffness, weight, repairability, and motor torque limits.</li>
+              <li>Converted inverse-kinematics simulation into a working embedded control program.</li>
+              <li>Delivered walking, standing, sitting, waving, and rocking motions; course grade A+.</li>
+            </ul>
+            <div class="placeholder-row" aria-label="Robot dog future media slots">
+              <div class="media-placeholder">
+                <div>
+                  <strong>Photo slot</strong>
+                  <span>Robot body, wiring, or leg module close-up</span>
+                </div>
+              </div>
+              <div class="media-placeholder">
+                <div>
+                  <strong>Video slot</strong>
+                  <span>Walking or gesture demonstration</span>
+                </div>
+              </div>
+            </div>
+            <a class="text-link" href="robot-dog.html">Open detailed case study</a>
+          </article>
 
-        <div class="project-feature reverse">
-          <div class="project-text">
-            <p class="tag">Practice of Mechanical Engineering · Team Lead</p>
+          <article class="project-card">
+            <p class="tag">Practice of Mechanical Engineering - Team Lead</p>
             <h3>Quadcopter Ball-Transfer Drone</h3>
             <p>
-              Led the design and construction of a quadcopter system tasked with moving a ball from a low
-              platform to a high platform. The work covered airframe design, electronics selection, power
-              supply decisions, thrust-to-throttle testing, flight controller integration, SBUS debugging,
-              resonance troubleshooting, and ball-carrying mechanism development.
+              Led development of a quadcopter system for moving a ball between platforms, covering
+              airframe design, thrust testing, electronics, flight controller integration, and final
+              mission strategy.
             </p>
-            <p>
-              To reduce final-test risk, our team built spare assemblies, studied the rules carefully, and
-              prepared contingency strategies before the one-shot final evaluation. The drone became one
-              of the most stable systems in the course and earned full marks in both midterm and final
-              tests.
-            </p>
-            <a class="text-link" href="drone.html">Open project detail</a>
-          </div>
-          <div class="media-grid">
-            <img src="照片/無人機/S__112828433.jpg" alt="Autodesk Inventor stress analysis screenshot for a drone arm" />
-            <video src="照片/無人機/804593083.736598.mp4" controls preload="metadata" aria-label="Quadcopter project demonstration video"></video>
-          </div>
-        </div>
+            <ul class="compact-list">
+              <li>Analyzed thrust-to-throttle behavior, power supply limits, resonance, and stability.</li>
+              <li>Debugged motor, SBUS, and flight controller integration issues before final tests.</li>
+              <li>Prepared spare parts and contingency plans; achieved full marks in midterm and final.</li>
+            </ul>
+            <div class="placeholder-row" aria-label="Drone future media slots">
+              <div class="media-placeholder">
+                <div>
+                  <strong>Photo slot</strong>
+                  <span>Drone frame, arm analysis, or electronics layout</span>
+                </div>
+              </div>
+              <div class="media-placeholder">
+                <div>
+                  <strong>Video slot</strong>
+                  <span>Flight test or ball-transfer mission</span>
+                </div>
+              </div>
+            </div>
+            <a class="text-link" href="drone.html">Open detailed case study</a>
+          </article>
 
-        <div class="project-feature">
-          <div class="project-text">
-            <p class="tag">Machine Design Theory · Team Lead</p>
-            <h3>Foldable Long-Distance Ball Transfer Mechanism</h3>
+          <article class="project-card">
+            <p class="tag">Machine Design Theory - Team Lead</p>
+            <h3>Foldable Ball Transfer Mechanism</h3>
             <p>
-              Led a team in developing a compact mechanism that could transfer a ball between platforms
-              while staying within strict size constraints. Beyond basic pickup and release, the core
-              engineering challenge was folding: the structure had to deploy smoothly, remain stiff after
-              deployment, and survive repeated testing.
+              Developed a compact mechanism for transferring a ball under strict size constraints, with
+              the main design challenge centered on reliable folding, deployment, and locked-state
+              stiffness.
             </p>
-            <p>
-              After early folding concepts proved unreliable, I adapted available door hinges and latch
-              hardware into a practical folding module. Combined with 3D-printed parts and MDF structure,
-              the final mechanism achieved stable operation and strong final evaluation performance.
-            </p>
-            <a class="text-link" href="ball-transfer.html">Open project detail</a>
-          </div>
-          <div class="media-grid">
-            <img src="照片/遠距離運球機構/_1188258.JPG" alt="Team adjusting the long-distance ball transfer mechanism during evaluation" />
-            <img src="照片/遠距離運球機構/螢幕擷取畫面 2026-07-01 233852.png" alt="CAD or design screenshot of the ball transfer mechanism" />
-          </div>
-        </div>
+            <ul class="compact-list">
+              <li>Turned door hinges and latch hardware into a practical folding module.</li>
+              <li>Combined 3D-printed parts and MDF structure with repairable assembly choices.</li>
+              <li>Improved deployment smoothness and final test stability through iterative redesign.</li>
+            </ul>
+            <div class="placeholder-row" aria-label="Ball transfer future media slots">
+              <div class="media-placeholder">
+                <div>
+                  <strong>Photo slot</strong>
+                  <span>Folded and deployed mechanism</span>
+                </div>
+              </div>
+              <div class="media-placeholder">
+                <div>
+                  <strong>Video slot</strong>
+                  <span>Ball pickup, transfer, and release sequence</span>
+                </div>
+              </div>
+            </div>
+            <a class="text-link" href="ball-transfer.html">Open detailed case study</a>
+          </article>
 
-        <div class="project-feature reverse">
-          <div class="project-text">
-            <p class="tag">CKHS Robotics Team · Programming and Strategy Lead</p>
+          <article class="project-card">
+            <p class="tag">CKHS Robotics Team - Programming and Strategy Lead</p>
             <h3>FIRST Robotics Competition</h3>
             <p>
-              Served as programming team leader and strategy/scouting leader for the CKHS Robotics Team.
-              I wrote autonomous-period behavior and selected teleop logic, supported early-season
-              prototyping and mechanism development, and led the scouting team in building competition
-              tools for match data collection and strategy.
+              Led programming and scouting strategy for CKHS Robotics Team, writing autonomous logic,
+              supporting mechanism prototyping, and building tools for data-driven match decisions.
             </p>
-            <p>
-              I integrated scouting data with Excel-based analysis so our team could quickly evaluate
-              thousands of match records, choose alliance partners, and make strategy decisions under
-              match pressure. The team qualified for the Houston Championship and earned multiple
-              engineering awards in Taiwan and the United States.
-            </p>
-            <a class="text-link" href="frc.html">Open project detail</a>
-          </div>
-          <div class="media-grid">
-            <img src="照片/FRC/3C98B629-68DE-4928-B3DB-F39B2128F8D7.jpg" alt="FRC scouting and strategy discussion during competition" />
-            <video src="照片/FRC/804516483.355101.mp4" controls preload="metadata" aria-label="FRC robot autonomous and shooting demonstration"></video>
-          </div>
+            <ul class="compact-list">
+              <li>Worked across LabVIEW, Java, Dart, Excel VBA, and mobile scouting workflows.</li>
+              <li>Organized match data for alliance selection and in-event strategy decisions.</li>
+              <li>Contributed to Houston Championship qualification and multiple engineering awards.</li>
+            </ul>
+            <div class="placeholder-row" aria-label="FRC future media slots">
+              <div class="media-placeholder">
+                <div>
+                  <strong>Photo slot</strong>
+                  <span>Robot, team, or scouting app interface</span>
+                </div>
+              </div>
+              <div class="media-placeholder">
+                <div>
+                  <strong>Video slot</strong>
+                  <span>Autonomous routine or scoring demonstration</span>
+                </div>
+              </div>
+            </div>
+            <a class="text-link" href="frc.html">Open detailed case study</a>
+          </article>
         </div>
       </section>
 
@@ -193,10 +220,10 @@
           </div>
           <div class="profile-copy">
             <p>
-              This section is reserved for upcoming laboratory work on quadruped robot leg motor gearbox
-              design and fabrication, actuator packet communication, motor control, reinforcement learning
-              training, and real-world testing. The current site keeps the structure ready so new results
-              can be added without redesigning the portfolio later.
+              This site keeps a reserved section for upcoming laboratory work on quadruped robot leg
+              motor gearbox design and fabrication, actuator packet communication, motor control,
+              reinforcement-learning training, and real-world testing. The goal is to extend my current
+              hands-on robot-building experience into more systematic legged locomotion research.
             </p>
           </div>
         </div>
@@ -211,20 +238,23 @@
           <div class="award-list">
             <h3>FIRST Robotics Competition Awards</h3>
             <ul>
-              <li>2022 Sacramento Regional · Finalists & Industrial Design Award</li>
-              <li>2022 New Taipei City x Hon Hai Regional · Engineering Inspiration Award</li>
-              <li>2022 Carver Championship Division · Houston Championship qualification</li>
-              <li>2023 Los Angeles Regional · Excellence in Engineering Award</li>
-              <li>2023 San Diego Regional · Excellence in Engineering Award</li>
+              <li>2022 Sacramento Regional - Finalists and Industrial Design Award</li>
+              <li>2022 New Taipei City x Hon Hai Regional - Engineering Inspiration Award</li>
+              <li>2022 Carver Championship Division - Houston Championship qualification</li>
+              <li>2023 Los Angeles Regional - Excellence in Engineering Award</li>
+              <li>2023 San Diego Regional - Excellence in Engineering Award</li>
             </ul>
           </div>
           <div class="award-list">
             <h3>Additional Competitions</h3>
             <ul>
-              <li>2nd ISS Kibo Robot Programming Challenge Taiwan Preliminaries · Merit Award</li>
-              <li>58th Hsinchu County Science Fair, Biology Division · Second Place</li>
+              <li>2nd ISS Kibo Robot Programming Challenge Taiwan Preliminaries - Merit Award</li>
+              <li>58th Hsinchu County Science Fair, Biology Division - Second Place</li>
             </ul>
-            <img class="inline-photo" src="照片/國中科展/國中科展領獎照片.jpg" alt="Science fair award ceremony photo" />
+            <p>
+              These early competitions built the foundation for my later interest in robotics, practical
+              engineering constraints, and structured teamwork.
+            </p>
           </div>
         </div>
       </section>
@@ -232,7 +262,7 @@
       <section id="skills" class="section skills-section" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="section-kicker">Capabilities</p>
-          <h2 id="skills-title">A mechanical engineer who can also code, test, and fabricate.</h2>
+          <h2 id="skills-title">A mechanical engineer who can design, fabricate, program, and test.</h2>
         </div>
         <div class="skills-layout">
           <article>
@@ -253,7 +283,7 @@
             <h3>CAD and Analysis Tools</h3>
             <p>
               Autodesk Inventor, Autodesk AutoCAD, SolidWorks, Tracker, MATLAB-based MCK system analysis,
-              linkage calculations, and motion experiments.
+              linkage calculations, and university-level experimental analysis.
             </p>
           </article>
           <article>
@@ -261,7 +291,7 @@
             <p>
               Built an online JavaScript system for a physical Monopoly board game, collaborated on a
               hexagon-based Minesweeper game, self-studied C++ and Python for APCS, and fabricated
-              practical products with a personal 3D printer.
+              practical products using a personal 3D printer.
             </p>
           </article>
         </div>
@@ -278,10 +308,11 @@
               <span>2023 - 2027</span>
               <h3>Department of Mechanical Engineering, National Taiwan University</h3>
               <p>
-                Coursework includes Microprocessor Controlled Systems, Automatic Control, Numerical
+                Selected coursework: Microprocessor Controlled Systems, Automatic Control, Numerical
                 Analysis, Practice of Mechanical Engineering, Mechanical Engineering Laboratory I/II,
-                Engineering Materials, Dynamics, Fluid Mechanics, Thermodynamics, Heat Transfer, Mechanism,
-                Machine Design Theory, Manufacturing Processes, and Applied Electronics.
+                Workshop Practice, Engineering Materials, Engineering Graphics, Strength of Materials,
+                Fluid Mechanics, Dynamics, Thermodynamics, Heat Transfer, Mechanism, Machine Design
+                Theory, Manufacturing Processes, and Applied Electronics.
               </p>
             </article>
             <article>
@@ -289,7 +320,7 @@
               <h3>Taipei Municipal Chien Kuo High School</h3>
               <p>
                 Joined the robotics team, developed mechanical design and programming abilities, and
-                participated in regional and international FRC competitions.
+                participated in regional and international FIRST Robotics Competition events.
               </p>
             </article>
           </div>
@@ -299,10 +330,10 @@
       <section id="reports" class="section reports-section" aria-labelledby="reports-title">
         <div class="section-heading">
           <p class="section-kicker">Downloads</p>
-          <h2 id="reports-title">Resume placeholder and full project report archive.</h2>
+          <h2 id="reports-title">Resume placeholder and full report archive.</h2>
           <p>
-            The resume slot is ready for a future PDF. Existing reports are linked from the current
-            folder structure so reviewers can open the original documents directly.
+            The resume slot is ready for a future PDF. Existing reports remain linked from the current
+            folder structure so reviewers can open original documents directly.
           </p>
         </div>
 
@@ -326,38 +357,38 @@
           <a class="report-card" data-category="robot" href="檔案/機器狗/微處理期末書面報告_第四組.pdf">
             <span>Robot Dog</span>
             <strong>Microprocessor Final Written Report</strong>
-            <small>PDF · 4.5 MB</small>
+            <small>PDF - 4.5 MB</small>
           </a>
           <a class="report-card" data-category="robot" href="檔案/機器狗/專題期中進度簡報_第4組.pdf">
             <span>Robot Dog</span>
             <strong>Midterm Progress Slides</strong>
-            <small>PDF · large local file</small>
+            <small>PDF - large local file</small>
           </a>
           <a class="report-card" data-category="robot" href="檔案/機器狗/專題期末簡報_第4組.pdf">
             <span>Robot Dog</span>
             <strong>Final Presentation Slides</strong>
-            <small>PDF · large local file</small>
+            <small>PDF - large local file</small>
           </a>
 
           <a class="report-card" data-category="drone" href="檔案/無人機/機械工程實務期末報告_第五組.pdf">
             <span>Drone</span>
             <strong>Practice of Mechanical Engineering Final Report</strong>
-            <small>PDF · 5.8 MB</small>
+            <small>PDF - 5.8 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/可放期末報告Thrust to Throttle.pdf">
             <span>Drone</span>
             <strong>Thrust to Throttle Testing</strong>
-            <small>PDF · 1.1 MB</small>
+            <small>PDF - 1.1 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/飛控整合、馬達故障除錯、SBUS.pdf">
             <span>Drone</span>
             <strong>Flight Controller, Motor Debugging, and SBUS</strong>
-            <small>PDF · 0.5 MB</small>
+            <small>PDF - 0.5 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/dynamic testings after midterm.pdf">
             <span>Drone</span>
             <strong>Dynamic Testing After Midterm</strong>
-            <small>PDF · 0.3 MB</small>
+            <small>PDF - 0.3 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/First Personal Journal and Feedback 李承軒B12502027.pdf">
             <span>Drone</span>
@@ -392,7 +423,7 @@
           <a class="report-card" data-category="drone" href="檔案/無人機/第二次worksheet.pdf">
             <span>Drone</span>
             <strong>Project Meeting Worksheet II</strong>
-            <small>PDF · 20.1 MB</small>
+            <small>PDF - 20.1 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/第三次worksheet.pdf">
             <span>Drone</span>
@@ -407,54 +438,54 @@
           <a class="report-card" data-category="drone" href="檔案/無人機/機械工程實驗第一次報告.pdf">
             <span>Drone / Lab</span>
             <strong>Mechanical Engineering Experiment Report I</strong>
-            <small>PDF · 19.7 MB</small>
+            <small>PDF - 19.7 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/機械工程實驗第二次報告 (1).pdf">
             <span>Drone / Lab</span>
             <strong>Mechanical Engineering Experiment Report II</strong>
-            <small>PDF · 25.0 MB</small>
+            <small>PDF - 25.0 MB</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/機械工程實驗第三次報告.pdf">
             <span>Drone / Lab</span>
             <strong>Mechanical Engineering Experiment Report III</strong>
-            <small>PDF · very large local file</small>
+            <small>PDF - very large local file</small>
           </a>
           <a class="report-card" data-category="drone" href="檔案/無人機/機械工程實驗第四次報告.pdf">
             <span>Drone / Lab</span>
             <strong>Mechanical Engineering Experiment Report IV</strong>
-            <small>PDF · very large local file</small>
+            <small>PDF - very large local file</small>
           </a>
 
           <a class="report-card" data-category="mechanism" href="檔案/遠距離運球機構/機械設計原理 第九組 第二次報告 (1).pdf">
             <span>Ball Transfer Mechanism</span>
             <strong>Machine Design Theory Second Report</strong>
-            <small>PDF · 8.2 MB</small>
+            <small>PDF - 8.2 MB</small>
           </a>
           <a class="report-card" data-category="mechanism" href="檔案/遠距離運球機構/機械設計原理期末Project 第九組.pdf">
             <span>Ball Transfer Mechanism</span>
             <strong>Machine Design Theory Final Project</strong>
-            <small>PDF · 2.2 MB</small>
+            <small>PDF - 2.2 MB</small>
           </a>
 
           <a class="report-card" data-category="coursework" href="檔案/數值分析/Numerical Analysis Midterm Project B12502027 李承軒.pdf">
             <span>Numerical Analysis</span>
             <strong>Midterm Project</strong>
-            <small>PDF · 2.1 MB</small>
+            <small>PDF - 2.1 MB</small>
           </a>
           <a class="report-card" data-category="coursework" href="檔案/數值分析/Numerical Analysis Final Project B12502027 李承軒.pdf">
             <span>Numerical Analysis</span>
             <strong>Final Project</strong>
-            <small>PDF · 1.9 MB</small>
+            <small>PDF - 1.9 MB</small>
           </a>
           <a class="report-card" data-category="coursework" href="檔案/冷凍空調/冷凍空調期末報告new.pdf">
             <span>Refrigeration and Air Conditioning</span>
             <strong>Final Report</strong>
-            <small>PDF · 0.4 MB</small>
+            <small>PDF - 0.4 MB</small>
           </a>
           <a class="report-card" data-category="coursework" href="檔案/冷凍空調/簡報 - 高溫熱泵的應用 .pdf">
             <span>Refrigeration and Air Conditioning</span>
             <strong>High-Temperature Heat Pump Presentation</strong>
-            <small>PDF · 8.9 MB</small>
+            <small>PDF - 8.9 MB</small>
           </a>
           <a class="report-card" data-category="coursework" href="檔案/機械工程實驗/Mechanical Engineering Experiments Report 1.pdf">
             <span>Mechanical Engineering Laboratory</span>
@@ -512,7 +543,7 @@
     </main>
 
     <footer class="site-footer">
-      <p>Cheng-Hsuan Lee · Mechanical Engineering Portfolio</p>
+      <p>Cheng-Hsuan Lee - Mechanical Engineering Portfolio</p>
       <a href="#home">Back to top</a>
     </footer>
 

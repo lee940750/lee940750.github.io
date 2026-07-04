@@ -25,8 +25,9 @@
         <p class="section-kicker">Machine Design Theory</p>
         <h1>Foldable Long-Distance Ball Transfer Mechanism</h1>
         <p>
-          A compact deployable mechanism designed to move a ball between platforms while satisfying strict
-          size, strength, stability, and repeatability constraints.
+          A deployable mechanism designed to move a ball between platforms while fitting within strict
+          size limits, maintaining enough stiffness after deployment, and remaining repairable during
+          repeated testing.
         </p>
       </section>
 
@@ -41,49 +42,124 @@
               </div>
               <div>
                 <dt>Materials</dt>
-                <dd>3D-printed parts, MDF structure, hinges, latch hardware</dd>
+                <dd>3D-printed parts, MDF structure, hinges, latch hardware, hand-built assemblies</dd>
               </div>
               <div>
                 <dt>Main Constraint</dt>
-                <dd>Compact size limit with reliable deployment and ball transfer</dd>
+                <dd>Compact storage size with reliable deployment and ball transfer</dd>
               </div>
               <div>
-                <dt>Outcome</dt>
-                <dd>Stable final mechanism with strong final test performance</dd>
+                <dt>Result</dt>
+                <dd>Stable final mechanism with strong final-test performance</dd>
               </div>
             </dl>
           </aside>
 
-          <article class="detail-story">
-            <h2>Design Problem</h2>
-            <p>
-              The mechanism had to pick up, transport, and release a ball from one platform to another
-              while staying within a prescribed volume. I treated the folding behavior as the central
-              design challenge. A mechanism that worked only when already deployed would not be enough; it
-              also had to fold cleanly, deploy repeatedly, and keep enough stiffness after deployment.
-            </p>
+          <div class="detail-stack">
+            <article class="detail-story">
+              <h2>Project Goal</h2>
+              <p>
+                The Machine Design Theory project required a mechanism that could transfer a ball from a
+                lower platform to a higher platform while staying within a specified length, width, and
+                height. The basic movement of picking up and releasing a ball was only one part of the
+                problem. The harder requirement was packaging the system into the allowed size and then
+                deploying it reliably.
+              </p>
+              <p>
+                As team lead, I guided the team from early concepts to fabrication. I focused on turning
+                the size constraint into a practical folding architecture, then checking whether the
+                deployed structure would be stiff enough to perform the task repeatedly.
+              </p>
+            </article>
 
-            <h2>Practical Solution</h2>
-            <p>
-              Early folding concepts were not smooth or reliable. I redesigned the fold module around
-              accessible door hinges and latch hardware, then integrated the module into the larger
-              structure. This made the deployment motion more predictable and allowed the team to focus on
-              strengthening the ball-transfer path and improving test consistency.
-            </p>
+            <article class="detail-block">
+              <h2>Design Decisions</h2>
+              <div class="decision-grid">
+                <div class="decision-item">
+                  <strong>Folding as the core problem</strong>
+                  <p>
+                    I treated the folded-to-deployed transition as a main design requirement, not a
+                    secondary packaging detail.
+                  </p>
+                </div>
+                <div class="decision-item">
+                  <strong>Simple hardware adaptation</strong>
+                  <p>
+                    Door hinges and latch hardware became a reliable folding module after early custom
+                    ideas proved less smooth.
+                  </p>
+                </div>
+                <div class="decision-item">
+                  <strong>Fabrication-aware structure</strong>
+                  <p>
+                    3D-printed components and MDF were chosen and arranged around available tools,
+                    assembly speed, and repairability.
+                  </p>
+                </div>
+              </div>
+            </article>
 
-            <h2>Engineering Lessons</h2>
-            <ul>
-              <li>Simple hardware can become a strong design solution when matched carefully to the constraint.</li>
-              <li>Folding mechanisms must be evaluated by both motion quality and locked-state stiffness.</li>
-              <li>Material choice, assembly order, and repair access all affect the final reliability of a student-built machine.</li>
-            </ul>
+            <article class="detail-block">
+              <h2>Problem Solving Process</h2>
+              <ol class="numbered-list">
+                <li>
+                  Broke the task into storage, deployment, ball pickup, ball transport, and release, then
+                  evaluated how each function affected the others.
+                </li>
+                <li>
+                  Tested folding concepts early because a mechanism that only works in its deployed form
+                  would fail the size constraint.
+                </li>
+                <li>
+                  Replaced unreliable folding ideas with hinge-and-latch modules that provided smoother
+                  motion and clearer locked positions.
+                </li>
+                <li>
+                  Adjusted structure and fabrication details after considering strength, stiffness,
+                  weight, and the ability to repair parts before final evaluation.
+                </li>
+              </ol>
+            </article>
 
-            <div class="media-strip" aria-label="Ball transfer media">
-              <img src="照片/遠距離運球機構/_1188263.JPG" alt="Foldable ball transfer mechanism during testing" />
-              <img src="照片/遠距離運球機構/_1188267.JPG" alt="Team working on the deployed ball transfer mechanism" />
-              <img src="照片/遠距離運球機構/螢幕擷取畫面 2026-07-01 233852.png" alt="Design screenshot of the mechanism" />
-            </div>
-          </article>
+            <article class="detail-block">
+              <h2>Engineering Takeaways</h2>
+              <p>
+                This project was valuable because it rewarded practical mechanical judgment. The best
+                solution was not necessarily the most complex one; it was the one that could be made,
+                assembled, adjusted, and trusted in a final test. I learned to evaluate a design not only
+                by its ideal motion, but also by how it behaves during setup, deployment, and repeated use.
+              </p>
+              <ul>
+                <li>Packaging constraints can dominate mechanism architecture.</li>
+                <li>Accessible off-the-shelf hardware can be an excellent engineering solution.</li>
+                <li>Stiffness after deployment is as important as smooth folding motion.</li>
+              </ul>
+            </article>
+
+            <article class="detail-block">
+              <h2>Future Media Slots</h2>
+              <div class="project-media-plan" aria-label="Future ball-transfer media slots">
+                <div class="media-placeholder">
+                  <div>
+                    <strong>Photo slot</strong>
+                    <span>Folded mechanism showing compact storage configuration</span>
+                  </div>
+                </div>
+                <div class="media-placeholder">
+                  <div>
+                    <strong>Photo slot</strong>
+                    <span>Deployed structure, hinge module, or latch detail</span>
+                  </div>
+                </div>
+                <div class="media-placeholder">
+                  <div>
+                    <strong>Video slot</strong>
+                    <span>Ball pickup, transfer, and release sequence</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
         </div>
       </section>
     </main>
