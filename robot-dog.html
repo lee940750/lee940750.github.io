@@ -25,138 +25,129 @@
         <p class="section-kicker">Microprocessor Controlled Systems</p>
         <h1>Quadruped Robot Dog</h1>
         <p>
-          A one-semester project that turned a legged-robot idea into a working prototype through
-          mechanical design, 3D printing, embedded control, inverse kinematics, servo calibration, and
-          repeated integration testing.
+          A one-semester legged-robot project combining 3D-printed mechanism design, servo control,
+          inverse kinematics, embedded programming, and integration testing.
         </p>
       </section>
 
+      <div class="fact-strip" aria-label="Robot dog project facts">
+        <article>
+          <span>Role</span>
+          <strong>Team lead, mechanical designer, controls developer</strong>
+        </article>
+        <article>
+          <span>Hardware</span>
+          <strong>ESP32, PCA9685, eight MG90S servos, 3D-printed structure</strong>
+        </article>
+        <article>
+          <span>Software</span>
+          <strong>MATLAB gait simulation and Arduino implementation</strong>
+        </article>
+        <article>
+          <span>Result</span>
+          <strong>Walking, standing, sitting, waving, and rocking; course grade A+</strong>
+        </article>
+      </div>
+
       <section class="detail-layout">
-        <div class="detail-grid">
-          <aside class="detail-panel">
-            <h2>Project Facts</h2>
-            <dl>
-              <div>
-                <dt>Role</dt>
-                <dd>Team lead, mechanical designer, controls developer</dd>
-              </div>
-              <div>
-                <dt>Hardware</dt>
-                <dd>ESP32, PCA9685 servo driver, eight MG90S servos, 3D-printed structure</dd>
-              </div>
-              <div>
-                <dt>Software</dt>
-                <dd>MATLAB gait simulation, Arduino implementation, mobile web control interface</dd>
-              </div>
-              <div>
-                <dt>Result</dt>
-                <dd>Walking, standing, sitting, waving, and rocking motions; course grade A+</dd>
-              </div>
-            </dl>
-          </aside>
-
-          <div class="detail-stack">
-            <article class="detail-story">
-              <h2>Project Goal</h2>
-              <p>
-                The assignment was not only to assemble a robot, but to build a coordinated mechanical
-                and control system. Our team chose a quadruped robot because it forced us to connect
-                structure, actuator placement, power routing, kinematics, and timing. As team lead, I
-                organized the work so mechanical design, electronics, and code could be tested together
-                instead of waiting until the final week for integration.
-              </p>
-              <p>
-                I designed the body and leg modules around maintainability. The robot needed to be easy
-                to assemble, repair, and modify after tests revealed problems. This meant thinking about
-                screw access, servo replacement, wire routing, battery placement, and the relationship
-                between the center of gravity and the leg workspace.
-              </p>
-            </article>
-
-            <article class="detail-block">
-              <h2>Key Engineering Decisions</h2>
-              <div class="decision-grid">
-                <div class="decision-item">
-                  <strong>Modular legs</strong>
-                  <p>
-                    The leg structure was designed as replaceable modules so a damaged print or failed
-                    servo would not require rebuilding the whole robot.
-                  </p>
-                </div>
-                <div class="decision-item">
-                  <strong>Simulation first</strong>
-                  <p>
-                    I tested gait logic and inverse kinematics in MATLAB before moving the equations into
-                    the Arduino program.
-                  </p>
-                </div>
-                <div class="decision-item">
-                  <strong>Practical packaging</strong>
-                  <p>
-                    The electronics layout considered wire length, battery access, board placement, and
-                    weight distribution rather than only fitting parts into the body.
-                  </p>
-                </div>
-              </div>
-            </article>
-
-            <article class="detail-block">
-              <h2>Control and Debugging Process</h2>
-              <ol class="numbered-list">
-                <li>
-                  Defined the leg geometry and servo directions, then calibrated each motor so commanded
-                  angles matched the physical configuration.
-                </li>
-                <li>
-                  Built foot trajectories and inverse-kinematics calculations in MATLAB to check whether
-                  the leg path stayed inside the reachable workspace.
-                </li>
-                <li>
-                  Translated the model into Arduino code for the ESP32 and PCA9685, separating gait
-                  update logic, foot trajectory generation, angle calculation, and servo output.
-                </li>
-                <li>
-                  Tested simple actions first, then combined them into more complex motions after the
-                  robot could reliably stand and shift weight.
-                </li>
-              </ol>
-            </article>
-
-            <article class="detail-block">
-              <h2>What This Project Shows</h2>
-              <ul>
-                <li>I can design a mechanical system while anticipating assembly and repair problems.</li>
-                <li>I can move from mathematical simulation to embedded implementation on real hardware.</li>
-                <li>I can lead a team through integration problems where mechanical and software causes overlap.</li>
-                <li>I understand that legged robots require geometry, timing, calibration, and structure to work together.</li>
-              </ul>
-            </article>
-
-            <article class="detail-block">
-              <h2>Future Media Slots</h2>
-              <div class="project-media-plan" aria-label="Future robot dog media slots">
-                <div class="media-placeholder">
-                  <div>
-                    <strong>Photo slot</strong>
-                    <span>Top view showing ESP32, PCA9685, wiring, and battery placement</span>
-                  </div>
-                </div>
-                <div class="media-placeholder">
-                  <div>
-                    <strong>Photo slot</strong>
-                    <span>Close-up of the 3D-printed leg and servo mounting design</span>
-                  </div>
-                </div>
-                <div class="media-placeholder">
-                  <div>
-                    <strong>Video slot</strong>
-                    <span>Walking, standing, sitting, or waving demonstration</span>
-                  </div>
-                </div>
-              </div>
-            </article>
+        <article class="detail-feature">
+          <div class="detail-text">
+            <h2>Designing a robot that could be repaired, not just demonstrated.</h2>
+            <p>
+              Our team chose a quadruped robot because it forced mechanical design and control logic to
+              be developed together. I designed the body and leg modules with assembly, servo replacement,
+              wire routing, battery placement, and center-of-gravity position in mind.
+            </p>
+            <p>
+              The goal was a robot that could survive repeated tests. A maintainable structure let us
+              test more aggressively because broken prints, loose wiring, or failed servos could be fixed
+              without rebuilding the entire machine.
+            </p>
           </div>
-        </div>
+          <div class="feature-media" aria-label="Robot dog design media slots">
+            <div class="media-placeholder media-primary">
+              <div>
+                <strong>Photo slot</strong>
+                <span>Robot body and electronics layout</span>
+              </div>
+            </div>
+            <div class="media-placeholder media-secondary">
+              <div>
+                <strong>Photo slot</strong>
+                <span>Leg module and servo mounting detail</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail-feature reverse">
+          <div class="detail-text">
+            <h2>From gait simulation to embedded control.</h2>
+            <p>
+              I first tested gait logic and inverse kinematics in MATLAB to make sure the foot trajectory
+              stayed inside the reachable workspace. After the simulated motion was stable, I translated
+              the logic into Arduino code for the ESP32 and PCA9685 servo driver.
+            </p>
+            <div class="decision-grid">
+              <div class="decision-item">
+                <strong>Calibration</strong>
+                <p>Each servo direction and angle offset had to match the physical leg geometry.</p>
+              </div>
+              <div class="decision-item">
+                <strong>Gait timing</strong>
+                <p>Foot trajectories, body support, and update timing had to work together.</p>
+              </div>
+              <div class="decision-item">
+                <strong>Output control</strong>
+                <p>The program separated gait update, inverse kinematics, and servo output.</p>
+              </div>
+            </div>
+          </div>
+          <div class="feature-media" aria-label="Robot dog control media slots">
+            <div class="media-placeholder media-primary">
+              <div>
+                <strong>Diagram slot</strong>
+                <span>Gait or inverse-kinematics visualization</span>
+              </div>
+            </div>
+            <div class="media-placeholder media-secondary">
+              <div>
+                <strong>Code slot</strong>
+                <span>Control loop or calibration screenshot</span>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="detail-feature">
+          <div class="detail-text">
+            <h2>Final behavior and engineering lessons.</h2>
+            <p>
+              The final robot completed forward walking, standing, sitting, waving, and rocking motions.
+              The project showed me how tightly legged robot performance depends on geometry,
+              calibration, structural stiffness, power layout, and timing.
+            </p>
+            <ul class="compact-list">
+              <li>Mechanical geometry and control software must be validated together.</li>
+              <li>Repairable hardware makes integration testing much faster.</li>
+              <li>Team leadership matters most when mechanical and software causes overlap.</li>
+            </ul>
+          </div>
+          <div class="feature-media" aria-label="Robot dog result media slots">
+            <div class="media-placeholder media-primary">
+              <div>
+                <strong>Video slot</strong>
+                <span>Walking or standing demonstration</span>
+              </div>
+            </div>
+            <div class="media-placeholder media-secondary">
+              <div>
+                <strong>Video slot</strong>
+                <span>Sitting, waving, or rocking motion</span>
+              </div>
+            </div>
+          </div>
+        </article>
       </section>
     </main>
   </body>

@@ -298,9 +298,9 @@ h3 {
 
 .feature-media {
   display: grid;
-  grid-template-columns: minmax(0, 1.35fr) minmax(0, 0.75fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 12px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .award-list,
@@ -340,12 +340,9 @@ h3 {
   background: #fff;
 }
 
-.media-placeholder.media-primary {
-  min-height: 360px;
-}
-
+.media-placeholder.media-primary,
 .media-placeholder.media-secondary {
-  min-height: 230px;
+  min-height: 340px;
 }
 
 .media-placeholder strong {
@@ -533,12 +530,9 @@ h3 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .media-placeholder.media-primary {
-    min-height: 280px;
-  }
-
+  .media-placeholder.media-primary,
   .media-placeholder.media-secondary {
-    min-height: 190px;
+    min-height: 280px;
   }
 }
 
@@ -596,13 +590,10 @@ h3 {
     padding: 36px 0;
   }
 
-  .media-placeholder.media-primary {
-    min-height: 230px;
-  }
-
+  .media-placeholder.media-primary,
   .media-placeholder.media-secondary,
   .file-placeholder {
-    min-height: 180px;
+    min-height: 220px;
   }
 
   .site-footer {
