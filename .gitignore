@@ -1,7 +1,7 @@
-# Files over GitHub's 100 MiB regular Git limit.
-檔案/機器狗/專題期中進度簡報_第4組.pdf
-檔案/機器狗/專題期末簡報_第4組.pdf
-檔案/無人機/機械工程實驗第三次報告.pdf
-檔案/無人機/機械工程實驗第四次報告.pdf
-照片/無人機/IMG_4171.MOV
-照片/遠距離運球機構/IMG_0015.MOV
+# Local source materials used while building the portfolio.
+檔案/
+照片/
+
+# Common local/editor files.
+.DS_Store
+Thumbs.db
