@@ -158,8 +158,13 @@
   grid-template-columns: 1fr;
 }
 
-.detail-feature .media-placeholder.media-primary {
+.detail-feature .media-placeholder.media-primary,
+.detail-feature .media-photo.media-primary {
   min-height: 360px;
+}
+
+.detail-feature .media-photo.media-primary {
+  height: 360px;
 }
 
 .detail-grid {
@@ -518,7 +523,12 @@
     padding: 22px;
   }
 
-  .detail-feature .media-placeholder.media-primary {
+  .detail-feature .media-placeholder.media-primary,
+  .detail-feature .media-photo.media-primary {
     min-height: 240px;
+  }
+
+  .detail-feature .media-photo.media-primary {
+    height: 240px;
   }
 }
