@@ -29,6 +29,39 @@
   font-size: 1.15rem;
 }
 
+.case-glance {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  width: min(1180px, calc(100% - 48px));
+  margin: -14px auto 44px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--line);
+}
+
+.case-glance article {
+  min-height: 136px;
+  padding: 20px;
+  background: var(--panel);
+}
+
+.case-glance span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--warm);
+  font-size: 0.74rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.case-glance strong {
+  display: block;
+  color: var(--ink);
+  line-height: 1.28;
+}
+
 .detail-layout {
   width: 100%;
   padding-bottom: 0;
@@ -247,6 +280,7 @@
 
 @media (max-width: 980px) {
   .project-detail-shell,
+  .case-glance,
   .detail-feature,
   .detail-grid,
   .decision-grid,
@@ -256,6 +290,10 @@
 
   .fact-strip {
     position: static;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .case-glance {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -270,6 +308,7 @@
 
 @media (max-width: 720px) {
   .project-hero,
+  .case-glance,
   .project-detail-shell {
     width: calc(100% - 32px);
   }
@@ -280,6 +319,11 @@
 
   .fact-strip {
     grid-template-columns: 1fr;
+  }
+
+  .case-glance {
+    grid-template-columns: 1fr;
+    margin-bottom: 26px;
   }
 
   .detail-feature {

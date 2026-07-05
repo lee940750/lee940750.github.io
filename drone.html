@@ -12,9 +12,9 @@
       <a class="brand" href="index.html#home" aria-label="CHENG-HSUAN LEE home">CHL</a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="index.html#projects">Projects</a>
-        <a href="index.html#competitions">Competitions</a>
+        <a href="index.html#research">Research Fit</a>
         <a href="index.html#skills">Skills</a>
-        <a href="index.html#reports">Reports</a>
+        <a href="index.html#materials">Materials</a>
         <a href="index.html#contact">Contact</a>
       </nav>
     </header>
@@ -22,117 +22,134 @@
     <main>
       <section class="project-hero">
         <a href="index.html#projects">Back to portfolio</a>
-        <p class="section-kicker">Practice of Mechanical Engineering</p>
+        <p class="section-kicker">Case Study | Flying Robot System</p>
         <h1>Quadcopter Ball-Transfer Drone</h1>
         <p>
-          A full-system drone project for transporting a ball from a low platform to a high platform,
-          developed through airframe design, propulsion testing, controller integration, and final-test
-          risk management.
+          A mission-driven quadcopter built to move a ball between platforms, requiring airframe design,
+          payload integration, thrust testing, signal debugging, and final-test risk management.
         </p>
+      </section>
+
+      <section class="case-glance" aria-label="Drone project at a glance">
+        <article>
+          <span>Challenge</span>
+          <strong>Build a drone that could remain stable while carrying and transferring a ball.</strong>
+        </article>
+        <article>
+          <span>My Contribution</span>
+          <strong>Led system design, testing, integration debugging, and final-run preparation.</strong>
+        </article>
+        <article>
+          <span>Technical Stack</span>
+          <strong>Airframe fabrication, propulsion testing, ESCs, flight controller, SBUS signal chain.</strong>
+        </article>
+        <article>
+          <span>Outcome</span>
+          <strong>Full marks in midterm and final evaluations; course grade A+.</strong>
+        </article>
       </section>
 
       <section class="project-detail-shell">
         <aside class="fact-strip" aria-label="Drone project facts">
-        <article>
-          <span>Role</span>
-          <strong>Team lead, system designer, integration coordinator</strong>
-        </article>
-        <article>
-          <span>Scope</span>
-          <strong>Airframe, ball mechanism, electronics, power, thrust testing</strong>
-        </article>
-        <article>
-          <span>Debugging</span>
-          <strong>Motor behavior, SBUS signal chain, flight controller, resonance</strong>
-        </article>
-        <article>
-          <span>Result</span>
-          <strong>Full marks in midterm and final tests; course grade A+</strong>
-        </article>
+          <article>
+            <span>Role</span>
+            <strong>Team lead, system designer, integration coordinator</strong>
+          </article>
+          <article>
+            <span>Scope</span>
+            <strong>Airframe, payload mechanism, electronics, power, thrust testing</strong>
+          </article>
+          <article>
+            <span>Debugging</span>
+            <strong>Motor behavior, SBUS signal chain, flight controller, resonance</strong>
+          </article>
+          <article>
+            <span>Result</span>
+            <strong>Full marks in midterm and final tests; course grade A+</strong>
+          </article>
         </aside>
 
         <section class="detail-layout">
-        <article class="detail-feature">
-          <div class="detail-text">
-            <h2>A mission-driven drone, not only a flying frame.</h2>
-            <p>
-              The project required a drone to move a ball between platforms, so the mechanical design,
-              payload placement, power system, and flight stability had to be considered together. As
-              team lead, I coordinated concept selection, procurement, fabrication, testing, and final
-              evaluation strategy.
-            </p>
-            <p>
-              The ball-transfer mechanism affected mass distribution and flight behavior, so we treated
-              the airframe and payload system as one integrated design problem.
-            </p>
-          </div>
-          <div class="feature-media" aria-label="Drone design media slot">
-            <div class="media-placeholder media-primary">
-              <div>
-                <strong>Photo slot</strong>
-                <span>Assembled drone or airframe layout</span>
+          <article class="detail-feature">
+            <div class="detail-text">
+              <h2>Defined the drone as a system, not a collection of parts.</h2>
+              <p>
+                The ball-transfer mission forced every design decision to interact: payload placement
+                changed mass distribution, frame stiffness affected vibration, and power choices affected
+                control margin. I coordinated the team around the full mission rather than isolated
+                subsystem progress.
+              </p>
+              <p>
+                That systems view helped us prioritize the decisions that mattered most for stable
+                testing: airframe geometry, mechanism placement, electronics layout, and spare assemblies.
+              </p>
+            </div>
+            <div class="feature-media" aria-label="Drone system media area">
+              <div class="media-placeholder media-primary">
+                <div>
+                  <strong>System media reserved</strong>
+                  <span>Airframe, payload mechanism, or electronics integration view</span>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
 
-        <article class="detail-feature reverse">
-          <div class="detail-text">
-            <h2>Testing thrust, signals, and stability before the final run.</h2>
-            <p>
-              We used thrust-to-throttle testing to evaluate whether the selected motors, propellers,
-              ESCs, and battery could provide enough control margin. During integration, we separated
-              motor, signal, mechanical vibration, and flight-controller causes instead of treating every
-              instability as a tuning problem.
-            </p>
-            <div class="decision-grid">
-              <div class="decision-item">
-                <strong>Propulsion</strong>
-                <p>Measured thrust behavior helped guide safer design decisions.</p>
-              </div>
-              <div class="decision-item">
-                <strong>Signals</strong>
-                <p>SBUS and controller setup were checked as part of system reliability.</p>
-              </div>
-              <div class="decision-item">
-                <strong>Structure</strong>
-                <p>Resonance and vibration were treated as flight-stability risks.</p>
-              </div>
-            </div>
-          </div>
-          <div class="feature-media" aria-label="Drone testing media slot">
-            <div class="media-placeholder media-primary">
-              <div>
-                <strong>Photo slot</strong>
-                <span>Thrust testing, debugging setup, or CAD analysis</span>
+          <article class="detail-feature reverse">
+            <div class="detail-text">
+              <h2>Used testing to separate flight problems from design problems.</h2>
+              <p>
+                We used thrust-to-throttle testing to understand propulsion margin before final flights.
+                During integration, we separated motor behavior, SBUS setup, controller configuration,
+                vibration, and structural resonance instead of blaming every issue on tuning.
+              </p>
+              <div class="decision-grid">
+                <div class="decision-item">
+                  <strong>Propulsion</strong>
+                  <p>Measured thrust behavior to guide safer design and flight decisions.</p>
+                </div>
+                <div class="decision-item">
+                  <strong>Signals</strong>
+                  <p>Checked control signal flow as part of system reliability.</p>
+                </div>
+                <div class="decision-item">
+                  <strong>Structure</strong>
+                  <p>Treated vibration and resonance as stability risks, not side effects.</p>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+            <div class="feature-media" aria-label="Drone test media area">
+              <div class="media-placeholder media-primary">
+                <div>
+                  <strong>Test media reserved</strong>
+                  <span>Thrust test setup, debugging bench, or signal/power diagram</span>
+                </div>
+              </div>
+            </div>
+          </article>
 
-        <article class="detail-feature">
-          <div class="detail-text">
-            <h2>Risk control for a one-shot evaluation.</h2>
-            <p>
-              Because the final evaluation had limited formal attempts, our team prepared spare
-              assemblies, reviewed the rules carefully, and planned likely failure responses. The final
-              result was one of the most stable systems in the course.
-            </p>
-            <ul class="compact-list">
-              <li>Stable flight depends on structure, signals, power, and tuning working together.</li>
-              <li>Final-test reliability improves when spare parts and fallback plans are ready.</li>
-              <li>Leadership means turning uncertain test data into clear next actions.</li>
-            </ul>
-          </div>
-          <div class="feature-media" aria-label="Drone result media slot">
-            <div class="media-placeholder media-primary">
-              <div>
-                <strong>Video slot</strong>
-                <span>Flight stability test</span>
+          <article class="detail-feature">
+            <div class="detail-text">
+              <h2>Prepared for a final evaluation with little room for failure.</h2>
+              <p>
+                The final run demanded reliability under limited formal attempts. I helped the team
+                prepare spare parts, check rules, and plan likely failure responses so the build could
+                survive pressure instead of relying on a perfect single attempt.
+              </p>
+              <ul class="compact-list">
+                <li>Stable flight depended on structure, signals, power, and tuning working together.</li>
+                <li>Spare parts and fallback plans turned uncertainty into controlled risk.</li>
+                <li>Leadership meant converting noisy test results into clear next actions.</li>
+              </ul>
+            </div>
+            <div class="feature-media" aria-label="Drone demo media area">
+              <div class="media-placeholder media-primary">
+                <div>
+                  <strong>Demo media reserved</strong>
+                  <span>Flight stability test or ball-transfer mission run</span>
+                </div>
               </div>
             </div>
-          </div>
-        </article>
+          </article>
         </section>
       </section>
     </main>
