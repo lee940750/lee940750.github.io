@@ -370,10 +370,8 @@ h3 {
   border: 2px solid #111;
   border-radius: 8px;
   background: #fff;
-  box-shadow: 4px 4px 0 #111;
   transition:
-    transform 160ms ease,
-    box-shadow 160ms ease,
+    border-color 160ms ease,
     background 160ms ease;
 }
 
@@ -386,8 +384,7 @@ h3 {
 .text-link:focus-visible {
   color: #111;
   background: #f4f0df;
-  box-shadow: 2px 2px 0 #111;
-  transform: translate(2px, 2px);
+  border-color: var(--accent-dark);
 }
 
 .awards-layout,
@@ -497,23 +494,85 @@ h3 {
 
 .contact-section {
   display: grid;
-  grid-template-columns: minmax(320px, 1fr) auto;
-  gap: 36px;
+  grid-template-columns: minmax(320px, 0.95fr) minmax(360px, 1.05fr);
+  gap: 42px;
   align-items: center;
+}
+
+.contact-section p:not(.section-kicker) {
+  max-width: 640px;
+  color: var(--muted);
 }
 
 .contact-card {
   display: grid;
-  gap: 10px;
-  min-width: min(420px, 100%);
-  padding: 26px;
+  gap: 24px;
+  min-width: min(520px, 100%);
+  padding: 30px;
+  border: 2px solid #111;
+  background: #fff;
 }
 
-.contact-card a {
-  color: var(--accent-dark);
-  font-size: 1.1rem;
+.contact-identity {
+  display: grid;
+  gap: 6px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-identity span,
+.contact-methods span {
+  color: var(--accent);
+  font-size: 0.75rem;
   font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.contact-identity strong {
+  color: var(--ink);
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  line-height: 1;
+}
+
+.contact-identity p {
+  margin: 0;
+  color: var(--muted);
+  font-weight: 750;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 0;
+}
+
+.contact-methods a {
+  display: grid;
+  gap: 5px;
+  padding: 16px 0;
+  color: var(--accent-dark);
   text-decoration: none;
+  border-bottom: 1px solid var(--line);
+}
+
+.contact-methods a:first-child {
+  padding-top: 0;
+}
+
+.contact-methods a:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact-methods strong {
+  color: var(--accent-dark);
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.contact-methods a:hover strong,
+.contact-methods a:focus-visible strong {
+  color: #111;
 }
 
 .site-footer {
