@@ -150,6 +150,99 @@
               </div>
             </div>
           </article>
+
+          <section class="case-module" aria-labelledby="drone-flow-title">
+            <h2 id="drone-flow-title">Engineering flow</h2>
+            <div class="system-flow" aria-label="Drone engineering flow">
+              <article class="flow-step">
+                <span>01</span>
+                <strong>Define the mission system</strong>
+                <p>Connected ball transfer, airframe layout, payload placement, and flight stability.</p>
+              </article>
+              <article class="flow-step">
+                <span>02</span>
+                <strong>Validate propulsion margin</strong>
+                <p>Used thrust-to-throttle testing to understand motor, propeller, ESC, and battery behavior.</p>
+              </article>
+              <article class="flow-step">
+                <span>03</span>
+                <strong>Debug integration risks</strong>
+                <p>Separated signal-chain, controller, vibration, and structural causes during tests.</p>
+              </article>
+              <article class="flow-step">
+                <span>04</span>
+                <strong>Prepare final execution</strong>
+                <p>Planned spare parts, rule checks, and fallback responses for limited attempts.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-module" aria-labelledby="drone-table-title">
+            <h2 id="drone-table-title">Technical decision table</h2>
+            <div class="decision-table-wrap">
+              <table class="decision-table">
+                <thead>
+                  <tr>
+                    <th>Constraint</th>
+                    <th>Decision</th>
+                    <th>Why it mattered</th>
+                    <th>Skill demonstrated</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Payload affected mass distribution</td>
+                    <td>Treated airframe and transfer mechanism as one system</td>
+                    <td>Reduced the chance of stable frame design failing after payload integration</td>
+                    <td>System architecture</td>
+                  </tr>
+                  <tr>
+                    <td>Flight behavior depended on propulsion margin</td>
+                    <td>Ran thrust-to-throttle testing before final flights</td>
+                    <td>Converted motor uncertainty into usable design information</td>
+                    <td>Experimental validation</td>
+                  </tr>
+                  <tr>
+                    <td>Instability had multiple possible causes</td>
+                    <td>Separated signal, controller, vibration, and structural issues</td>
+                    <td>Prevented the team from treating every problem as a tuning issue</td>
+                    <td>Integration debugging</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="case-module" aria-labelledby="drone-capability-title">
+            <h2 id="drone-capability-title">Capability signals</h2>
+            <div class="capability-grid">
+              <article>
+                <span>Mechanical Systems</span>
+                <strong>Balanced airframe, payload mechanism, electronics, and power layout.</strong>
+              </article>
+              <article>
+                <span>Testing</span>
+                <strong>Used thrust data and flight behavior to guide design decisions.</strong>
+              </article>
+              <article>
+                <span>Debugging</span>
+                <strong>Separated motor, signal, controller, vibration, and resonance issues.</strong>
+              </article>
+              <article>
+                <span>Leadership</span>
+                <strong>Prepared the team for a final run with spare parts and fallback plans.</strong>
+              </article>
+            </div>
+          </section>
+
+          <section class="takeaway-band" aria-labelledby="drone-takeaway-title">
+            <h2 id="drone-takeaway-title">Reviewer takeaway</h2>
+            <p>
+              This project shows that I can lead a physical robotics system where mechanical design,
+              electrical integration, testing, and risk control interact. It is strong evidence of my
+              ability to handle messy real-world hardware problems before they become research blockers.
+            </p>
+          </section>
         </section>
       </section>
     </main>

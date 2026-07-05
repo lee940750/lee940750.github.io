@@ -150,6 +150,99 @@
               </div>
             </div>
           </article>
+
+          <section class="case-module" aria-labelledby="robot-flow-title">
+            <h2 id="robot-flow-title">Engineering flow</h2>
+            <div class="system-flow" aria-label="Robot dog engineering flow">
+              <article class="flow-step">
+                <span>01</span>
+                <strong>Define the body architecture</strong>
+                <p>Balanced servo placement, wire routing, battery location, and repair access.</p>
+              </article>
+              <article class="flow-step">
+                <span>02</span>
+                <strong>Simulate reachable motion</strong>
+                <p>Used MATLAB to check gait trajectory and inverse-kinematics behavior.</p>
+              </article>
+              <article class="flow-step">
+                <span>03</span>
+                <strong>Translate to embedded control</strong>
+                <p>Moved from simulation logic to ESP32, PCA9685, and calibrated servo output.</p>
+              </article>
+              <article class="flow-step">
+                <span>04</span>
+                <strong>Iterate on the physical robot</strong>
+                <p>Used repeated testing to tune timing, offsets, and behavior sequencing.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="case-module" aria-labelledby="robot-table-title">
+            <h2 id="robot-table-title">Technical decision table</h2>
+            <div class="decision-table-wrap">
+              <table class="decision-table">
+                <thead>
+                  <tr>
+                    <th>Constraint</th>
+                    <th>Decision</th>
+                    <th>Why it mattered</th>
+                    <th>Skill demonstrated</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Eight servos inside a compact body</td>
+                    <td>Designed a serviceable 3D-printed structure</td>
+                    <td>Made repair and calibration possible during integration</td>
+                    <td>Mechanical packaging</td>
+                  </tr>
+                  <tr>
+                    <td>Simulated motion had to match real hardware</td>
+                    <td>Calibrated servo direction, offset, and leg geometry</td>
+                    <td>Reduced mismatch between model and physical robot</td>
+                    <td>System debugging</td>
+                  </tr>
+                  <tr>
+                    <td>Multiple behaviors needed the same platform</td>
+                    <td>Separated gait logic, inverse kinematics, and servo output</td>
+                    <td>Made walking and gesture behaviors easier to tune</td>
+                    <td>Embedded control structure</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <section class="case-module" aria-labelledby="robot-capability-title">
+            <h2 id="robot-capability-title">Capability signals</h2>
+            <div class="capability-grid">
+              <article>
+                <span>Mechanical Systems</span>
+                <strong>Designed a repairable robot body around real assembly constraints.</strong>
+              </article>
+              <article>
+                <span>Embedded Control</span>
+                <strong>Implemented gait logic on ESP32 with calibrated servo output.</strong>
+              </article>
+              <article>
+                <span>Testing and Debugging</span>
+                <strong>Linked geometry, timing, calibration, and observed robot behavior.</strong>
+              </article>
+              <article>
+                <span>Leadership</span>
+                <strong>Kept mechanical and software debugging moving as one team problem.</strong>
+              </article>
+            </div>
+          </section>
+
+          <section class="takeaway-band" aria-labelledby="robot-takeaway-title">
+            <h2 id="robot-takeaway-title">Reviewer takeaway</h2>
+            <p>
+              This project is evidence that I can work across the full legged-robot stack: structure,
+              actuation, kinematics, embedded control, and real hardware iteration. It is the clearest
+              bridge between my current project experience and my graduate interest in legged robotics.
+            </p>
+          </section>
         </section>
       </section>
     </main>
