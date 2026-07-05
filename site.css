@@ -449,6 +449,14 @@ h3 {
   width: min(46%, 310px);
 }
 
+.feature-media.frc-media {
+  gap: 14px;
+}
+
+.feature-media.frc-media .media-photo img {
+  width: min(86%, 500px);
+}
+
 .feature-media.media-stack .media-placeholder {
   width: 100%;
   min-height: 230px;
@@ -906,6 +914,10 @@ h3 {
 
   .feature-media.mechanism-media .media-photo img,
   .feature-media.mechanism-media .portrait-photo img {
+    width: 100%;
+  }
+
+  .feature-media.frc-media .media-photo img {
     width: 100%;
   }
 
