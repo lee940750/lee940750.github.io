@@ -417,6 +417,31 @@ h3 {
   align-items: stretch;
 }
 
+.feature-media.media-stack {
+  grid-template-columns: 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.feature-media.media-stack .media-photo {
+  width: 100%;
+}
+
+.feature-media.media-stack .media-photo img {
+  width: 100%;
+  max-width: 100%;
+  max-height: none;
+}
+
+.feature-media.media-stack .portrait-photo img {
+  width: min(78%, 520px);
+}
+
+.feature-media.media-stack .media-placeholder {
+  width: 100%;
+  min-height: 230px;
+}
+
 .award-list,
 .skills-layout article,
 .file-placeholder,
@@ -857,6 +882,10 @@ h3 {
 
   .media-photo img {
     max-height: none;
+  }
+
+  .feature-media.media-stack .portrait-photo img {
+    width: 100%;
   }
 
   .standout-grid article {
