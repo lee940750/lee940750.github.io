@@ -387,6 +387,39 @@
   line-height: 1.35;
 }
 
+.applicant-signal {
+  padding-bottom: 46px;
+}
+
+.signal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.signal-grid article {
+  min-height: 190px;
+  padding: 22px;
+  border: 2px solid #111;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.signal-grid span {
+  display: block;
+  margin-bottom: 12px;
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.signal-grid strong {
+  display: block;
+  color: var(--ink);
+  line-height: 1.35;
+}
+
 .takeaway-band {
   margin-top: 42px;
   padding: 30px;
@@ -422,6 +455,7 @@
   .decision-grid,
   .system-flow,
   .capability-grid,
+  .signal-grid,
   .project-media-plan {
     grid-template-columns: 1fr;
   }
@@ -474,7 +508,8 @@
   }
 
   .flow-step,
-  .capability-grid article {
+  .capability-grid article,
+  .signal-grid article {
     min-height: auto;
   }
 
