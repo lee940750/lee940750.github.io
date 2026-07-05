@@ -437,6 +437,18 @@ h3 {
   width: min(78%, 520px);
 }
 
+.feature-media.mechanism-media {
+  justify-items: end;
+}
+
+.feature-media.mechanism-media .media-photo img {
+  width: min(74%, 500px);
+}
+
+.feature-media.mechanism-media .portrait-photo img {
+  width: min(46%, 310px);
+}
+
 .feature-media.media-stack .media-placeholder {
   width: 100%;
   min-height: 230px;
@@ -885,6 +897,15 @@ h3 {
   }
 
   .feature-media.media-stack .portrait-photo img {
+    width: 100%;
+  }
+
+  .feature-media.mechanism-media {
+    justify-items: stretch;
+  }
+
+  .feature-media.mechanism-media .media-photo img,
+  .feature-media.mechanism-media .portrait-photo img {
     width: 100%;
   }
 
