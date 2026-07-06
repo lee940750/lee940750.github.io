@@ -185,7 +185,7 @@
 }
 
 .detail-media-stack.robot-build-stack .media-photo :is(img, video) {
-  width: min(75%, 325px);
+  width: min(85%, 370px);
 }
 
 .detail-media-stack.drone-test-stack .media-photo :is(img, video) {
@@ -193,7 +193,7 @@
 }
 
 .detail-media-stack.drone-demo-stack .media-photo :is(img, video) {
-  width: min(74%, 320px);
+  width: min(82%, 355px);
 }
 
 .detail-media-stack.frc-award-stack .media-photo :is(img, video) {
