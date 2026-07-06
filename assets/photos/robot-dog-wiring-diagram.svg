@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
+  <title id="title">Simplified robot dog wiring diagram</title>
+  <desc id="desc">Power and signal wiring from a 3S battery to regulators, ESP32, PCA9685 servo driver, and eight MG90S servos.</desc>
+  <rect width="960" height="540" fill="#ffffff"/>
+  <text x="480" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#111111">
+    Simplified Robot Dog Wiring Diagram
+  </text>
+
+  <defs>
+    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#ef2b2d"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#1f5cff"/>
+    </marker>
+    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#00a651"/>
+    </marker>
+    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#8b45ff"/>
+    </marker>
+  </defs>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#111111" stroke="#111111" stroke-width="3">
+    <rect x="42" y="206" width="142" height="122" rx="12" fill="#ffffff"/>
+    <text x="113" y="246" text-anchor="middle" font-weight="700" font-size="18">3S 18650</text>
+    <text x="113" y="274" text-anchor="middle" font-size="16">Lithium Battery</text>
+    <text x="113" y="302" text-anchor="middle" font-size="16">11.1V-12.6V</text>
+
+    <rect x="266" y="118" width="142" height="94" rx="12" fill="#ffffff"/>
+    <text x="337" y="153" text-anchor="middle" font-weight="700">UBEC 8A</text>
+    <text x="337" y="181" text-anchor="middle" font-size="16">Buck to 6V</text>
+
+    <rect x="266" y="324" width="142" height="94" rx="12" fill="#ffffff"/>
+    <text x="337" y="359" text-anchor="middle" font-weight="700">Mini560</text>
+    <text x="337" y="387" text-anchor="middle" font-size="16">Buck to 5V</text>
+
+    <rect x="518" y="118" width="162" height="94" rx="12" fill="#ffffff"/>
+    <text x="599" y="153" text-anchor="middle" font-weight="700">PCA9685</text>
+    <text x="599" y="181" text-anchor="middle" font-size="16">V+ 6V Servo Driver</text>
+
+    <rect x="518" y="324" width="162" height="94" rx="12" fill="#ffffff"/>
+    <text x="599" y="359" text-anchor="middle" font-weight="700">ESP32</text>
+    <text x="599" y="387" text-anchor="middle" font-size="16">Dev Module</text>
+
+    <rect x="778" y="118" width="142" height="94" rx="12" fill="#ffffff"/>
+    <text x="849" y="153" text-anchor="middle" font-weight="700">8x MG90S</text>
+    <text x="849" y="181" text-anchor="middle" font-size="16">Micro Servos</text>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
+    <path d="M184 236 C224 236 224 165 266 165" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
+    <path d="M408 165 H518" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
+    <path d="M680 165 H778" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
+
+    <path d="M184 298 C224 298 224 371 266 371" stroke="#1f5cff" marker-end="url(#arrow-blue)"/>
+    <path d="M408 371 H518" stroke="#1f5cff" marker-end="url(#arrow-blue)"/>
+
+    <path d="M599 324 V212" stroke="#00a651" marker-end="url(#arrow-green)"/>
+    <path d="M680 356 C718 356 718 212 680 184" stroke="#8b45ff" marker-end="url(#arrow-purple)"/>
+  </g>
+
+  <g font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">
+    <text x="454" y="147" fill="#ef2b2d">6V</text>
+    <text x="456" y="393" fill="#1f5cff">5V</text>
+    <text x="618" y="275" fill="#00a651" text-anchor="middle">I2C</text>
+    <text x="618" y="300" fill="#00a651" text-anchor="middle">(SDA/SCL)</text>
+    <text x="718" y="284" fill="#8b45ff">3.3V</text>
+    <text x="718" y="310" fill="#8b45ff">VCC</text>
+  </g>
+
+  <path d="M56 466 H910" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
+  <g stroke="#111111" stroke-width="4" fill="none">
+    <path d="M113 328 V466"/>
+    <path d="M337 418 V466"/>
+    <path d="M599 418 V466"/>
+    <path d="M849 212 V466"/>
+    <circle cx="113" cy="466" r="6" fill="#111111"/>
+    <circle cx="337" cy="466" r="6" fill="#111111"/>
+    <circle cx="599" cy="466" r="6" fill="#111111"/>
+    <circle cx="849" cy="466" r="6" fill="#111111"/>
+  </g>
+  <text x="480" y="510" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111111">
+    Common Ground (GND)
+  </text>
+</svg>

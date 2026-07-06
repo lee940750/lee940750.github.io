@@ -63,6 +63,7 @@
 }
 
 .detail-layout {
+  min-width: 0;
   width: 100%;
   padding-bottom: 0;
 }
@@ -116,6 +117,7 @@
   grid-template-columns: minmax(280px, 0.95fr) minmax(280px, 1.05fr);
   gap: 34px;
   align-items: center;
+  min-width: 0;
   padding: 42px 0;
   border-top: 1px solid var(--line);
 }
@@ -156,6 +158,30 @@
 
 .detail-feature .feature-media {
   grid-template-columns: 1fr;
+  min-width: 0;
+}
+
+.detail-feature .media-photo {
+  min-width: 0;
+}
+
+.detail-feature .feature-media.detail-media-stack {
+  gap: 14px;
+}
+
+.detail-feature .feature-media.detail-media-row {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+
+.detail-media-stack .media-photo :is(img, video),
+.detail-media-row .media-photo :is(img, video) {
+  width: 100%;
+}
+
+.detail-media-row.frc-strategy-media .media-photo :is(img, video) {
+  max-height: 520px;
 }
 
 .detail-feature .media-placeholder.media-primary {
@@ -471,6 +497,14 @@
 
   .detail-feature.reverse .detail-text {
     order: initial;
+  }
+
+  .detail-feature .feature-media.detail-media-row {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-media-row.frc-strategy-media .media-photo :is(img, video) {
+    max-height: none;
   }
 
   .detail-panel {
