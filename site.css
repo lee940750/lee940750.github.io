@@ -427,7 +427,7 @@ h3 {
   width: 100%;
 }
 
-.feature-media.media-stack .media-photo img {
+.feature-media.media-stack .media-photo :is(img, video) {
   width: 100%;
   max-width: 100%;
   max-height: none;
@@ -515,7 +515,7 @@ h3 {
   min-height: 340px;
 }
 
-.media-photo img {
+.media-photo :is(img, video) {
   display: block;
   width: auto;
   max-width: 100%;
@@ -525,6 +525,10 @@ h3 {
   border: 0;
   border-radius: 6px;
   background: transparent;
+}
+
+.media-photo video {
+  background: #f7faf7;
 }
 
 .media-placeholder strong {
@@ -817,7 +821,7 @@ h3 {
     min-height: 280px;
   }
 
-  .media-photo img {
+  .media-photo :is(img, video) {
     max-height: 460px;
   }
 }
@@ -900,7 +904,7 @@ h3 {
     min-height: 220px;
   }
 
-  .media-photo img {
+  .media-photo :is(img, video) {
     max-height: none;
   }
 

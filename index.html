@@ -8,7 +8,7 @@
       name="description"
       content="Robotics systems portfolio of CHENG-HSUAN LEE, an NTU mechanical engineering student who builds full-stack physical robots across mechanical design, embedded control, testing, and team leadership."
     />
-    <link rel="stylesheet" href="site.css?v=20260706-frc-home-fit" />
+    <link rel="stylesheet" href="site.css?v=20260706-media-video" />
   </head>
   <body>
     <header class="site-header">
@@ -148,19 +148,19 @@
               </p>
               <a class="text-link" href="robot-dog.html">Click here: Robot dog case study</a>
             </div>
-            <div class="feature-media" aria-label="Robot dog reserved media areas">
-              <div class="media-placeholder media-primary">
-                <div>
-                  <strong>Demo media reserved</strong>
-                  <span>Robot gait, standing behavior, or gesture demonstration</span>
-                </div>
-              </div>
-              <div class="media-placeholder media-secondary">
-                <div>
-                  <strong>Build media reserved</strong>
-                  <span>Body design, wiring, or leg module close-up</span>
-                </div>
-              </div>
+            <div class="feature-media" aria-label="Robot dog media">
+              <figure class="media-photo media-primary">
+                <video controls muted playsinline preload="metadata" aria-label="Robot dog walking demo video">
+                  <source src="assets/videos/home-robot-dog-demo.mp4" type="video/mp4" />
+                  Robot dog walking demo video.
+                </video>
+              </figure>
+              <figure class="media-photo media-secondary">
+                <img
+                  src="assets/photos/home-robot-dog-build.jpg"
+                  alt="Robot dog control and test screenshot showing system behavior"
+                />
+              </figure>
             </div>
           </article>
 
@@ -199,12 +199,12 @@
                   alt="Drone team with the ball-transfer quadcopter and related builds"
                 />
               </figure>
-              <div class="media-placeholder media-secondary">
-                <div>
-                  <strong>Test media reserved</strong>
-                  <span>Thrust testing, airframe analysis, or electronics layout</span>
-                </div>
-              </div>
+              <figure class="media-photo media-secondary">
+                <img
+                  src="assets/photos/home-drone-test.jpg"
+                  alt="Drone testing and build documentation for the ball-transfer quadcopter"
+                />
+              </figure>
             </div>
           </article>
 
