@@ -1,86 +1,104 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title desc">
-  <title id="title">Simplified robot dog wiring diagram</title>
-  <desc id="desc">Power and signal wiring from a 3S battery to regulators, ESP32, PCA9685 servo driver, and eight MG90S servos.</desc>
-  <rect width="960" height="540" fill="#ffffff"/>
-  <text x="480" y="46" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="30" font-weight="700" fill="#111111">
-    Simplified Robot Dog Wiring Diagram
-  </text>
-
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="620" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Robot dog power and signal wiring diagram</title>
+  <desc id="desc">Block diagram showing a 3S battery feeding 6V and 5V regulators, the ESP32 controller, PCA9685 servo driver, and eight MG90S servos with common ground.</desc>
   <defs>
-    <marker id="arrow-red" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L10,3 L0,6 Z" fill="#ef2b2d"/>
+    <marker id="arrow-red" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#d62828"/>
     </marker>
-    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L10,3 L0,6 Z" fill="#1f5cff"/>
+    <marker id="arrow-blue" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#1d4ed8"/>
     </marker>
-    <marker id="arrow-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L10,3 L0,6 Z" fill="#00a651"/>
+    <marker id="arrow-green" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#047857"/>
     </marker>
-    <marker id="arrow-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
-      <path d="M0,0 L10,3 L0,6 Z" fill="#8b45ff"/>
+    <marker id="arrow-violet" markerWidth="12" markerHeight="8" refX="10" refY="4" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,4 L0,8 Z" fill="#7c3aed"/>
     </marker>
+    <style>
+      .label { font-family: Arial, Helvetica, sans-serif; fill: #111; }
+      .red-label { fill: #d62828; }
+      .blue-label { fill: #1d4ed8; }
+      .green-label { fill: #047857; }
+      .violet-label { fill: #7c3aed; }
+      .title { font-size: 30px; font-weight: 800; }
+      .node-title { font-size: 20px; font-weight: 800; }
+      .node-copy { font-size: 16px; font-weight: 500; fill: #334155; }
+      .small { font-size: 15px; font-weight: 700; }
+      .box { fill: #fff; stroke: #111; stroke-width: 2.5; }
+      .ground { stroke: #111; stroke-width: 7; stroke-linecap: round; }
+      .pin { fill: #111; }
+      .wire-red { fill: none; stroke: #d62828; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-red); }
+      .wire-blue { fill: none; stroke: #1d4ed8; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-blue); }
+      .wire-green { fill: none; stroke: #047857; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-green); }
+      .wire-violet { fill: none; stroke: #7c3aed; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; marker-end: url(#arrow-violet); }
+    </style>
   </defs>
 
-  <g font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#111111" stroke="#111111" stroke-width="3">
-    <rect x="42" y="206" width="142" height="122" rx="12" fill="#ffffff"/>
-    <text x="113" y="246" text-anchor="middle" font-weight="700" font-size="18">3S 18650</text>
-    <text x="113" y="274" text-anchor="middle" font-size="16">Lithium Battery</text>
-    <text x="113" y="302" text-anchor="middle" font-size="16">11.1V-12.6V</text>
+  <rect width="1000" height="620" fill="#fff"/>
+  <text x="500" y="52" text-anchor="middle" class="label title">Robot Dog Power &amp; Signal Wiring</text>
 
-    <rect x="266" y="118" width="142" height="94" rx="12" fill="#ffffff"/>
-    <text x="337" y="153" text-anchor="middle" font-weight="700">UBEC 8A</text>
-    <text x="337" y="181" text-anchor="middle" font-size="16">Buck to 6V</text>
-
-    <rect x="266" y="324" width="142" height="94" rx="12" fill="#ffffff"/>
-    <text x="337" y="359" text-anchor="middle" font-weight="700">Mini560</text>
-    <text x="337" y="387" text-anchor="middle" font-size="16">Buck to 5V</text>
-
-    <rect x="518" y="118" width="162" height="94" rx="12" fill="#ffffff"/>
-    <text x="599" y="153" text-anchor="middle" font-weight="700">PCA9685</text>
-    <text x="599" y="181" text-anchor="middle" font-size="16">V+ 6V Servo Driver</text>
-
-    <rect x="518" y="324" width="162" height="94" rx="12" fill="#ffffff"/>
-    <text x="599" y="359" text-anchor="middle" font-weight="700">ESP32</text>
-    <text x="599" y="387" text-anchor="middle" font-size="16">Dev Module</text>
-
-    <rect x="778" y="118" width="142" height="94" rx="12" fill="#ffffff"/>
-    <text x="849" y="153" text-anchor="middle" font-weight="700">8x MG90S</text>
-    <text x="849" y="181" text-anchor="middle" font-size="16">Micro Servos</text>
+  <g id="battery">
+    <rect class="box" x="52" y="240" width="160" height="116" rx="14"/>
+    <text x="132" y="278" text-anchor="middle" class="label node-title">3S Battery</text>
+    <text x="132" y="306" text-anchor="middle" class="label node-copy">18650 Li-ion pack</text>
+    <text x="132" y="332" text-anchor="middle" class="label node-copy">11.1V-12.6V</text>
   </g>
 
-  <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="6">
-    <path d="M184 236 C224 236 224 165 266 165" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
-    <path d="M408 165 H518" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
-    <path d="M680 165 H778" stroke="#ef2b2d" marker-end="url(#arrow-red)"/>
-
-    <path d="M184 298 C224 298 224 371 266 371" stroke="#1f5cff" marker-end="url(#arrow-blue)"/>
-    <path d="M408 371 H518" stroke="#1f5cff" marker-end="url(#arrow-blue)"/>
-
-    <path d="M599 324 V212" stroke="#00a651" marker-end="url(#arrow-green)"/>
-    <path d="M680 356 C718 356 718 212 680 184" stroke="#8b45ff" marker-end="url(#arrow-purple)"/>
+  <g id="ubec">
+    <rect class="box" x="290" y="122" width="170" height="94" rx="14"/>
+    <text x="375" y="160" text-anchor="middle" class="label node-title">UBEC 8A</text>
+    <text x="375" y="188" text-anchor="middle" class="label node-copy">6V servo rail</text>
   </g>
 
-  <g font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700">
-    <text x="454" y="147" fill="#ef2b2d">6V</text>
-    <text x="456" y="393" fill="#1f5cff">5V</text>
-    <text x="618" y="275" fill="#00a651" text-anchor="middle">I2C</text>
-    <text x="618" y="300" fill="#00a651" text-anchor="middle">(SDA/SCL)</text>
-    <text x="718" y="284" fill="#8b45ff">3.3V</text>
-    <text x="718" y="310" fill="#8b45ff">VCC</text>
+  <g id="mini560">
+    <rect class="box" x="290" y="360" width="170" height="94" rx="14"/>
+    <text x="375" y="398" text-anchor="middle" class="label node-title">Mini560</text>
+    <text x="375" y="426" text-anchor="middle" class="label node-copy">5V logic rail</text>
   </g>
 
-  <path d="M56 466 H910" stroke="#111111" stroke-width="8" stroke-linecap="round"/>
-  <g stroke="#111111" stroke-width="4" fill="none">
-    <path d="M113 328 V466"/>
-    <path d="M337 418 V466"/>
-    <path d="M599 418 V466"/>
-    <path d="M849 212 V466"/>
-    <circle cx="113" cy="466" r="6" fill="#111111"/>
-    <circle cx="337" cy="466" r="6" fill="#111111"/>
-    <circle cx="599" cy="466" r="6" fill="#111111"/>
-    <circle cx="849" cy="466" r="6" fill="#111111"/>
+  <g id="pca">
+    <rect class="box" x="565" y="122" width="190" height="94" rx="14"/>
+    <text x="660" y="158" text-anchor="middle" class="label node-title">PCA9685</text>
+    <text x="660" y="186" text-anchor="middle" class="label node-copy">16-channel servo driver</text>
   </g>
-  <text x="480" y="510" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" fill="#111111">
-    Common Ground (GND)
-  </text>
+
+  <g id="esp32">
+    <rect class="box" x="565" y="360" width="190" height="94" rx="14"/>
+    <text x="660" y="398" text-anchor="middle" class="label node-title">ESP32</text>
+    <text x="660" y="426" text-anchor="middle" class="label node-copy">Main controller</text>
+  </g>
+
+  <g id="servos">
+    <rect class="box" x="820" y="122" width="140" height="94" rx="14"/>
+    <text x="890" y="158" text-anchor="middle" class="label node-title">8x MG90S</text>
+    <text x="890" y="186" text-anchor="middle" class="label node-copy">Leg servos</text>
+  </g>
+
+  <path class="wire-red" d="M212 270 C244 270 250 169 290 169"/>
+  <path class="wire-red" d="M460 169 H565"/>
+  <path class="wire-red" d="M755 169 H820"/>
+  <text x="507" y="137" text-anchor="middle" class="label small red-label">6V servo power</text>
+
+  <path class="wire-blue" d="M212 326 C244 326 250 407 290 407"/>
+  <path class="wire-blue" d="M460 407 H565"/>
+  <text x="512" y="446" text-anchor="middle" class="label small blue-label">5V controller power</text>
+
+  <path class="wire-green" d="M660 360 V216"/>
+  <text x="690" y="295" class="label small green-label">I2C: SDA / SCL</text>
+
+  <path class="wire-violet" d="M755 407 C790 407 790 216 755 184"/>
+  <text x="784" y="304" class="label small violet-label">3.3V logic ref.</text>
+
+  <path class="ground" d="M58 536 H942"/>
+  <g stroke="#111" stroke-width="3.5" stroke-linecap="round">
+    <path d="M132 356 V536"/>
+    <path d="M375 454 V536"/>
+    <path d="M660 454 V536"/>
+    <path d="M890 216 V536"/>
+  </g>
+  <circle class="pin" cx="132" cy="536" r="6"/>
+  <circle class="pin" cx="375" cy="536" r="6"/>
+  <circle class="pin" cx="660" cy="536" r="6"/>
+  <circle class="pin" cx="890" cy="536" r="6"/>
+  <text x="500" y="578" text-anchor="middle" class="label node-title">Common Ground (GND)</text>
 </svg>

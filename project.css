@@ -184,6 +184,22 @@
   max-height: 520px;
 }
 
+.detail-media-stack.robot-build-stack .media-photo :is(img, video) {
+  width: min(66%, 285px);
+}
+
+.detail-media-stack.drone-test-stack .media-photo :is(img, video) {
+  width: min(82%, 322px);
+}
+
+.detail-media-stack.drone-demo-stack .media-photo :is(img, video) {
+  width: min(65%, 280px);
+}
+
+.detail-media-stack.frc-award-stack .media-photo :is(img, video) {
+  width: min(91%, 395px);
+}
+
 .detail-feature .media-placeholder.media-primary {
   min-height: 360px;
 }
@@ -505,6 +521,13 @@
 
   .detail-media-row.frc-strategy-media .media-photo :is(img, video) {
     max-height: none;
+  }
+
+  .detail-media-stack.robot-build-stack .media-photo :is(img, video),
+  .detail-media-stack.drone-test-stack .media-photo :is(img, video),
+  .detail-media-stack.drone-demo-stack .media-photo :is(img, video),
+  .detail-media-stack.frc-award-stack .media-photo :is(img, video) {
+    width: 100%;
   }
 
   .detail-panel {
