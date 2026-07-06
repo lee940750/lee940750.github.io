@@ -449,6 +449,19 @@ h3 {
   width: min(46%, 310px);
 }
 
+.feature-media.robot-dog-media,
+.feature-media.drone-media {
+  gap: 14px;
+}
+
+.feature-media.robot-dog-media .media-photo :is(img, video) {
+  width: min(70%, 430px);
+}
+
+.feature-media.drone-media .media-photo :is(img, video) {
+  width: min(76%, 390px);
+}
+
 .feature-media.frc-media {
   gap: 14px;
 }
@@ -918,6 +931,11 @@ h3 {
 
   .feature-media.mechanism-media .media-photo img,
   .feature-media.mechanism-media .portrait-photo img {
+    width: 100%;
+  }
+
+  .feature-media.robot-dog-media .media-photo :is(img, video),
+  .feature-media.drone-media .media-photo :is(img, video) {
     width: 100%;
   }
 
