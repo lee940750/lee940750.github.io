@@ -707,6 +707,186 @@ h3 {
   color: var(--muted);
 }
 
+.document-library {
+  display: grid;
+  gap: 18px;
+}
+
+.document-resume-card,
+.document-group,
+.document-subgroup {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.document-resume-card {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.3fr) minmax(260px, 1fr);
+  gap: 16px;
+  align-items: center;
+  padding: 22px 24px;
+  border: 2px solid #111;
+  background: #fff;
+}
+
+.document-resume-card span,
+.document-group-heading span,
+.document-link span {
+  color: var(--accent);
+  font-size: 0.74rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
+.document-resume-card span {
+  display: block;
+}
+
+.document-resume-card strong {
+  color: var(--ink);
+  font-size: 1.28rem;
+  line-height: 1.2;
+}
+
+.document-resume-card p {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.document-group {
+  padding: 26px;
+}
+
+.document-group-heading {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.document-group-heading h3 {
+  margin: 0;
+  font-size: clamp(1.45rem, 2.5vw, 2.2rem);
+  line-height: 1.08;
+}
+
+.document-group-heading p {
+  max-width: 820px;
+  margin: 0;
+  color: var(--muted);
+}
+
+.document-project-grid,
+.other-course-grid {
+  display: grid;
+  gap: 14px;
+}
+
+.document-project-grid {
+  grid-template-columns: minmax(320px, 1.28fr) repeat(2, minmax(260px, 0.86fr));
+}
+
+.other-course-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.document-subgroup {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  min-width: 0;
+  padding: 20px;
+}
+
+.document-subgroup h4 {
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.2;
+}
+
+.document-subgroup > p {
+  margin: -6px 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.document-list {
+  display: grid;
+  gap: 10px;
+}
+
+.document-link {
+  display: grid;
+  gap: 7px;
+  min-width: 0;
+  padding: 16px;
+  color: var(--ink);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  transition:
+    border-color 160ms ease,
+    background 160ms ease,
+    transform 160ms ease;
+}
+
+.document-link.featured {
+  border: 2px solid #111;
+  background: #fbfff9;
+}
+
+.document-link:hover,
+.document-link:focus-visible {
+  border-color: var(--accent-dark);
+  background: #f4f0df;
+  transform: translateY(-1px);
+}
+
+.document-link strong {
+  color: var(--ink);
+  line-height: 1.22;
+}
+
+.document-link p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.94rem;
+}
+
+.document-mini-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.document-mini-list.document-mini-list-two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.document-mini-list a {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  padding: 10px 12px;
+  color: var(--accent-dark);
+  font-size: 0.94rem;
+  font-weight: 800;
+  line-height: 1.2;
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+}
+
+.document-mini-list a:hover,
+.document-mini-list a:focus-visible {
+  color: #111;
+  border-color: var(--accent-dark);
+  background: #f4f0df;
+}
+
 .contact-section {
   display: grid;
   grid-template-columns: minmax(320px, 0.95fr) minmax(360px, 1.05fr);
@@ -825,7 +1005,9 @@ h3 {
   .hero-proof,
   .standout-grid,
   .skills-layout,
-  .file-placeholder-grid {
+  .file-placeholder-grid,
+  .document-project-grid,
+  .other-course-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -899,6 +1081,9 @@ h3 {
   .standout-grid,
   .skills-layout,
   .file-placeholder-grid,
+  .document-resume-card,
+  .document-project-grid,
+  .other-course-grid,
   .feature-media,
   .research-focus,
   .placeholder-row,
@@ -915,6 +1100,16 @@ h3 {
   .media-placeholder.media-secondary,
   .file-placeholder {
     min-height: 220px;
+  }
+
+  .document-group,
+  .document-subgroup {
+    padding: 18px;
+  }
+
+  .document-mini-list,
+  .document-mini-list.document-mini-list-two {
+    grid-template-columns: 1fr;
   }
 
   .media-photo :is(img, video) {
