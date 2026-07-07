@@ -776,6 +776,92 @@ h3 {
   color: var(--muted);
 }
 
+.document-tabs {
+  display: grid;
+  gap: 16px;
+  min-width: 0;
+}
+
+.document-tab-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.document-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+.document-tab-list label {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  color: var(--accent-dark);
+  font-size: 0.94rem;
+  font-weight: 850;
+  line-height: 1.1;
+  cursor: pointer;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  transition:
+    color 160ms ease,
+    border-color 160ms ease,
+    background 160ms ease;
+}
+
+.document-tab-list label:hover {
+  color: #111;
+  border-color: var(--accent-dark);
+  background: #f4f0df;
+}
+
+.document-tab-panels {
+  min-width: 0;
+}
+
+.document-tab-panels > .document-tab-panel {
+  display: none;
+}
+
+#major-tab-drone:checked ~ .document-tab-list label[for="major-tab-drone"],
+#major-tab-robot:checked ~ .document-tab-list label[for="major-tab-robot"],
+#major-tab-mechanism:checked ~ .document-tab-list label[for="major-tab-mechanism"],
+#other-tab-numerical:checked ~ .document-tab-list label[for="other-tab-numerical"],
+#other-tab-thermal:checked ~ .document-tab-list label[for="other-tab-thermal"],
+#other-tab-experiments:checked ~ .document-tab-list label[for="other-tab-experiments"] {
+  color: #fff;
+  border-color: #111;
+  background: var(--accent-dark);
+}
+
+#major-tab-drone:focus-visible ~ .document-tab-list label[for="major-tab-drone"],
+#major-tab-robot:focus-visible ~ .document-tab-list label[for="major-tab-robot"],
+#major-tab-mechanism:focus-visible ~ .document-tab-list label[for="major-tab-mechanism"],
+#other-tab-numerical:focus-visible ~ .document-tab-list label[for="other-tab-numerical"],
+#other-tab-thermal:focus-visible ~ .document-tab-list label[for="other-tab-thermal"],
+#other-tab-experiments:focus-visible ~ .document-tab-list label[for="other-tab-experiments"] {
+  outline: 3px solid rgba(15, 118, 110, 0.25);
+  outline-offset: 2px;
+}
+
+#major-tab-drone:checked ~ .document-tab-panels #major-panel-drone,
+#major-tab-robot:checked ~ .document-tab-panels #major-panel-robot,
+#major-tab-mechanism:checked ~ .document-tab-panels #major-panel-mechanism,
+#other-tab-numerical:checked ~ .document-tab-panels #other-panel-numerical,
+#other-tab-thermal:checked ~ .document-tab-panels #other-panel-thermal,
+#other-tab-experiments:checked ~ .document-tab-panels #other-panel-experiments {
+  display: grid;
+}
+
 .document-project-grid,
 .other-course-grid {
   display: grid;
@@ -1105,6 +1191,16 @@ h3 {
   .document-group,
   .document-subgroup {
     padding: 18px;
+  }
+
+  .document-tab-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .document-tab-list label {
+    justify-content: flex-start;
+    width: 100%;
   }
 
   .document-mini-list,

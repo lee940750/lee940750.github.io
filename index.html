@@ -8,7 +8,7 @@
       name="description"
       content="Robotics systems portfolio of CHENG-HSUAN LEE, an NTU mechanical engineering student who builds full-stack physical robots across mechanical design, embedded control, testing, and team leadership."
     />
-    <link rel="stylesheet" href="site.css?v=20260707-document-library" />
+    <link rel="stylesheet" href="site.css?v=20260707-document-tabs" />
   </head>
   <body>
     <header class="site-header">
@@ -439,12 +439,22 @@
           <article class="document-group document-group-wide">
             <div class="document-group-heading">
               <span>Major Project Reports</span>
-              <h3>Final reports first</h3>
               <p>Core robotics and mechanism documents, ordered so the strongest project evidence is easiest to scan.</p>
             </div>
 
-            <div class="document-project-grid">
-              <section class="document-subgroup" aria-labelledby="drone-documents-title">
+            <div class="document-tabs document-tabs-major" aria-label="Major project report categories">
+              <input class="document-tab-input" type="radio" name="major-document-tabs" id="major-tab-drone" checked />
+              <input class="document-tab-input" type="radio" name="major-document-tabs" id="major-tab-robot" />
+              <input class="document-tab-input" type="radio" name="major-document-tabs" id="major-tab-mechanism" />
+
+              <div class="document-tab-list" aria-label="Choose a major project category">
+                <label for="major-tab-drone">Drone</label>
+                <label for="major-tab-robot">Robot Dog</label>
+                <label for="major-tab-mechanism">Mechanism</label>
+              </div>
+
+              <div class="document-tab-panels">
+              <section class="document-subgroup document-tab-panel" id="major-panel-drone" aria-labelledby="drone-documents-title">
                 <h4 id="drone-documents-title">Quadcopter Ball-Transfer Drone</h4>
                 <p>Course: Practice of Mechanical Engineering</p>
                 <div class="document-list">
@@ -502,7 +512,7 @@
                 </div>
               </section>
 
-              <section class="document-subgroup" aria-labelledby="robot-documents-title">
+              <section class="document-subgroup document-tab-panel" id="major-panel-robot" aria-labelledby="robot-documents-title">
                 <h4 id="robot-documents-title">Quadruped Robot Dog</h4>
                 <p>Course: Microprocessor Controlled Systems</p>
                 <div class="document-list">
@@ -524,7 +534,7 @@
                 </div>
               </section>
 
-              <section class="document-subgroup" aria-labelledby="mechanism-documents-title">
+              <section class="document-subgroup document-tab-panel" id="major-panel-mechanism" aria-labelledby="mechanism-documents-title">
                 <h4 id="mechanism-documents-title">Foldable Ball Transfer Mechanism</h4>
                 <p>Course: Machine Design Theory</p>
                 <div class="document-list">
@@ -540,6 +550,7 @@
                   </a>
                 </div>
               </section>
+              </div>
             </div>
           </article>
 
@@ -550,8 +561,19 @@
               <p>Supplementary technical documents grouped by course name, with final projects placed first where applicable.</p>
             </div>
 
-            <div class="other-course-grid">
-              <section class="document-subgroup" aria-labelledby="numerical-documents-title">
+            <div class="document-tabs document-tabs-other" aria-label="Other coursework document categories">
+              <input class="document-tab-input" type="radio" name="other-document-tabs" id="other-tab-numerical" checked />
+              <input class="document-tab-input" type="radio" name="other-document-tabs" id="other-tab-thermal" />
+              <input class="document-tab-input" type="radio" name="other-document-tabs" id="other-tab-experiments" />
+
+              <div class="document-tab-list" aria-label="Choose an other coursework category">
+                <label for="other-tab-numerical">Numerical Analysis</label>
+                <label for="other-tab-thermal">Refrigeration</label>
+                <label for="other-tab-experiments">ME Experiments</label>
+              </div>
+
+              <div class="document-tab-panels">
+              <section class="document-subgroup document-tab-panel" id="other-panel-numerical" aria-labelledby="numerical-documents-title">
                 <h4 id="numerical-documents-title">Numerical Analysis</h4>
                 <p>Coursework evidence in computational methods and numerical problem solving.</p>
                 <div class="document-list">
@@ -568,7 +590,7 @@
                 </div>
               </section>
 
-              <section class="document-subgroup" aria-labelledby="thermal-documents-title">
+              <section class="document-subgroup document-tab-panel" id="other-panel-thermal" aria-labelledby="thermal-documents-title">
                 <h4 id="thermal-documents-title">Principles of Air-Conditioning and Refrigeration</h4>
                 <p>Coursework evidence in thermal systems, heat pump applications, and technical literature synthesis.</p>
                 <div class="document-list">
@@ -585,7 +607,7 @@
                 </div>
               </section>
 
-              <section class="document-subgroup" aria-labelledby="experiment-documents-title">
+              <section class="document-subgroup document-tab-panel" id="other-panel-experiments" aria-labelledby="experiment-documents-title">
                 <h4 id="experiment-documents-title">Mechanical Engineering Experiments</h4>
                 <p>Coursework evidence in measurement, instrumentation, data reduction, and experimental reasoning.</p>
                 <div class="document-mini-list document-mini-list-two" aria-label="Mechanical engineering experiment reports">
@@ -599,6 +621,7 @@
                   <a href="assets/documents/mechanical-engineering-experiments-i-report-1.pdf" target="_blank" rel="noopener">Experiments I - Report 1</a>
                 </div>
               </section>
+              </div>
             </div>
           </article>
         </div>
