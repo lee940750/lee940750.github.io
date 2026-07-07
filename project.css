@@ -340,6 +340,33 @@
   padding-top: 38px;
 }
 
+.project-video-reel {
+  padding-top: 38px;
+}
+
+.feature-video {
+  display: grid;
+  gap: 10px;
+  max-width: 880px;
+  margin: 0;
+}
+
+.feature-video video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #f7faf7;
+}
+
+.feature-video figcaption {
+  color: var(--ink);
+  font-size: 0.95rem;
+  font-weight: 800;
+}
+
 .demo-video-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
