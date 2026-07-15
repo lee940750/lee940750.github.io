@@ -5,3 +5,6 @@
 # Common local/editor files.
 .DS_Store
 Thumbs.db
+tmp/
+GPT record/
+CHENG HSUAN LEE CV .pdf

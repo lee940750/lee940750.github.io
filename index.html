@@ -8,7 +8,7 @@
       name="description"
       content="Robotics systems portfolio of CHENG-HSUAN LEE, an NTU mechanical engineering student who builds full-stack physical robots across mechanical design, embedded control, testing, and team leadership."
     />
-    <link rel="stylesheet" href="site.css?v=20260707-document-tabs" />
+    <link rel="stylesheet" href="site.css?v=20260715-asr-cv" />
   </head>
   <body>
     <header class="site-header">
@@ -39,8 +39,8 @@
               <span>Mechanical Engineering, National Taiwan University</span>
             </article>
             <article>
-              <strong>4+</strong>
-              <span>team-led robotics and mechanism builds</span>
+              <strong>ASR Lab</strong>
+              <span>12-DoF quadruped locomotion, Isaac Lab RL, and sim-to-real debugging</span>
             </article>
             <article>
               <strong>A+ / full marks</strong>
@@ -70,7 +70,7 @@
         <div class="standout-grid" aria-label="Applicant differentiation signals">
           <article>
             <span>Full-stack robotics builder</span>
-            <strong>Mechanical design, electronics layout, embedded control, and test behavior connect in my projects.</strong>
+            <strong>Mechanical design, actuator packaging, embedded control, robot learning, and test behavior connect in my projects.</strong>
           </article>
           <article>
             <span>Reference-quality drone system</span>
@@ -95,10 +95,11 @@
           </div>
           <div class="profile-copy">
             <p>
-              My strongest projects sit at the boundary between mechanical design and control: a
-              quadruped robot dog, a ball-transfer quadcopter, a deployable transfer mechanism, and
-              FRC competition robots. I repeatedly took roles where hardware, code, testing, and team
-              coordination had to work together before a deadline.
+              My strongest work sits at the boundary between mechanical design, control, and robot
+              learning: ASR Lab quadruped locomotion research, a course-built quadruped robot dog, a
+              ball-transfer quadcopter, a deployable transfer mechanism, and FRC competition robots. I
+              repeatedly took roles where hardware, code, testing, and team coordination had to work
+              together before a deadline.
             </p>
             <p>
               The pattern across my work is simple: define the physical constraint, build a repairable
@@ -107,6 +108,48 @@
               research.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section class="section lab-band current-research-band" aria-labelledby="current-research-title">
+        <div class="section-heading compact-heading">
+          <p class="section-kicker">Current Robotics Research</p>
+          <h2 id="current-research-title">Moving from course robots into learning-based quadruped locomotion.</h2>
+          <p>
+            In NTUME ASR Lab, I am building toward a 12-DoF quadruped workflow that connects
+            actuator/reducer design, motor communication, Isaac Lab reinforcement learning, and physical
+            deployment debugging.
+          </p>
+        </div>
+        <div class="skills-layout" aria-label="Current ASR Lab research signals">
+          <article>
+            <h3>12-DoF Quadruped</h3>
+            <p>
+              Working with legged robot models, URDF preparation, observation/action mapping, and
+              hardware-aware deployment checks.
+            </p>
+          </article>
+          <article>
+            <h3>Robot Learning</h3>
+            <p>
+              Studying Isaac Lab locomotion workflows with DWAQ/PPO training, reward shaping, gait
+              stability, and sim-to-real mismatch.
+            </p>
+          </article>
+          <article>
+            <h3>Actuation Hardware</h3>
+            <p>
+              Iterating actuator packaging and compact cycloidal/planetary reducer concepts around
+              torque, backlash, bearings, tolerance, and serviceability.
+            </p>
+          </article>
+          <article>
+            <h3>Motor Debugging</h3>
+            <p>
+              Building motor-control diagnostics around speed/position commands, current feedback,
+              calibration, serial readback, and wiring-level failure isolation.
+            </p>
+          </article>
         </div>
       </section>
 
@@ -309,13 +352,13 @@
             <p>
               My target direction is legged robotics and robot hardware that survives real testing:
               actuator and gearbox design, mechanism-control integration, embedded motor communication,
-              locomotion experiments, and the gap between simulation and physical behavior.
+              reinforcement-learning locomotion, and the gap between simulation and physical behavior.
             </p>
             <div class="research-focus" aria-label="Research interests">
               <span>Legged robotics</span>
-              <span>Actuator design</span>
-              <span>Embedded control</span>
-              <span>Real-world testing</span>
+              <span>Robot learning</span>
+              <span>Actuator / reducer design</span>
+              <span>Sim-to-real testing</span>
             </div>
           </div>
         </div>
@@ -330,22 +373,22 @@
           <article>
             <h3>Mechanical Systems</h3>
             <p>
-              Mechanism design, 3D printing, machining, CNC, soldering, engineering drawings,
-              serviceability planning, and strength-weight tradeoffs.
+              Mechanism design, actuator packaging, cycloidal/planetary reducer concepts, CAD,
+              3D printing, machining, engineering drawings, and serviceability planning.
             </p>
           </article>
           <article>
-            <h3>Embedded Control</h3>
+            <h3>Robot Learning and Control</h3>
             <p>
-              Arduino, ESP32, MATLAB, Simulink, C++, Python, servo control, actuator communication,
-              calibration, and practical control implementation.
+              Isaac Lab, DWAQ/PPO workflows, reward/observation/action-space tuning, URDF, ROS,
+              Pinocchio, MATLAB, Simulink, Python, C++, and practical control implementation.
             </p>
           </article>
           <article>
-            <h3>Testing and Debugging</h3>
+            <h3>Embedded Debugging</h3>
             <p>
-              Thrust testing, vibration and resonance diagnosis, signal-chain debugging, motion analysis,
-              experimental records, and failure-mode isolation.
+              ESP32, Teensy, Arduino, PCA9685, RS485, UART, I2C, PWM, motor calibration,
+              speed/position/current feedback, signal-chain debugging, and failure-mode isolation.
             </p>
           </article>
           <article>
@@ -430,11 +473,11 @@
         </div>
 
         <div class="document-library" aria-label="Application materials and supporting reports">
-          <a class="document-resume-card" href="assets/documents/cheng-hsuan-lee-cv.pdf" target="_blank" rel="noopener">
+          <a class="document-resume-card" href="assets/documents/cheng-hsuan-lee-cv.pdf?v=20260715-academic-cv" target="_blank" rel="noopener">
             <span>Resume</span>
             <div>
               <strong>Cheng-Hsuan Lee CV</strong>
-              <p>Open the latest CV PDF with ASR Lab work, engineering projects, coursework, and competition record.</p>
+              <p>Open the academic CV with ASR Lab quadruped research, engineering projects, coursework, and competition record.</p>
             </div>
           </a>
 
