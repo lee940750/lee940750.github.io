@@ -464,35 +464,6 @@
   border-bottom: 0;
 }
 
-.capability-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
-}
-
-.capability-grid article {
-  min-height: 180px;
-  padding: 20px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: var(--panel);
-}
-
-.capability-grid span {
-  display: block;
-  margin-bottom: 12px;
-  color: var(--warm);
-  font-size: 0.74rem;
-  font-weight: 850;
-  text-transform: uppercase;
-}
-
-.capability-grid strong {
-  display: block;
-  color: var(--ink);
-  line-height: 1.35;
-}
-
 .applicant-signal {
   padding-bottom: 46px;
 }
@@ -560,7 +531,6 @@
   .detail-grid,
   .decision-grid,
   .system-flow,
-  .capability-grid,
   .signal-grid,
   .project-media-plan {
     grid-template-columns: 1fr;
@@ -637,7 +607,6 @@
   }
 
   .flow-step,
-  .capability-grid article,
   .signal-grid article {
     min-height: auto;
   }
