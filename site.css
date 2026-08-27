@@ -303,6 +303,18 @@ h3 {
   color: var(--muted);
 }
 
+.laboratory-feature {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(340px, 1.05fr);
+  gap: 42px;
+  align-items: center;
+  padding: 14px 0 28px;
+}
+
+.laboratory-skills {
+  margin-top: 28px;
+}
+
 .project-showcase {
   display: grid;
   gap: 0;
@@ -553,8 +565,8 @@ h3 {
   border-color: var(--accent-dark);
 }
 
-.research-detail-link {
-  margin-top: 22px;
+.laboratory-detail-link {
+  margin-top: 2px;
 }
 
 .research-focus {
@@ -1057,6 +1069,7 @@ h3 {
 
 @media (max-width: 980px) {
   .section-grid,
+  .laboratory-feature,
   .project-feature,
   .awards-layout,
   .contact-section {
@@ -1158,6 +1171,10 @@ h3 {
   .project-feature {
     gap: 24px;
     padding: 36px 0;
+  }
+
+  .laboratory-feature {
+    gap: 24px;
   }
 
   .media-placeholder.media-primary,
