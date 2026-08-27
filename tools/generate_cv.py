@@ -274,7 +274,7 @@ def build_story():
     story.append(PageBreak())
 
     story += section("SELECTED ENGINEERING PROJECTS")
-    story.append(p("<b>Quadruped Robot Dog - Team Lead, Mechanical Designer, Controls Developer</b>", role_style))
+    story.append(p("<b>Self-Built Simple Robot Dog - Team Lead, Mechanical Designer, Controls Developer</b>", role_style))
     story.append(p("<i>Microprocessor Controlled Systems | A+ outcome | ESP32, PCA9685, MATLAB, Arduino, 3D-printed structure</i>", italic_style))
     story += bullets([
         "Designed and integrated a compact eight-servo quadruped platform around serviceability, wiring, battery placement, center-of-gravity position, and repeated repair during gait testing.",
