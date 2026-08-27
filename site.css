@@ -433,6 +433,10 @@ h3 {
   width: min(86%, 500px);
 }
 
+.feature-media.asr-lab-media .media-placeholder {
+  min-height: 250px;
+}
+
 .feature-media.media-stack .media-placeholder {
   width: 100%;
   min-height: 230px;
@@ -547,6 +551,10 @@ h3 {
   color: #111;
   background: #f4f0df;
   border-color: var(--accent-dark);
+}
+
+.research-detail-link {
+  margin-top: 22px;
 }
 
 .research-focus {
