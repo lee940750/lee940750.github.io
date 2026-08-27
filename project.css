@@ -205,31 +205,46 @@
   width: min(91%, 395px);
 }
 
-.detail-feature .feature-media.asr-hardware-mosaic {
+.detail-feature .feature-media.asr-hardware-mosaic,
+.detail-feature .feature-media.asr-media-gallery {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
-  align-items: center;
+  align-items: stretch;
 }
 
-.asr-hardware-mosaic .media-photo:first-child {
+.asr-hardware-mosaic .media-photo:first-child,
+.asr-media-gallery .asr-gallery-wide {
   grid-column: 1 / -1;
 }
 
-.asr-hardware-mosaic .media-photo :is(img, video) {
+.asr-hardware-mosaic .media-photo,
+.asr-media-gallery .media-photo {
+  min-height: 0;
+}
+
+.asr-hardware-mosaic .media-photo :is(img, video),
+.asr-media-gallery .media-photo :is(img, video) {
   width: 100%;
-  max-height: 300px;
+  height: 190px;
+  max-height: none;
   object-fit: contain;
+}
+
+.asr-hardware-mosaic .media-photo:first-child :is(img, video) {
+  width: min(86%, 420px);
+  height: 260px;
 }
 
 .asr-hardware-mosaic .media-photo:nth-child(n + 2) :is(img, video) {
-  max-height: 235px;
+  height: 220px;
 }
 
-.detail-media-stack.asr-training-stack .media-photo :is(img, video),
-.detail-media-stack.asr-deployment-stack .media-photo :is(img, video) {
-  width: 100%;
-  max-height: 460px;
-  object-fit: contain;
+.asr-training-gallery .asr-gallery-wide :is(img, video) {
+  height: 230px;
+}
+
+.asr-deployment-gallery .asr-gallery-wide :is(img, video) {
+  height: 235px;
 }
 
 .detail-feature .media-placeholder.media-primary {
@@ -591,9 +606,7 @@
   .detail-media-stack.robot-build-stack .media-photo :is(img, video),
   .detail-media-stack.drone-test-stack .media-photo :is(img, video),
   .detail-media-stack.drone-demo-stack .media-photo :is(img, video),
-  .detail-media-stack.frc-award-stack .media-photo :is(img, video),
-  .detail-media-stack.asr-training-stack .media-photo :is(img, video),
-  .detail-media-stack.asr-deployment-stack .media-photo :is(img, video) {
+  .detail-media-stack.frc-award-stack .media-photo :is(img, video) {
     width: 100%;
   }
 
@@ -640,12 +653,24 @@
     min-height: auto;
   }
 
-  .detail-feature .feature-media.asr-hardware-mosaic {
+  .detail-feature .feature-media.asr-hardware-mosaic,
+  .detail-feature .feature-media.asr-media-gallery {
     grid-template-columns: 1fr;
   }
 
-  .asr-hardware-mosaic .media-photo:first-child {
+  .asr-hardware-mosaic .media-photo:first-child,
+  .asr-media-gallery .asr-gallery-wide {
     grid-column: auto;
+  }
+
+  .asr-hardware-mosaic .media-photo :is(img, video),
+  .asr-hardware-mosaic .media-photo:first-child :is(img, video),
+  .asr-media-gallery .media-photo :is(img, video),
+  .asr-training-gallery .asr-gallery-wide :is(img, video),
+  .asr-deployment-gallery .asr-gallery-wide :is(img, video) {
+    width: 100%;
+    height: auto;
+    max-height: 360px;
   }
 
   .takeaway-band {
