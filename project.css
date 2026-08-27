@@ -256,8 +256,14 @@
   max-height: 310px;
 }
 
-.asr-video-grid {
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+.demo-video-grid.asr-video-grid {
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 22px;
+}
+
+.asr-video-grid .demo-video-card video {
+  aspect-ratio: 4 / 3;
+  max-height: 360px;
 }
 
 .detail-feature .media-placeholder.media-primary {
@@ -654,6 +660,10 @@
   }
 
   .demo-video-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .demo-video-grid.asr-video-grid {
     grid-template-columns: 1fr;
   }
 
