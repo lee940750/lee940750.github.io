@@ -205,6 +205,33 @@
   width: min(91%, 395px);
 }
 
+.detail-feature .feature-media.asr-hardware-mosaic {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  align-items: center;
+}
+
+.asr-hardware-mosaic .media-photo:first-child {
+  grid-column: 1 / -1;
+}
+
+.asr-hardware-mosaic .media-photo :is(img, video) {
+  width: 100%;
+  max-height: 300px;
+  object-fit: contain;
+}
+
+.asr-hardware-mosaic .media-photo:nth-child(n + 2) :is(img, video) {
+  max-height: 235px;
+}
+
+.detail-media-stack.asr-training-stack .media-photo :is(img, video),
+.detail-media-stack.asr-deployment-stack .media-photo :is(img, video) {
+  width: 100%;
+  max-height: 460px;
+  object-fit: contain;
+}
+
 .detail-feature .media-placeholder.media-primary {
   min-height: 360px;
 }
@@ -564,7 +591,9 @@
   .detail-media-stack.robot-build-stack .media-photo :is(img, video),
   .detail-media-stack.drone-test-stack .media-photo :is(img, video),
   .detail-media-stack.drone-demo-stack .media-photo :is(img, video),
-  .detail-media-stack.frc-award-stack .media-photo :is(img, video) {
+  .detail-media-stack.frc-award-stack .media-photo :is(img, video),
+  .detail-media-stack.asr-training-stack .media-photo :is(img, video),
+  .detail-media-stack.asr-deployment-stack .media-photo :is(img, video) {
     width: 100%;
   }
 
@@ -609,6 +638,14 @@
   .flow-step,
   .signal-grid article {
     min-height: auto;
+  }
+
+  .detail-feature .feature-media.asr-hardware-mosaic {
+    grid-template-columns: 1fr;
+  }
+
+  .asr-hardware-mosaic .media-photo:first-child {
+    grid-column: auto;
   }
 
   .takeaway-band {
