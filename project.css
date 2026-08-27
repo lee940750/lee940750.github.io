@@ -243,12 +243,21 @@
   max-height: 310px;
 }
 
+.asr-hardware-mosaic .media-photo.asr-compact-photo :is(img, video) {
+  width: min(86%, 340px);
+  max-height: 285px;
+}
+
 .asr-training-gallery .asr-gallery-wide :is(img, video) {
   max-height: 310px;
 }
 
 .asr-deployment-gallery .asr-gallery-wide :is(img, video) {
   max-height: 310px;
+}
+
+.asr-video-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .detail-feature .media-placeholder.media-primary {
