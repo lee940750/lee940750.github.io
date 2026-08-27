@@ -8,7 +8,7 @@
       name="description"
       content="Robotics systems portfolio of CHENG-HSUAN LEE, an NTU mechanical engineering student who builds full-stack physical robots across mechanical design, embedded control, testing, and team leadership."
     />
-    <link rel="stylesheet" href="site.css?v=20260827-laboratory-section" />
+    <link rel="stylesheet" href="site.css?v=20260827-lab-spotlight" />
   </head>
   <body>
     <header class="site-header">
@@ -83,37 +83,62 @@
         </div>
       </section>
 
-      <section id="laboratory" class="section lab-band current-research-band" aria-labelledby="laboratory-title">
-        <div class="section-heading compact-heading">
+      <section id="laboratory" class="section lab-band current-research-band lab-spotlight" aria-labelledby="laboratory-title">
+        <div class="section-heading compact-heading laboratory-heading">
           <p class="section-kicker">Laboratory</p>
           <h2 id="laboratory-title">NTUME ASR Lab | Control Systems Laboratory Experience</h2>
           <p>
-            My laboratory work is the bridge between my course-built robots and graduate-level robotics
-            research: I work on the Rifle 12-DoF quadruped platform across reducer hardware, motor
-            communication, Isaac Lab locomotion training, ROS2 deployment, and sim-to-real failure
-            analysis.
+            My most graduate-relevant experience is in NTUME ASR Lab, where I work on the Rifle 12-DoF
+            quadruped platform across actuator/reducer hardware, motor communication, Isaac Lab
+            locomotion training, ROS2 deployment, and sim-to-real failure analysis.
           </p>
         </div>
+
+        <div class="laboratory-proof-strip" aria-label="ASR Lab quick research evidence">
+          <article>
+            <span>Research Platform</span>
+            <strong>Rifle 12-DoF quadruped for learned locomotion and physical deployment.</strong>
+          </article>
+          <article>
+            <span>Hardware Depth</span>
+            <strong>Cycloidal and planetary reducer work tied to actuator packaging and reliability.</strong>
+          </article>
+          <article>
+            <span>Control Stack</span>
+            <strong>Motor communication packets, Arduino-based board programming, ODrive/Teensy debugging.</strong>
+          </article>
+          <article>
+            <span>Learning Pipeline</span>
+            <strong>Isaac Lab RL/IL training, TensorBoard records, ROS2 launch, rosbag, and topic review.</strong>
+          </article>
+        </div>
+
         <div class="laboratory-feature">
           <div class="project-text">
             <p class="tag">Learning-Based Quadruped Robot Integration</p>
             <p>
-              This is the clearest signal of my research direction: not only building robot hardware,
-              but understanding how actuator tolerance, motor packets, training choices, sensor feedback,
-              and real deployment logs shape locomotion behavior.
+              This work gives me a research view of robotics that course projects alone cannot provide:
+              the same walking failure may involve reducer tolerance, motor-current limits, packet
+              communication, IMU interpretation, reward design, or a mismatch between the simulated and
+              physical standing pose.
+            </p>
+            <p>
+              The important signal is scope. I am not only using a robotics framework; I am learning how
+              the hardware, controller, training run, log data, and physical robot failure point back to
+              one another during real deployment.
             </p>
             <div class="project-evidence" aria-label="ASR Lab summary">
               <article>
-                <span>Problem</span>
-                <strong>Make learning-based locomotion usable on hardware with real actuator limits.</strong>
+                <span>Research Question</span>
+                <strong>How can learned locomotion remain usable when real motors, reducers, sensors, and joints are imperfect?</strong>
               </article>
               <article>
-                <span>My Role</span>
-                <strong>Contributed reducer fabrication, control-board programming, training logs, and deployment debugging.</strong>
+                <span>Hands-On Contribution</span>
+                <strong>Worked on reducer fabrication, control-board programming, training records, ROS2 deployment, and failure diagnosis.</strong>
               </article>
               <article>
-                <span>Lab Signal</span>
-                <strong>Connects mechanism design, embedded control, RL workflows, and physical robot testing.</strong>
+                <span>Graduate Signal</span>
+                <strong>Connects mechanism design, embedded control, robot learning, and physical testing in one research workflow.</strong>
               </article>
             </div>
             <a class="text-link laboratory-detail-link" href="asr-lab.html">Click here: ASR Lab case study</a>
@@ -131,31 +156,35 @@
         </div>
         <div class="skills-layout laboratory-skills" aria-label="Current ASR Lab laboratory signals">
           <article>
-            <h3>12-DoF Quadruped</h3>
+            <h3>Hardware and Actuation</h3>
             <p>
-              Working with legged robot models, URDF preparation, observation/action mapping, and
-              hardware-aware deployment checks.
+              Designed and fabricated motor reduction gearbox concepts, including cycloidal and
+              planetary reducers, while learning how tolerance, backlash, shaft strength, and assembly
+              quality affect robot behavior.
             </p>
           </article>
           <article>
-            <h3>Robot Learning</h3>
+            <h3>Robot Learning Workflow</h3>
             <p>
-              Studying Isaac Lab locomotion workflows with DWAQ/PPO training, reward shaping, gait
-              stability, and sim-to-real mismatch.
+              Studied Isaac Lab locomotion workflows using DWAQ/PPO and imitation-learning experiments,
+              with reward tuning around foot clearance, posture, contact behavior, torque, and action
+              smoothness.
             </p>
           </article>
           <article>
-            <h3>Actuation Hardware</h3>
+            <h3>Embedded Motor Control</h3>
             <p>
-              Iterating actuator packaging and compact cycloidal/planetary reducer concepts around
-              torque, backlash, bearings, tolerance, and serviceability.
+              Gained experience in motor communication packet design, Arduino-based control board
+              programming, calibration, speed/position/current feedback, and wiring-level fault
+              isolation.
             </p>
           </article>
           <article>
-            <h3>Motor Debugging</h3>
+            <h3>Deployment Debugging</h3>
             <p>
-              Building motor-control diagnostics around speed/position commands, current feedback,
-              calibration, serial readback, and wiring-level failure isolation.
+              Used ROS2 launch workflows, rosbag records, topic checks, TensorBoard logs, and hardware
+              inspection to separate policy issues from actuator, sensor, communication, and assembly
+              problems.
             </p>
           </article>
         </div>
