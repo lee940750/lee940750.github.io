@@ -9,7 +9,7 @@
       content="Control systems laboratory experience of CHENG-HSUAN LEE in NTUME ASR Lab, focused on 12-DoF quadruped hardware, motor communication, Isaac Lab locomotion, and sim-to-real debugging."
     />
     <link rel="stylesheet" href="site.css?v=20260827-asr-lab-case-study" />
-    <link rel="stylesheet" href="project.css?v=20260828-asr-video-grid-4up" />
+    <link rel="stylesheet" href="project.css?v=20260828-no-why-sections" />
   </head>
   <body class="project-page">
     <header class="site-header">
@@ -32,7 +32,8 @@
           Current laboratory work on the Rifle 12-DoF quadruped platform, connecting actuator/reducer
           hardware, motor communication, Isaac Lab locomotion training, ROS2 deployment, and sim-to-real
           debugging. This is the research experience that best represents my move from building course
-          robots into hardware-aware legged robotics.
+          robots into hardware-aware legged robotics, where actuator limits, communication reliability,
+          training behavior, and real failure modes must be studied together.
         </p>
       </section>
 
@@ -43,7 +44,7 @@
         </article>
         <article>
           <span>My Contribution</span>
-          <strong>Worked across reducer fabrication, motor-control programming, training logs, and deployment debugging.</strong>
+          <strong>Worked across reducer fabrication, motor-control programming, training logs, topic data, and deployment debugging.</strong>
         </article>
         <article>
           <span>Technical Stack</span>
@@ -83,7 +84,8 @@
                 In ASR Lab, I worked close to the actuator layer: motor reduction gearbox design and
                 fabrication, motor command/readback routines, control-board programming, wiring checks,
                 calibration, and repeated hardware repair. The work made one point very clear: robot
-                learning only becomes useful when the physical platform can execute commands repeatably.
+                learning only becomes useful when the physical platform can execute commands repeatably
+                within actuator, gearbox, and sensing limits.
               </p>
               <p>
                 My hardware notes include reducer concepts, Cubemars RO80 motor testing, ODrive setup,
@@ -183,8 +185,9 @@
               <p>
                 I helped analyze issues such as violent initial motor motion, standing-pose mismatch,
                 motor protection, joint shaking, front-foot dragging, IMU unit interpretation, Teensy to
-                ODrive communication faults, loose shaft links, and repeated calf shaft failures. Those
-                failures became design evidence instead of noise.
+                ODrive communication faults, loose shaft links, and repeated calf shaft failures. Logs,
+                topic data, run comparisons, and physical inspection helped separate policy problems from
+                hardware and communication problems, so failures became design evidence instead of noise.
               </p>
             </div>
             <div class="feature-media asr-media-gallery asr-deployment-gallery" aria-label="ASR Lab deployment media area">
@@ -302,24 +305,6 @@
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </section>
-
-          <section class="case-module applicant-signal" aria-labelledby="asr-signal-title">
-            <h2 id="asr-signal-title">Why this matters</h2>
-            <div class="signal-grid">
-              <article>
-                <span>Hardware-aware robot learning</span>
-                <strong>My lab work connects learned locomotion to actuator limits, gearbox behavior, calibration, and real robot failure modes.</strong>
-              </article>
-              <article>
-                <span>Experimental debugging</span>
-                <strong>I use logs, topic data, run comparisons, and physical inspection to separate policy problems from hardware and communication problems.</strong>
-              </article>
-              <article>
-                <span>Graduate research fit</span>
-                <strong>This experience shows readiness for robotics labs where mechanical systems, control, learning, and real-world testing must be studied together.</strong>
-              </article>
             </div>
           </section>
 
