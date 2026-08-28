@@ -657,6 +657,17 @@ h3 {
   color: var(--muted);
 }
 
+.skills-layout .compact-list {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.48;
+}
+
+.skills-layout .compact-list li + li {
+  margin-top: 7px;
+}
+
 .timeline {
   display: grid;
   gap: 24px;

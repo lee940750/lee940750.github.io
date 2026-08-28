@@ -8,7 +8,7 @@
       name="description"
       content="Robotics systems portfolio of CHENG-HSUAN LEE, an NTU mechanical engineering student who builds full-stack physical robots across mechanical design, embedded control, testing, and team leadership."
     />
-    <link rel="stylesheet" href="site.css?v=20260827-capabilities-tune" />
+    <link rel="stylesheet" href="site.css?v=20260828-capabilities-rich" />
   </head>
   <body>
     <header class="site-header">
@@ -384,45 +384,61 @@
       <section id="skills" class="section skills-section" aria-labelledby="skills-title">
         <div class="section-heading">
           <p class="section-kicker">Capabilities</p>
-          <h2 id="skills-title">Build the robot, make it controllable, and turn failures into engineering evidence.</h2>
+          <h2 id="skills-title">Build the robot, make it measurable, and push it toward real operation.</h2>
           <p>
-            My strongest capability is cross-domain integration: I can move between mechanism design,
-            embedded motor control, robot learning workflows, and physical test debugging without losing
-            the system-level view.
+            My strongest capability is full-stack physical system execution. I can move from mechanism and
+            actuator decisions to embedded control, robot learning workflows, test evidence, and team-level
+            debugging without losing the system view.
           </p>
         </div>
         <div class="skills-layout">
           <article>
             <h3>Mechanical and Actuation Systems</h3>
             <p>
-              Mechanism design, actuator packaging, cycloidal/planetary reducer concepts, CAD,
-              3D printing, machining, engineering drawings, tolerance awareness, shaft reliability,
-              and serviceable robot architecture.
+              I design robot hardware around motion, assembly, tolerance, serviceability, and the control
+              signals the mechanism must eventually obey.
             </p>
+            <ul class="compact-list">
+              <li>CAD, engineering drawings, 3D printing, machining, and fabrication-aware design.</li>
+              <li>Cycloidal/planetary reducer concepts, actuator packaging, shaft reliability, and encoder alignment.</li>
+              <li>Mechanisms that can be repaired, calibrated, and tested repeatedly instead of only looking good in CAD.</li>
+            </ul>
           </article>
           <article>
             <h3>Robot Learning and Control</h3>
             <p>
-              Isaac Lab, DWAQ/PPO and imitation-learning workflows, reward/observation/action-space
-              tuning, URDF, ROS2 deployment context, Pinocchio, MATLAB, Simulink, Python, C++, and
-              practical control implementation.
+              I connect simulation-side policy behavior with the physical assumptions that decide whether
+              a robot can actually execute the motion.
             </p>
+            <ul class="compact-list">
+              <li>Isaac Lab, DWAQ/PPO, imitation learning, reward design, observation choices, and action-space tuning.</li>
+              <li>ROS2 deployment context, rosbag/topic checks, TensorBoard run comparison, URDF, and Pinocchio.</li>
+              <li>MATLAB, Simulink, Python, C++, and practical control implementation for physical prototypes.</li>
+            </ul>
           </article>
           <article>
             <h3>Embedded Motor Systems</h3>
             <p>
-              ESP32, Teensy, Arduino, ODrive, PCA9685, RS485, UART, I2C, PWM, motor communication
-              packets, calibration, speed/position/current feedback, signal-chain debugging, and
-              wiring-level fault isolation.
+              I treat motor behavior as data: command, readback, current, position, wiring, and controller
+              setup all have to be trustworthy before judging the robot.
             </p>
+            <ul class="compact-list">
+              <li>ESP32, Teensy, Arduino, ODrive, PCA9685, RS485, UART, I2C, PWM, and motor packet routines.</li>
+              <li>Speed, position, and current feedback used to separate control problems from hardware problems.</li>
+              <li>Calibration, communication checks, signal-chain debugging, and wiring-level fault isolation.</li>
+            </ul>
           </article>
           <article>
             <h3>Testing, Debugging, and Leadership</h3>
             <p>
-              Thrust testing, servo calibration, rosbag/topic checks, TensorBoard run comparison,
-              failure-mode diagnosis, fallback planning, and team coordination when mechanical,
-              electrical, software, and strategy decisions must converge.
+              I am strongest when the system is messy: incomplete tests, hardware failures, noisy logs,
+              and team decisions that need a clear next experiment.
             </p>
+            <ul class="compact-list">
+              <li>Thrust tests, servo calibration, leg motor fitting, load tests, and final-evaluation preparation.</li>
+              <li>Failure-mode diagnosis using logs, videos, physical inspection, rosbag topics, and run comparisons.</li>
+              <li>Team coordination across mechanical, electrical, software, strategy, and competition pressure.</li>
+            </ul>
           </article>
         </div>
       </section>
