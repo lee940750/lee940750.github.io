@@ -6,10 +6,10 @@
     <title>NTUME ASR Lab Quadruped Research | CHENG-HSUAN LEE</title>
     <meta
       name="description"
-      content="Control systems laboratory experience of CHENG-HSUAN LEE in NTUME ASR Lab, focused on 12-DoF quadruped hardware, motor communication, Isaac Lab locomotion, and sim-to-real debugging."
+      content="Control systems laboratory experience of CHENG-HSUAN LEE in NTUME ASR Lab, focused on quadruped actuator hardware, motor communication, Isaac Lab locomotion training, ROS2 deployment, and sim-to-real debugging."
     />
     <link rel="stylesheet" href="site.css?v=20260827-asr-lab-case-study" />
-    <link rel="stylesheet" href="project.css?v=20260828-no-why-sections" />
+    <link rel="stylesheet" href="project.css?v=20260828-asr-lab-rich-content" />
   </head>
   <body class="project-page">
     <header class="site-header">
@@ -29,30 +29,30 @@
         <p class="section-kicker">Case Study | Control Systems Laboratory Experience</p>
         <h1>NTUME ASR Lab - Learning-Based Quadruped Robot Integration</h1>
         <p>
-          Current laboratory work on the Rifle 12-DoF quadruped platform, connecting actuator/reducer
-          hardware, motor communication, Isaac Lab locomotion training, ROS2 deployment, and sim-to-real
-          debugging. This is the research experience that best represents my move from building course
-          robots into hardware-aware legged robotics, where actuator limits, communication reliability,
-          training behavior, and real failure modes must be studied together.
+          Current laboratory work on the Rifle 12-DoF quadruped platform, where I connect actuator and
+          reducer hardware, motor command/readback, Isaac Lab locomotion training, ROS2 deployment, and
+          sim-to-real debugging. This is the research experience that best represents my move from building
+          course robots into hardware-aware legged robotics: every policy result has to pass through reducer
+          tolerance, encoder alignment, current limits, wiring, state feedback, and real robot failure modes.
         </p>
       </section>
 
       <section class="case-glance" aria-label="ASR Lab experience at a glance">
         <article>
           <span>Challenge</span>
-          <strong>Make learned locomotion compatible with real motors, gearboxes, sensors, and failure modes.</strong>
+          <strong>Turn learned locomotion into repeatable behavior on a real 12-DoF quadruped, not just a simulation result.</strong>
         </article>
         <article>
           <span>My Contribution</span>
-          <strong>Worked across reducer fabrication, motor-control programming, training logs, topic data, and deployment debugging.</strong>
+          <strong>Designed reducer concepts, programmed motor-control routines, reviewed training/topic data, and debugged deployment failures.</strong>
         </article>
         <article>
           <span>Technical Stack</span>
-          <strong>Isaac Lab, DWAQ/PPO, imitation learning, ROS2, rosbag, TensorBoard, ODrive, Teensy, IMU.</strong>
+          <strong>Isaac Lab, DWAQ/PPO, imitation learning, ROS2, rosbag, TensorBoard, ODrive, Teensy, IMU, RO80 motors.</strong>
         </article>
         <article>
           <span>Research Signal</span>
-          <strong>Shows I can reason from mechanism tolerance to policy behavior on a real robot.</strong>
+          <strong>Builds an evidence chain from mechanism tolerance to motor response, training behavior, and real-robot tests.</strong>
         </article>
       </section>
 
@@ -60,7 +60,7 @@
         <aside class="fact-strip" aria-label="ASR Lab experience facts">
           <article>
             <span>Role</span>
-            <strong>Lab member focused on hardware-control integration and locomotion testing</strong>
+            <strong>Undergraduate lab member focused on hardware-control integration and locomotion testing</strong>
           </article>
           <article>
             <span>Robot</span>
@@ -77,20 +77,51 @@
         </aside>
 
         <section class="detail-layout">
+          <section class="case-module" aria-labelledby="asr-framing-title">
+            <h2 id="asr-framing-title">Research framing</h2>
+            <p class="module-intro">
+              My lab work sits in the gap between a learned locomotion policy and the machine that must
+              execute it. I treat each build, training run, and deployment attempt as a traceable experiment:
+              what command was sent, what the actuator actually did, what the logs recorded, and which
+              mechanical or control assumption failed.
+            </p>
+            <div class="decision-grid">
+              <div class="decision-item">
+                <strong>Physical interface</strong>
+                <p>Developed reducer and actuator concepts while checking assembly tolerance, encoder alignment, wiring, and repair access.</p>
+              </div>
+              <div class="decision-item">
+                <strong>Control interface</strong>
+                <p>Worked with motor communication packets, command/readback routines, Arduino/Teensy-side control, and ODrive setup.</p>
+              </div>
+              <div class="decision-item">
+                <strong>Experimental evidence</strong>
+                <p>Connected TensorBoard records, ROS2 topics, rosbag data, videos, and physical inspection into debugging decisions.</p>
+              </div>
+            </div>
+          </section>
+
           <article class="detail-feature asr-gallery-feature">
             <div class="detail-text">
               <h2>Built the hardware-control interface that robot learning depends on.</h2>
               <p>
-                In ASR Lab, I worked close to the actuator layer: motor reduction gearbox design and
-                fabrication, motor command/readback routines, control-board programming, wiring checks,
-                calibration, and repeated hardware repair. The work made one point very clear: robot
-                learning only becomes useful when the physical platform can execute commands repeatably
-                within actuator, gearbox, and sensing limits.
+                In ASR Lab, I worked close to the actuator layer: cycloidal and planetary reduction
+                gearbox concepts, fabrication details, motor command/readback routines, control-board
+                programming, wiring checks, calibration, and repeated hardware repair. The work made one
+                point very clear: robot learning only becomes useful when the physical platform can execute
+                commands repeatably within actuator, gearbox, and sensing limits.
               </p>
               <p>
-                My hardware notes include reducer concepts, Cubemars RO80 motor testing, ODrive setup,
-                current and velocity-limit behavior, encoder and magnet-seat tolerance issues, calf output
-                shaft failures, and material/assembly revisions made after physical tests.
+                I treated each motor module as both a mechanism and a measurement device. Rough rotation,
+                high current, encoder drift, or violent initial motion could not be explained from software
+                alone, so I traced failures through reducer assembly, magnet-seat tolerance, ODrive settings,
+                motor ID/communication checks, wiring, and real joint behavior.
+              </p>
+              <p>
+                My hardware notes include Cubemars RO80 motor testing, current and velocity-limit behavior,
+                encoder and magnet-seat tolerance issues, calf output shaft failures, coaxiality concerns,
+                material choices, and assembly revisions made after physical tests. That record helped turn
+                broken parts and unstable motion into usable design requirements for the next build.
               </p>
             </div>
             <div class="feature-media asr-hardware-mosaic" aria-label="ASR Lab hardware media area">
@@ -119,29 +150,31 @@
             <div class="detail-text">
               <h2>Treated locomotion training as an engineering experiment, not a black box.</h2>
               <p>
-                I recorded and compared training runs while tuning locomotion behavior in Isaac Lab. The
-                logs covered reward and command choices such as foot clearance, flat orientation, gait
-                timing, base height, contact penalties, torque limits, action-rate penalties, and
-                stand-still behavior.
+                I recorded and compared locomotion training runs in Isaac Lab with the same mindset I use
+                for hardware tests: isolate one hypothesis, compare the evidence, then decide whether the
+                next change belongs in reward design, command settings, observation choices, or the physical
+                robot assumption. The logs covered foot clearance, flat orientation, gait timing, base
+                height, contact penalties, torque limits, action-rate penalties, and stand-still behavior.
               </p>
               <p>
                 The important skill was not just launching training. It was learning what a policy was
-                optimizing, why a gait became unstable or too rigid, and how imitation learning,
-                reinforcement learning, reward weights, observation choices, and real robot constraints
-                affected one another.
+                optimizing, why a gait became unstable or too rigid, when imitation learning helped produce
+                natural motion, and when it limited command-following flexibility. I used checkpoints,
+                TensorBoard curves, simulation videos, and test notes to make the training process readable
+                enough to support engineering decisions.
               </p>
               <div class="decision-grid">
                 <div class="decision-item">
                   <strong>Reward tuning</strong>
-                  <p>Compared foot clearance, contact, posture, torque, and action-rate effects.</p>
+                  <p>Compared how clearance, contact, posture, torque, and action-rate terms changed gait behavior.</p>
                 </div>
                 <div class="decision-item">
                   <strong>IL/RL balance</strong>
-                  <p>Tracked the tradeoff between motion imitation and command-following flexibility.</p>
+                  <p>Tracked the tradeoff between natural motion imitation and controllable command response.</p>
                 </div>
                 <div class="decision-item">
                   <strong>Run records</strong>
-                  <p>Used checkpoints, TensorBoard, and test notes to make training decisions traceable.</p>
+                  <p>Used checkpoints, TensorBoard, videos, and written notes to make policy changes traceable.</p>
                 </div>
               </div>
             </div>
@@ -177,10 +210,10 @@
             <div class="detail-text">
               <h2>Closed the sim-to-real loop through logs, rosbag data, and failure analysis.</h2>
               <p>
-                Deployment work forced the system view: launch motor and sensor communication, run the
-                learned policy, record rosbag data, inspect command and motor topics, compare simulated
-                foot-height outputs with physical behavior, then decide whether the next fix belonged in
-                hardware, calibration, state estimation, or the policy.
+                Deployment work forced the system view: launch motor and sensor communication, verify the
+                standing pose, run the learned policy, record rosbag data, inspect command and motor topics,
+                compare simulated foot-height outputs with physical behavior, then decide whether the next
+                fix belonged in hardware, calibration, state estimation, communication, or policy design.
               </p>
               <p>
                 I helped analyze issues such as violent initial motor motion, standing-pose mismatch,
@@ -188,6 +221,11 @@
                 ODrive communication faults, loose shaft links, and repeated calf shaft failures. Logs,
                 topic data, run comparisons, and physical inspection helped separate policy problems from
                 hardware and communication problems, so failures became design evidence instead of noise.
+              </p>
+              <p>
+                This loop strengthened the kind of judgment I want to bring to graduate robotics research:
+                do not trust a clean simulation until the actuator response, sensing pipeline, communication
+                timing, and physical failure history explain why the real robot should behave the same way.
               </p>
             </div>
             <div class="feature-media asr-media-gallery asr-deployment-gallery" aria-label="ASR Lab deployment media area">
@@ -214,6 +252,11 @@
 
           <section class="case-module asr-video-reel" aria-labelledby="asr-sim-real-video-title">
             <h2 id="asr-sim-real-video-title">Simulation-to-real validation</h2>
+            <p class="module-intro">
+              These clips document the validation path from simulated locomotion to hardware-side tests.
+              I use them as engineering evidence, not decoration: each video helps connect policy behavior,
+              leg actuation, load response, and real-robot deployment failure modes.
+            </p>
             <div class="demo-video-grid asr-video-grid" aria-label="ASR Lab simulation and real-robot videos">
               <figure class="demo-video-card">
                 <video controls preload="metadata" playsinline src="assets/videos/asr-locomotion-simulation.mp4"></video>
@@ -239,23 +282,23 @@
             <div class="system-flow" aria-label="ASR Lab engineering flow">
               <article class="flow-step">
                 <span>01</span>
-                <strong>Build and calibrate hardware</strong>
-                <p>Assemble actuators, reducers, shafts, wiring, control boards, and motor IDs.</p>
+                <strong>Build the actuator layer</strong>
+                <p>Assemble reducers, motor modules, shafts, wiring, control boards, encoder seats, and motor IDs.</p>
               </article>
               <article class="flow-step">
                 <span>02</span>
-                <strong>Train locomotion policies</strong>
-                <p>Use Isaac Lab RL/IL workflows, reward shaping, checkpoints, and TensorBoard records.</p>
+                <strong>Make control measurable</strong>
+                <p>Check command/readback behavior, current limits, velocity limits, ODrive setup, and board communication.</p>
               </article>
               <article class="flow-step">
                 <span>03</span>
-                <strong>Deploy and record behavior</strong>
-                <p>Run ROS2 motor/sensor launches, policy execution, rosbag recording, and topic checks.</p>
+                <strong>Train and evaluate policies</strong>
+                <p>Use Isaac Lab RL/IL workflows, reward shaping, checkpoints, TensorBoard records, and simulation videos.</p>
               </article>
               <article class="flow-step">
                 <span>04</span>
-                <strong>Revise the system</strong>
-                <p>Trace failures back to hardware, communication, state estimation, calibration, or policy design.</p>
+                <strong>Deploy, log, and revise</strong>
+                <p>Run ROS2 launches and rosbag checks, then trace failures back to hardware, communication, calibration, or policy design.</p>
               </article>
             </div>
           </section>
@@ -303,6 +346,18 @@
                     <td>Isolated faults without assuming every failure came from the learned policy</td>
                     <td>Embedded debugging</td>
                   </tr>
+                  <tr>
+                    <td>Motor command and readback had to be trustworthy before policy tests</td>
+                    <td>Worked on packet-level communication and control-board routines before treating motion results as valid</td>
+                    <td>Made the actuator response observable instead of relying only on visible robot behavior</td>
+                    <td>Motor-control interface design</td>
+                  </tr>
+                  <tr>
+                    <td>Simulation videos, training curves, and real tests could tell different stories</td>
+                    <td>Compared TensorBoard records, simulation clips, rosbag topics, and physical inspection together</td>
+                    <td>Prevented clean-looking simulation progress from hiding hardware, sensing, or communication problems</td>
+                    <td>Research-grade experimental reasoning</td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -313,9 +368,11 @@
             <p>
               ASR Lab is the strongest signal of my current research direction: I am not only interested
               in robot learning as an algorithmic problem, but in the complete physical loop that makes
-              learning-based locomotion work on real hardware. The experience strengthens my fit for
-              graduate robotics research in legged robots, actuator design, embedded motor control, and
-              sim-to-real experimentation.
+              learning-based locomotion work on real hardware. I can move between reducer design,
+              embedded motor control, training analysis, ROS2 deployment, and failure investigation without
+              treating them as separate worlds. The experience strengthens my fit for graduate robotics
+              research in legged robots, actuator design, motor-control interfaces, and sim-to-real
+              experimentation.
             </p>
           </section>
         </section>

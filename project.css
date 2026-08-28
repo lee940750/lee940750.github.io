@@ -387,6 +387,13 @@
   line-height: 1.08;
 }
 
+.module-intro {
+  max-width: 900px;
+  margin: -4px 0 22px;
+  color: var(--muted);
+  font-size: 1.06rem;
+}
+
 .system-flow {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
