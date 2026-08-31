@@ -96,8 +96,8 @@ body_style = ParagraphStyle(
 body_small_style = ParagraphStyle(
     "BodySmall",
     parent=body_style,
-    fontSize=8.45,
-    leading=9.8,
+    fontSize=8.35,
+    leading=9.55,
     spaceAfter=3,
 )
 
@@ -126,7 +126,7 @@ bullet_style = ParagraphStyle(
     parent=body_small_style,
     leftIndent=10,
     firstLineIndent=-7,
-    spaceAfter=2,
+    spaceAfter=1.6,
 )
 
 table_label_style = ParagraphStyle(
@@ -207,10 +207,10 @@ def build_story():
 
     story += section("PROFILE")
     story.append(p(
-        "Mechanical Engineering undergraduate at National Taiwan University focused on complete physical robot systems. "
-        "My current work in NTUME ASR Lab connects 12-DoF quadruped locomotion, actuator/reducer design, motor communication, "
-        "Isaac Lab reinforcement-learning workflows, ROS2 deployment, and sim-to-real debugging. I am especially interested "
-        "in legged robots whose hardware, control policies, and experimental behavior must be designed together."
+        "Mechanical Engineering undergraduate at National Taiwan University focused on <b>complete physical robot systems</b>. "
+        "My current work in <b>NTUME ASR Lab</b> connects quadruped actuator hardware, motor communication, "
+        "Isaac Lab robot-learning workflows, ROS2 deployment, and <b>sim-to-real debugging</b>. I am especially interested "
+        "in legged robots whose hardware, control policies, and experimental behavior must be designed as one coupled system."
     ))
 
     story += section("EDUCATION")
@@ -226,7 +226,7 @@ def build_story():
     story.append(p("<b>Taipei Municipal Chien Kuo High School</b>", body_style))
     story.append(p("<i>Taipei, Taiwan | 2020-2023</i>", italic_style))
     story.append(p(
-        "Built early robotics foundation through CKHS Robotics Team, FRC programming, strategy, scouting, and international competition work.",
+        "Built early robotics foundation through CKHS Robotics Team, <b>FRC programming leadership</b>, strategy, scouting, and international competition work.",
         body_small_style,
     ))
 
@@ -237,37 +237,38 @@ def build_story():
         italic_style,
     ))
     story.append(p(
-        "Working at the boundary between legged robot hardware and learning-based control. My lab work focuses on making learned "
-        "locomotion usable on imperfect physical hardware by connecting actuator design, embedded motor communication, policy training, "
+        "Working at the boundary between <b>legged robot hardware</b>, <b>embedded motor-control interfaces</b>, and "
+        "<b>learning-based locomotion</b>. My lab work focuses on making learned policies usable on imperfect physical "
+        "hardware by connecting actuator/reducer design, command/readback reliability, Isaac Lab training behavior, ROS2 "
         "deployment logs, and failure analysis into one experimental loop.",
         body_small_style,
     ))
     story += bullets([
-        "Built a full quadruped development workflow that links mechanical architecture, leg-module packaging, actuator layout, compact reducer concepts, wiring, motor communication, Isaac Lab simulation, and physical robot validation.",
-        "Designed and fabricated motor reduction gearbox concepts for leg actuation, including cycloidal and planetary reducers, while evaluating torque transmission, backlash, bearing support, manufacturability, assembly tolerance, and repair access.",
-        "Developed motor-control and communication experience through packet design, Arduino-based control-board programming, command scaling, calibration, and speed/position/current feedback checks.",
-        "Ran and documented Isaac Lab / Isaac Sim locomotion experiments using DWAQ/PPO and imitation-learning workflows, tuning foot clearance, posture, contact behavior, gait regularity, torque penalties, action smoothness, and standing behavior.",
-        "Prepared the simulation-to-hardware path through URDF/model checks, observation/action mapping, actuator limits, policy export, ROS2 motor/sensor launches, rosbag recording, topic review, and safety checks.",
-        "Diagnosed deployment failures by comparing policy outputs, motor logs, foot-height traces, IMU interpretation, TensorBoard records, and observed robot motion, separating policy issues from actuator, sensor, communication, and assembly problems.",
-        "Converted physical failures into engineering revisions, including encoder/magnet-seat tolerance checks, shaft material and coaxiality concerns, loose linkage correction, calibration changes, and serviceability improvements for repeated tests.",
+        "<b>Hardware-control integration:</b> contributed to a quadruped development workflow linking mechanical architecture, leg-module packaging, reducer concepts, wiring, motor communication, Isaac Lab simulation, and physical robot validation.",
+        "<b>Actuator and reducer development:</b> designed and fabricated motor reduction gearbox concepts for leg actuation, including cycloidal and planetary reducers, while evaluating torque transmission, backlash, bearing support, manufacturability, assembly tolerance, and repair access.",
+        "<b>Motor-control interface work:</b> developed practical experience with communication packet design, Arduino/Teensy-side control-board programming, command scaling, calibration, and speed/position/current feedback checks before treating robot motion as valid data.",
+        "<b>Learning-based locomotion experiments:</b> ran and documented Isaac Lab / Isaac Sim training using DWAQ/PPO and imitation-learning workflows, tuning foot clearance, posture, contact behavior, gait regularity, torque penalties, action smoothness, and standing behavior.",
+        "<b>Simulation-to-hardware preparation:</b> checked model assumptions, observation/action mapping, actuator limits, policy export, ROS2 motor/sensor launches, rosbag recording, topic review, and basic safety conditions before deployment tests.",
+        "<b>Failure analysis:</b> compared policy outputs, motor logs, foot-height traces, IMU interpretation, TensorBoard records, simulation videos, and observed robot motion to separate policy issues from actuator, sensor, communication, and assembly problems.",
+        "<b>Design revision from evidence:</b> converted physical failures into engineering changes, including encoder/magnet-seat tolerance checks, shaft material and coaxiality concerns, loose linkage correction, calibration changes, and serviceability improvements for repeated tests.",
     ])
     story.append(Spacer(1, 3))
     story.append(technical_table([
         (
             "Research signal",
-            "Hardware-aware robot learning: actuator packaging, reducer behavior, motor feedback, state estimation, and learned policy behavior are treated as one coupled system.",
+            "<b>Hardware-aware robot learning:</b> actuator packaging, reducer behavior, motor feedback, state estimation, and learned policy behavior are treated as one coupled system rather than separate tasks.",
         ),
         (
             "Methods in use",
-            "Isaac Lab / Isaac Sim, DWAQ/PPO, imitation learning, reward shaping, TensorBoard run comparison, URDF checks, ROS2 launch workflows, rosbag records, and topic-level debugging.",
+            "<b>Traceable experiment loop:</b> Isaac Lab / Isaac Sim, DWAQ/PPO, imitation learning, reward shaping, TensorBoard comparison, URDF checks, ROS2 launch workflows, rosbag records, topic-level debugging, and video review.",
         ),
         (
             "Hardware interface",
-            "Actuator/reducer packaging, ODrive/Teensy context, motor speed/position/current feedback, communication packet design, calibration, wiring checks, and fault isolation.",
+            "<b>Actuator-to-policy interface:</b> actuator/reducer packaging, ODrive/Teensy context, motor speed/position/current feedback, communication packet design, calibration, wiring checks, and fault isolation.",
         ),
         (
             "Graduate fit",
-            "Prepared for robotics research where mechanical design, embedded control, robot learning, and real-world testing must be evaluated together rather than in isolation.",
+            "<b>Graduate research readiness:</b> prepared for robotics labs where mechanical design, embedded control, robot learning, and real-world testing must be evaluated together rather than in isolation.",
         ),
     ]))
 
@@ -277,66 +278,65 @@ def build_story():
     story.append(p("<b>Self-Built Simple Robot Dog - Team Lead, Mechanical Designer, Controls Developer</b>", role_style))
     story.append(p("<i>Microprocessor Controlled Systems | A+ outcome | ESP32, PCA9685, MATLAB, Arduino, 3D-printed structure</i>", italic_style))
     story += bullets([
-        "Designed and integrated a compact eight-servo quadruped platform around serviceability, wiring, battery placement, center-of-gravity position, and repeated repair during gait testing.",
-        "Translated inverse-kinematics and gait reasoning from MATLAB into embedded ESP32/PCA9685 servo control, separating behavior logic, gait timing, calibration, and servo output for easier debugging.",
-        "Implemented and tuned behavior modes including walking, standing, sitting, waving, hip-lift, and rocking, using observed robot motion to revise timing and calibration choices.",
-        "Used the project as a practical bridge into legged-robot research by confronting the mismatch between simulated motion, servo limits, wiring, and physical body behavior.",
+        "<b>Led a small team</b> to design and integrate a compact eight-servo quadruped platform around serviceability, wiring, battery placement, center-of-gravity position, and repeated repair during gait testing.",
+        "<b>Connected simulation to hardware:</b> translated inverse-kinematics and gait reasoning from MATLAB into embedded ESP32/PCA9685 servo control, separating behavior logic, gait timing, calibration, and servo output for easier debugging.",
+        "<b>Delivered multiple physical behaviors</b> including walking, standing, sitting, waving, hip-lift, and rocking while confronting the mismatch between simulated motion, servo limits, wiring, and physical body behavior.",
     ])
 
     story.append(p("<b>Quadcopter Ball-Transfer Drone - Team Lead and Systems Integrator</b>", role_style))
     story.append(p("<i>Practice of Mechanical Engineering | Full marks and A+ outcome | Peer reference point for many teams</i>", italic_style))
     story += bullets([
-        "Led full-system mission design for a drone that had to fly, carry, transfer, and release balls reliably under final evaluation pressure.",
-        "Coordinated airframe, payload mechanism, flight controller, SBUS receiver, ESC/motor setup, spare-system planning, and final-risk control; our architecture and testing process became a reference point for many peer teams.",
-        "Used thrust-to-throttle tests, drift diagnosis, vibration checks, crash recovery, payload trials, and signal-chain debugging to convert failure symptoms into specific design decisions.",
-        "Maintained engineering records across final report, dynamic testing, thrust characterization, flight-controller/motor/SBUS debugging, and personal design feedback.",
+        "<b>Led full-system mission design</b> for a drone that had to fly, carry, transfer, and release balls reliably under final evaluation pressure.",
+        "<b>Coordinated cross-domain integration</b> across airframe, payload mechanism, flight controller, SBUS receiver, ESC/motor setup, spare-system planning, and final-risk control; our architecture and testing process became a reference point for many peer teams.",
+        "<b>Converted failures into decisions</b> through thrust-to-throttle tests, drift diagnosis, vibration checks, crash recovery, payload trials, signal-chain debugging, and engineering documentation.",
     ])
 
     story.append(p("<b>Foldable Ball Transfer Mechanism - Team Lead</b>", role_style))
     story.append(p("<i>Machine Design Theory | Mechanism design, packaging constraint, fabrication-aware decision making</i>", italic_style))
     story += bullets([
-        "Designed a foldable long-distance ball-transfer mechanism under packaging and deployment constraints, balancing ideal motion with buildable structure.",
-        "Evaluated folding architecture, linkage geometry, component accessibility, fabrication feasibility, latch behavior, locked-state stiffness, and tolerance sensitivity before committing to the final design.",
-        "Favored reliable deployment, assembly order, repair access, and accessible fabrication over unnecessary complexity, strengthening practical hardware judgment.",
+        "<b>Led concept selection and mechanism architecture</b> for a foldable long-distance ball-transfer mechanism under packaging and deployment constraints.",
+        "<b>Balanced ideal motion with buildable structure</b> by evaluating folding architecture, linkage geometry, component accessibility, fabrication feasibility, latch behavior, locked-state stiffness, and tolerance sensitivity.",
+        "<b>Prioritized reliability under real fabrication limits</b>, including deployment repeatability, assembly order, repair access, and accessible materials over unnecessary complexity.",
     ])
 
-    story += section("COMPETITION ROBOTICS AND LEADERSHIP")
-    story.append(p("<b>CKHS Robotics Team - Programming and Strategy Lead</b>", role_style))
-    story.append(p("<i>FIRST Robotics Competition and scouting/strategy systems</i>", italic_style))
+    story += section("LEADERSHIP AND TEAM EXECUTION")
+    story.append(p("<b>Engineering Project and Robotics Team Leadership</b>", role_style))
+    story.append(p("<i>Hands-on project teams, CKHS Robotics Team, FRC programming/strategy/scouting leadership</i>", italic_style))
     story += bullets([
-        "Led programming and strategy work in competition robotics, connecting autonomous logic, driver needs, mechanism limits, match strategy, and repair speed under real event pressure.",
-        "Built scouting and analysis workflows, including mobile data collection and Excel/VBA-based comparison tools, to turn large match datasets into alliance-selection and strategy decisions.",
-        "Gained repeated practice communicating across mechanical, electrical, programming, drive-team, and strategy responsibilities during high-pressure regional and championship events.",
+        "<b>Led multiple hands-on engineering teams</b>, including the self-built robot dog, quadcopter ball-transfer drone, and foldable ball-transfer mechanism projects, translating open-ended goals into design choices, task ownership, testing plans, and final deliverables.",
+        "<b>Coordinated high-pressure system integration</b> in the drone project, aligning mechanical design, propulsion testing, electronics, signal debugging, spare parts, and final-run risk control; the finished system became a reference point for many peer teams.",
+        "<b>Served as programming, strategy, and scouting leader</b> in CKHS Robotics Team / FRC, connecting autonomous logic, driver needs, mechanism limits, match data, and repair speed during regional and championship-level competition environments.",
+        "<b>Developed evidence-based technical leadership:</b> built scouting/Excel analysis workflows, clarified failure symptoms, separated mechanical/electrical/software causes, assigned the next test, and kept the team moving when time was limited.",
     ])
 
     story += section("AWARDS AND RECOGNITION")
     story += bullets([
-        "2022 FRC Sacramento Regional - Finalist and Industrial Design Award.",
-        "2022 FRC New Taipei City x Hon Hai Regional - Engineering Inspiration Award; qualified for Houston Championship.",
-        "2022 FRC Carver Championship Division, Houston - international championship participation.",
-        "2023 FRC Los Angeles Regional - Excellence in Engineering Award.",
-        "2023 FRC San Diego Regional - Excellence in Engineering Award.",
-        "2nd ISS Kibo Robot Programming Challenge Taiwan Preliminary - Merit Award.",
-        "58th Hsinchu County Science Fair, Biology Division - Second Place.",
+        "<b>2022 FRC Sacramento Regional:</b> Finalist and Industrial Design Award.",
+        "<b>2022 FRC New Taipei City x Hon Hai Regional:</b> Engineering Inspiration Award; qualified for Houston Championship.",
+        "<b>2022 FRC Carver Championship Division, Houston:</b> international championship participation.",
+        "<b>2023 FRC Los Angeles Regional:</b> Excellence in Engineering Award.",
+        "<b>2023 FRC San Diego Regional:</b> Excellence in Engineering Award.",
+        "<b>2nd ISS Kibo Robot Programming Challenge Taiwan Preliminary:</b> Merit Award.",
+        "<b>58th Hsinchu County Science Fair, Biology Division:</b> Second Place.",
     ])
 
     story += section("TECHNICAL SKILLS")
     story.append(technical_table([
         (
             "Mechanical Systems",
-            "Mechanism design; actuator packaging; cycloidal/planetary reducer concepts; CAD; 3D printing; machining; engineering drawings; tolerance and assembly planning.",
+            "<b>Mechanism design and actuator packaging;</b> cycloidal/planetary reducer concepts; CAD; 3D printing; machining; engineering drawings; tolerance and assembly planning.",
         ),
         (
             "Robot Learning and Control",
-            "NVIDIA Isaac Lab / Isaac Sim; DWAQ/PPO workflows; imitation learning; reward shaping; observation/action-space tuning; URDF; ROS2; Pinocchio; MATLAB/Simulink; motor calibration.",
+            "<b>NVIDIA Isaac Lab / Isaac Sim;</b> DWAQ/PPO workflows; imitation learning; reward shaping; observation/action-space tuning; URDF; ROS2; Pinocchio; MATLAB/Simulink; motor calibration.",
         ),
         (
             "Embedded and Software",
-            "Python; C++; Arduino; ESP32; Teensy 4.0; ODrive; PCA9685; RS485; UART; I2C; PWM; Git/GitHub; Linux; serial diagnostics.",
+            "<b>Embedded motor-control stack:</b> Python; C++; Arduino; ESP32; Teensy 4.0; ODrive; PCA9685; RS485; UART; I2C; PWM; Git/GitHub; Linux; serial diagnostics.",
         ),
         (
             "Testing and Documentation",
-            "Thrust testing; vibration/drift diagnosis; motor speed/position/current feedback; TensorBoard comparison; rosbag/topic checks; failure isolation; engineering reports; portfolio documentation.",
+            "<b>Experimental debugging and documentation:</b> thrust testing; vibration/drift diagnosis; motor speed/position/current feedback; TensorBoard comparison; rosbag/topic checks; failure isolation; engineering reports; portfolio documentation.",
         ),
     ]))
 
