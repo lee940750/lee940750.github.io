@@ -213,7 +213,11 @@
 }
 
 .detail-feature.asr-gallery-feature {
-  align-items: start;
+  align-items: center;
+}
+
+.detail-feature.asr-gallery-feature .feature-media {
+  align-self: center;
 }
 
 .asr-hardware-mosaic .media-photo:first-child,
