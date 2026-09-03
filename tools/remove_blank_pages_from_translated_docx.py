@@ -78,7 +78,13 @@ def patch_rfonts(xml: str) -> str:
         )
         return tag
 
+    def patch_lang_tag(match: re.Match) -> str:
+        tag = match.group(0)
+        tag = re.sub(r'\s+w:(val|eastAsia|bidi)="[^"]*"', "", tag)
+        return tag[:-2] + ' w:val="en-US" w:eastAsia="en-US" w:bidi="en-US"/>'
+
     xml = re.sub(r"<w:rFonts\b[^>]*/>", patch_tag, xml)
+    xml = re.sub(r"<w:lang\b[^>]*/>", patch_lang_tag, xml)
     if "<w:docDefaults>" in xml and "<w:rPrDefault>" in xml:
         if "<w:rPrDefault><w:rPr>" in xml and "<w:rFonts" not in xml.split("<w:rPrDefault><w:rPr>", 1)[1].split("</w:rPr>", 1)[0]:
             xml = xml.replace(
