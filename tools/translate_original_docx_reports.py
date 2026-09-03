@@ -20,6 +20,27 @@ PARA_RE = re.compile(r"<w:p\b[\s\S]*?</w:p>")
 TEXT_RE = re.compile(r"(<w:t\b[^>]*>)([\s\S]*?)(</w:t>)")
 XML_UNESCAPE_MAP = {"&quot;": '"', "&apos;": "'"}
 
+RESIDUAL_REPLACEMENTS = {
+    "第1章、": "Chapter 1. ",
+    "第2章、": "Chapter 2. ",
+    "第3章、": "Chapter 3. ",
+    "第4章、": "Chapter 4. ",
+    "第5章、": "Chapter 5. ",
+    "第%1章、": "Chapter %1. ",
+    "%2、": "%2.",
+    "%5、": "%5.",
+    "%8、": "%8.",
+    "飛行晃動": "flight oscillation",
+    "面寬，傘齒輪若較窄取": "face width; use",
+    "做保守計算": "for conservative calculation",
+    "積分": "integration",
+    "左端高度": "left-end height",
+    "右端高度": "right-end height",
+    "數值位移": "numerical displacement",
+    "節點位移": "nodal displacement",
+    "取": "use",
+}
+
 
 REPORTS = [
     {
@@ -221,6 +242,13 @@ def replace_paragraph_texts(xml_bytes: bytes, translations: dict[str, str]) -> t
     return updated.encode("utf-8"), translated_count, remaining_chinese
 
 
+def apply_residual_replacements(xml_bytes: bytes) -> bytes:
+    xml = xml_bytes.decode("utf-8")
+    for source, target in RESIDUAL_REPLACEMENTS.items():
+        xml = xml.replace(escape(source), escape(target))
+    return xml.encode("utf-8")
+
+
 def text_parts(zip_file: zipfile.ZipFile) -> list[str]:
     names = []
     for name in zip_file.namelist():
@@ -252,6 +280,7 @@ def translate_docx(source: Path, output: Path, cache: dict[str, str]) -> dict:
     with zipfile.ZipFile(source, "r") as zin, zipfile.ZipFile(output, "w", zipfile.ZIP_DEFLATED) as zout:
         for item in zin.infolist():
             data = zin.read(item.filename)
+            is_word_xml = item.filename.startswith("word/") and item.filename.endswith(".xml")
             if item.filename in parts:
                 try:
                     data, translated, remaining = replace_paragraph_texts(data, cache)
@@ -259,6 +288,8 @@ def translate_docx(source: Path, output: Path, cache: dict[str, str]) -> dict:
                     remaining_chinese_paragraphs += remaining
                 except Exception:
                     pass
+            if is_word_xml:
+                data = apply_residual_replacements(data)
             zout.writestr(item, data)
 
     return {
