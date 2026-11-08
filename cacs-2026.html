@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CACS 2026 First-Author Research | CHENG-HSUAN LEE</title>
+    <meta name="description" content="First-author CACS 2026 paper by Cheng-Hsuan Lee on gait-guided quadruped sim-to-real transfer. Best Student Paper Award Honorable Mention and in-person English oral presentation." />
+    <link rel="stylesheet" href="site.css?v=20261108-cacs" />
+    <link rel="stylesheet" href="project.css?v=20260902-asr-media-center" />
+  </head>
+  <body class="project-page publication-page">
+    <header class="site-header">
+      <a class="brand" href="index.html#home" aria-label="CHENG-HSUAN LEE home">CHL</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <section class="project-hero">
+        <a href="index.html#publication">Back to publication</a>
+        <p class="section-kicker">First-Author Research | NTUME ASR Lab | CACS 2026</p>
+        <h1>Making learned quadruped locomotion executable on real hardware.</h1>
+        <p class="publication-award">Best Student Paper Award — Honorable Mention</p>
+        <p>My first-author conference paper connects a failed physical deployment to a testable control strategy: verify a gait on the robot first, then use that reference to guide reinforcement learning. I presented this work in person through an English oral presentation at CACS 2026.</p>
+        <a class="text-link" href="assets/documents/cacs-2026-quadruped-paper.pdf" target="_blank" rel="noopener">Read the full paper (PDF)</a>
+      </section>
+      <section class="case-glance" aria-label="Research at a glance">
+        <article><span>Authorship</span><strong>First author; in-person English oral presenter</strong></article>
+        <article><span>Recognition</span><strong>One of 11 student-paper finalists; subsequently awarded Honorable Mention</strong></article>
+        <article><span>Publication</span><strong>CACS 2026 · IEEE conference proceedings · Paper #1275</strong></article>
+        <article><span>Evidence</span><strong>Six guided hardware recordings; two controllers tested at a 0.4 m/s forward command</strong></article>
+      </section>
+      <section class="project-detail-shell">
+        <aside class="fact-strip" aria-label="Publication facts">
+          <article><span>Conference</span><strong>2026 International Automatic Control Conference<br />October 21–24, 2026<br />Taichung, Taiwan</strong></article>
+          <article><span>Platform</span><strong>Custom 12-DoF quadruped; CubeMars RO80 motors, ODrive, Jetson NX, ROS 2</strong></article>
+          <article><span>Method</span><strong>Hardware-verified gait reference + PPO; encoder-consistent forward kinematics and ROS bag analysis</strong></article>
+          <article><span>Related laboratory work</span><a href="asr-lab.html">Explore the ASR Lab hardware and learning workflow</a></article>
+        </aside>
+        <div class="detail-layout">
+          <section class="case-module" aria-labelledby="paper-title">
+            <p class="section-kicker">Publication</p>
+            <h2 id="paper-title">Sim-to-Real Performance Analysis of a Custom Quadruped Robot Using Gait-Generator-Guided Reinforcement Learning</h2>
+            <p><strong>Cheng-Hsuan Lee</strong>, Yi-Cheng Wang, Yu-Hsuan Chi, Yu-Mei Huang, Yu-Cheng Kuo, and Chung-Hsien Kuo.</p>
+            <p>2026 International Automatic Control Conference (CACS 2026), IEEE conference proceedings.</p>
+            <p>As first author, I brought the laboratory investigation into a research paper and communicated the method, physical failure evidence, and transfer results through an English oral presentation. The study builds on my hands-on work across actuator hardware, motor control, training records, and sim-to-real debugging.</p>
+          </section>
+          <section class="case-module" aria-labelledby="question-title">
+            <h2 id="question-title">A policy can walk in simulation and still fail before its first real gait cycle.</h2>
+            <p>The pure-RL controller produced a repeatable simulated gait with a mean swing peak of 7.54 cm. On hardware, front-foot displacement reached only 2.57–3.53 cm before protection; the front-right thigh measured 46.98 A within 0.675 s of command onset. No complete walking cycle formed in the analyzed failure record.</p>
+            <p>Our interpretation was a feasibility mismatch: simulated task success allowed motions that the real mechanism could not reliably execute. Backlash, drivetrain loss, assembly differences, contact, sensing, and actuator limits narrowed the physical motion region.</p>
+          </section>
+          <section class="case-module" aria-labelledby="method-title">
+            <h2 id="method-title">Verify physical feasibility before asking the policy to optimize.</h2>
+            <p>We adapted a gait generator to the robot's link dimensions, joint conventions, and inverse kinematics. Direct execution on hardware provided a qualitative feasibility check before the reference was introduced into PPO through joint-position, joint-velocity, and foot-position rewards. Task rewards continued to optimize tracking, stabilization, contact, smoothness, and effort.</p>
+            <ol class="publication-flow" aria-label="Research workflow">
+              <li><strong>Diagnose</strong><span>Compare simulated swing, real foot motion, tracking error, and actuator current.</span></li>
+              <li><strong>Verify</strong><span>Execute the robot-specific gait reference directly on the physical platform.</span></li>
+              <li><strong>Guide learning</strong><span>Use a kinematic motion prior to constrain PPO toward executable trajectories.</span></li>
+              <li><strong>Measure transfer</strong><span>Evaluate six hardware recordings using consistent foot, joint, and current metrics.</span></li>
+            </ol>
+          </section>
+          <section class="case-module" aria-labelledby="results-title">
+            <h2 id="results-title">Repeated hardware trials, with the remaining gap made explicit.</h2>
+            <p>Both gait-guided controllers sustained forward walking in all three recordings per controller. To compare foot motion consistently, we reconstructed simulation and hardware trajectories from joint positions using the same forward-kinematics model.</p>
+            <div class="publication-table-wrap" tabindex="0" role="region" aria-label="Guided controller results, scroll horizontally if needed">
+              <table class="decision-table">
+                <caption>Level-ground walking at a 0.4 m/s forward command; three hardware recordings per controller.</caption>
+                <thead><tr><th scope="col">Measurement</th><th scope="col">Guided A</th><th scope="col">Guided B</th></tr></thead>
+                <tbody>
+                  <tr><th scope="row">Simulated mean swing peak</th><td>8.63 cm</td><td>8.54 cm</td></tr>
+                  <tr><th scope="row">Hardware mean swing peak</th><td>7.78 ± 0.06 cm</td><td>7.25 ± 0.45 cm</td></tr>
+                  <tr><th scope="row">Amplitude retention</th><td>90.0%</td><td>84.9%</td></tr>
+                  <tr><th scope="row">Phase correlation</th><td>0.980</td><td>0.990</td></tr>
+                  <tr><th scope="row">Hardware joint RMSE</th><td>6.53 ± 1.24°</td><td>6.86 ± 3.57°</td></tr>
+                  <tr><th scope="row">Hardware current RMS</th><td>8.41 ± 0.65 A</td><td>10.32 ± 1.66 A</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>The guided trajectories preserved timing and shape, but lost about 10–15% of their swing amplitude. Body-orientation variability also increased on hardware, and joint tracking and brief current peaks remained concerns. These results motivate drivetrain identification and better state/contact estimation.</p>
+            <p class="publication-note">Scope: straight, level-ground walking at the tested command. The pure-RL comparison is one recorded failure, not a repeated steady-state baseline; the paper does not claim a formal percentage improvement over pure RL or validated turning and uneven-terrain performance.</p>
+          </section>
+          <section class="case-module" aria-labelledby="award-title">
+            <h2 id="award-title">From student-paper finalist to Honorable Mention.</h2>
+            <p>The paper was selected as one of <strong>11 finalists</strong> for the CACS 2026 Best Student Paper Award and subsequently received an <strong>Honorable Mention</strong>. I attended the conference in person and delivered the <strong>English oral presentation</strong> as the paper's first author.</p>
+            <figure class="publication-certificate">
+              <a href="assets/documents/cacs-2026-award-certificate.pdf" target="_blank" rel="noopener"><img src="assets/photos/cacs-2026-award.jpg" alt="Official CACS 2026 certificate: Best Student Paper Award Honorable Mention, paper 1275, Cheng-Hsuan Lee and coauthors" loading="lazy" /></a>
+              <figcaption>Official award certificate · <a href="assets/documents/cacs-2026-award-certificate.pdf" target="_blank" rel="noopener">Open certificate PDF</a></figcaption>
+            </figure>
+            <p><a href="https://cacs2026.github.io/cacs2026-program/" target="_blank" rel="noopener">Official conference program</a> · Paper #1275, Best Student Paper Contest.</p>
+          </section>
+          <section class="case-module" aria-labelledby="conference-title">
+            <h2 id="conference-title">Presenting the research in person.</h2>
+            <div class="conference-gallery">
+              <figure class="media-placeholder conference-placeholder"><div><strong>English oral presentation</strong><span>CACS 2026 · Research talk</span></div></figure>
+              <figure class="media-placeholder conference-placeholder"><div><strong>Award ceremony</strong><span>Best Student Paper Award · Honorable Mention</span></div></figure>
+              <figure class="media-placeholder conference-placeholder"><div><strong>Conference experience</strong><span>On-site photographs · Taichung, Taiwan</span></div></figure>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer"><p>CHENG-HSUAN LEE · Robotics Systems Portfolio</p><a href="index.html#publication">Back to portfolio</a></footer>
+  </body>
+</html>
