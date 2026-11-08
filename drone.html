@@ -1,264 +1,185 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Quadcopter Ball-Transfer Drone | CHENG-HSUAN LEE</title>
-    <link rel="stylesheet" href="site.css?v=20260706-home-media-align" />
-    <link rel="stylesheet" href="project.css?v=20260828-no-why-sections" />
-  </head>
-  <body class="project-page">
-    <header class="site-header">
-      <a class="brand" href="index.html#home" aria-label="CHENG-HSUAN LEE home">CHL</a>
-      <nav class="nav-links" aria-label="Primary navigation">
-        <a href="index.html#projects">Projects</a>
-        <a href="index.html#laboratory">Laboratory</a>
-        <a href="index.html#skills">Skills</a>
-        <a href="index.html#materials">CV/PDF</a>
-        <a href="index.html#contact">Contact</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="project-hero">
-        <a href="index.html#projects">Back to portfolio</a>
-        <p class="section-kicker">Case Study | Flying Robot System</p>
-        <h1>Quadcopter Ball-Transfer Drone</h1>
-        <p>
-          A mission-driven quadcopter built to move a ball between platforms, requiring airframe design,
-          payload integration, thrust testing, signal debugging, and final-test risk management. The
-          build became a visible reference point for many peer teams in the course.
-        </p>
-      </section>
-
-      <section class="case-glance" aria-label="Drone project at a glance">
-        <article>
-          <span>Challenge</span>
-          <strong>Build a drone that could remain stable while carrying and transferring a ball.</strong>
-        </article>
-        <article>
-          <span>My Contribution</span>
-          <strong>Led system design, evidence-driven debugging, integration decisions, and final-run preparation.</strong>
-        </article>
-        <article>
-          <span>Technical Stack</span>
-          <strong>Airframe fabrication, propulsion testing, ESCs, flight controller, SBUS signal chain.</strong>
-        </article>
-        <article>
-          <span>Outcome</span>
-          <strong>Full marks, course grade A+, and a system many peer teams used as a reference.</strong>
-        </article>
-      </section>
-
-      <section class="project-detail-shell">
-        <aside class="fact-strip" aria-label="Drone project facts">
-          <article>
-            <span>Role</span>
-            <strong>Team lead, system designer, integration coordinator</strong>
-          </article>
-          <article>
-            <span>Scope</span>
-            <strong>Airframe, payload mechanism, electronics, power, thrust testing</strong>
-          </article>
-          <article>
-            <span>Debugging</span>
-            <strong>Motor behavior, SBUS signal chain, flight controller, resonance</strong>
-          </article>
-          <article>
-            <span>Result</span>
-            <strong>Full marks, course grade A+, and peer-reference system influence</strong>
-          </article>
-        </aside>
-
-        <section class="detail-layout">
-          <article class="detail-feature">
-            <div class="detail-text">
-              <h2>Defined the drone as a system, not a collection of parts.</h2>
-              <p>
-                The ball-transfer mission forced every design decision to interact: payload placement
-                changed mass distribution, frame stiffness affected vibration, and power choices affected
-                control margin. I coordinated the team around the full mission rather than isolated
-                subsystem progress.
-              </p>
-              <p>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Quadcopter Ball-Transfer Drone | CHENG-HSUAN LEE</title>
+<link href="site.css?v=20261108-focused" rel="stylesheet"/>
+<link href="project.css?v=20261108-focused" rel="stylesheet"/>
+<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<body class="project-page focused-case">
+<header class="site-header">
+<a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+</header>
+<main>
+<section class="project-hero">
+<a href="index.html#projects">Back to portfolio</a>
+<p class="section-kicker">Case Study | Flying Robot System</p>
+<h1>Quadcopter Ball-Transfer Drone</h1><p class="case-lead">Led a complete flying-robot mission: airframe, payload, propulsion tests, electronics, and flight debugging.</p>
+<div aria-label="Case study navigation" class="case-jump-links"><a href="#case-evidence">Key evidence</a><a href="#technical-details">Technical details</a></div></section>
+<section aria-label="Drone project at a glance" class="case-glance"><article><span>My role</span><strong>Team lead · system integration</strong></article><article><span>Result</span><strong>Full marks · course grade A+</strong></article><article><span>Peer influence</span><strong>Reference for many peer teams</strong></article><article><span>Evidence</span><strong>Thrust tests · full final-test video</strong></article></section>
+<section class="project-detail-shell">
+<aside aria-label="Drone project facts" class="fact-strip">
+<article>
+<span>Role</span>
+<strong>Team lead, system designer, integration coordinator</strong>
+</article>
+<article>
+<span>Scope</span>
+<strong>Airframe, payload mechanism, electronics, power, thrust testing</strong>
+</article>
+<article>
+<span>Debugging</span>
+<strong>Motor behavior, SBUS signal chain, flight controller, resonance</strong>
+</article>
+<article>
+<span>Result</span>
+<strong>Full marks, course grade A+, and peer-reference system influence</strong>
+</article>
+</aside>
+<section class="detail-layout" id="case-evidence">
+<article class="detail-feature">
+<div class="detail-text">
+<h2>Mission architecture &amp; integration</h2>
+<p>Coordinated airframe, payload, power, propulsion, and electronics decisions as one ball-transfer mission. Many peer teams referenced our architecture and testing approach.</p>
+<details class="evidence-disclosure narrative-disclosure"><summary>Design &amp; debugging notes</summary><p>
                 That systems view helped us prioritize the decisions that mattered most for stable
                 testing: airframe geometry, mechanism placement, electronics layout, and spare assemblies.
-              </p>
-              <p>
+              </p><p>
                 The drone became a reference point for many peer teams, who looked to our architecture,
                 testing approach, and integration decisions while developing their own builds.
-              </p>
-            </div>
-            <div class="feature-media" aria-label="Drone system media area">
-              <figure class="media-photo media-primary">
-                <img
-                  src="assets/photos/drone-top.jpg"
-                  alt="CAD rendering of the quadcopter frame and ball-transfer payload mechanism"
-                />
-              </figure>
-            </div>
-          </article>
-
-          <article class="detail-feature reverse">
-            <div class="detail-text">
-              <h2>Used testing to separate flight problems from design problems.</h2>
-              <p>
-                We used thrust-to-throttle testing to understand propulsion margin before final flights.
-                During integration, we separated motor behavior, SBUS setup, controller configuration,
-                vibration, and structural resonance instead of blaming every issue on tuning. That habit
-                turned failure symptoms into design decisions the whole team could act on.
-              </p>
-              <div class="decision-grid">
-                <div class="decision-item">
-                  <strong>Propulsion</strong>
-                  <p>Measured thrust behavior to guide safer design and flight decisions.</p>
-                </div>
-                <div class="decision-item">
-                  <strong>Signals</strong>
-                  <p>Checked control signal flow as part of system reliability.</p>
-                </div>
-                <div class="decision-item">
-                  <strong>Structure</strong>
-                  <p>Treated vibration and resonance as stability risks, not side effects.</p>
-                </div>
-              </div>
-            </div>
-            <div class="feature-media detail-media-stack drone-test-stack" aria-label="Drone test media area">
-              <figure class="media-photo media-primary">
-                <img
-                  src="assets/photos/drone-middle.jpg"
-                  alt="Drone thrust test setup used to measure motor and propeller behavior"
-                />
-              </figure>
-              <figure class="media-photo media-secondary">
-                <img
-                  src="assets/photos/drone-arm-stress-analysis.jpg"
-                  alt="Drone arm stress analysis in Autodesk Inventor showing deformation under load"
-                />
-              </figure>
-            </div>
-          </article>
-
-          <article class="detail-feature">
-            <div class="detail-text">
-              <h2>Prepared for a final evaluation with little room for failure.</h2>
-              <p>
-                The final run demanded reliability under limited formal attempts. I helped the team
-                prepare spare parts, check rules, and plan likely failure responses so the build could
-                survive pressure instead of relying on a perfect single attempt.
-              </p>
-              <ul class="compact-list">
-                <li>Stable flight depended on structure, signals, power, and tuning working together.</li>
-                <li>Spare parts and fallback plans turned uncertainty into controlled risk.</li>
-                <li>Leadership meant converting noisy test results into clear next actions.</li>
-              </ul>
-            </div>
-            <div class="feature-media detail-media-stack drone-demo-stack" aria-label="Drone demo media area">
-              <figure class="media-photo media-primary">
-                <img
-                  src="assets/photos/drone-bottom.jpg"
-                  alt="Completed quadcopter builds during final drone testing"
-                />
-              </figure>
-              <figure class="media-photo media-secondary">
-                <img
-                  src="assets/photos/drone-final-test.jpg"
-                  alt="Completed ball-transfer drone staged in the test area with tennis balls"
-                />
-              </figure>
-            </div>
-          </article>
-
-          <section class="case-module project-video-reel" aria-labelledby="drone-final-video-title">
-            <h2 id="drone-final-video-title">Full final test video</h2>
-            <figure class="feature-video">
-              <video controls muted playsinline preload="metadata" aria-label="Full final test video for the ball-transfer drone">
-                <source src="assets/videos/drone-final-test-full-1080p.mp4" type="video/mp4" />
+              </p></details></div>
+<div aria-label="Drone system media area" class="feature-media">
+<figure class="media-photo media-primary">
+<img alt="CAD rendering of the quadcopter frame and ball-transfer payload mechanism" decoding="async" height="390" loading="lazy" src="assets/photos/drone-top.jpg" width="534"/>
+</figure>
+</div>
+</article>
+<article class="detail-feature reverse">
+<div class="detail-text">
+<h2>Propulsion &amp; signal-chain debugging</h2>
+<p>Used thrust-to-throttle tests and signal checks to separate propulsion, SBUS, controller, vibration, and structural causes of unstable flight.</p>
+<details class="evidence-disclosure"><summary>Implementation checkpoints</summary><div class="decision-grid">
+<div class="decision-item">
+<strong>Propulsion</strong>
+<p>Measured thrust behavior to guide safer design and flight decisions.</p>
+</div>
+<div class="decision-item">
+<strong>Signals</strong>
+<p>Checked control signal flow as part of system reliability.</p>
+</div>
+<div class="decision-item">
+<strong>Structure</strong>
+<p>Treated vibration and resonance as stability risks, not side effects.</p>
+</div>
+</div></details>
+</div>
+<div aria-label="Drone test media area" class="feature-media detail-media-stack drone-test-stack">
+<figure class="media-photo media-primary">
+<img alt="Drone thrust test setup used to measure motor and propeller behavior" decoding="async" height="578" loading="lazy" src="assets/photos/drone-middle.jpg" width="456"/>
+</figure>
+<figure class="media-photo media-secondary">
+<img alt="Drone arm stress analysis in Autodesk Inventor showing deformation under load" decoding="async" height="938" loading="lazy" src="assets/photos/drone-arm-stress-analysis.jpg" width="1744"/>
+</figure>
+</div>
+</article>
+<article class="detail-feature">
+<div class="detail-text">
+<h2>Final-test execution</h2>
+<p>Prepared spare parts, rule checks, and fallback responses for limited evaluation attempts. The team earned full marks and an A+ course grade.</p>
+<ul class="compact-list">
+<li>Stable flight depended on structure, signals, power, and tuning working together.</li>
+<li>Spare parts and fallback plans turned uncertainty into controlled risk.</li>
+<li>Leadership meant converting noisy test results into clear next actions.</li>
+</ul>
+</div>
+<div aria-label="Drone demo media area" class="feature-media detail-media-stack drone-demo-stack">
+<figure class="media-photo media-primary">
+<img alt="Completed quadcopter builds during final drone testing" decoding="async" height="1350" loading="lazy" src="assets/photos/drone-bottom.jpg" width="1800"/>
+</figure>
+<figure class="media-photo media-secondary">
+<img alt="Completed ball-transfer drone staged in the test area with tennis balls" decoding="async" height="530" loading="lazy" src="assets/photos/drone-final-test.jpg" width="594"/>
+</figure>
+</div>
+</article>
+<section aria-labelledby="drone-final-video-title" class="case-module project-video-reel">
+<h2 id="drone-final-video-title">Full final test video</h2>
+<figure class="feature-video">
+<video aria-label="Full final test video for the ball-transfer drone" controls="" muted="" playsinline="" preload="metadata">
+<source src="assets/videos/drone-final-test-full-1080p.mp4" type="video/mp4"/>
                 Full final test video for the ball-transfer drone.
               </video>
-              <figcaption>Drone final test run</figcaption>
-            </figure>
-          </section>
-
-          <section class="case-module" aria-labelledby="drone-flow-title">
-            <h2 id="drone-flow-title">Engineering flow</h2>
-            <div class="system-flow" aria-label="Drone engineering flow">
-              <article class="flow-step">
-                <span>01</span>
-                <strong>Define the mission system</strong>
-                <p>Connected ball transfer, airframe layout, payload placement, and flight stability.</p>
-              </article>
-              <article class="flow-step">
-                <span>02</span>
-                <strong>Validate propulsion margin</strong>
-                <p>Used thrust-to-throttle testing to understand motor, propeller, ESC, and battery behavior.</p>
-              </article>
-              <article class="flow-step">
-                <span>03</span>
-                <strong>Debug integration risks</strong>
-                <p>Separated signal-chain, controller, vibration, and structural causes during tests.</p>
-              </article>
-              <article class="flow-step">
-                <span>04</span>
-                <strong>Prepare final execution</strong>
-                <p>Planned spare parts, rule checks, and fallback responses for limited attempts.</p>
-              </article>
-            </div>
-          </section>
-
-          <section class="case-module" aria-labelledby="drone-table-title">
-            <h2 id="drone-table-title">Technical decision table</h2>
-            <div class="decision-table-wrap">
-              <table class="decision-table">
-                <thead>
-                  <tr>
-                    <th>Constraint</th>
-                    <th>Decision</th>
-                    <th>Why it mattered</th>
-                    <th>Skill demonstrated</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Payload affected mass distribution</td>
-                    <td>Treated airframe and transfer mechanism as one system</td>
-                    <td>Reduced the chance of stable frame design failing after payload integration</td>
-                    <td>System architecture</td>
-                  </tr>
-                  <tr>
-                    <td>Flight behavior depended on propulsion margin</td>
-                    <td>Ran thrust-to-throttle testing before final flights</td>
-                    <td>Converted motor uncertainty into usable design information</td>
-                    <td>Experimental validation</td>
-                  </tr>
-                  <tr>
-                    <td>Instability had multiple possible causes</td>
-                    <td>Separated signal, controller, vibration, and structural issues</td>
-                    <td>Prevented the team from treating every problem as a tuning issue</td>
-                    <td>Integration debugging</td>
-                  </tr>
-                  <tr>
-                    <td>Peer teams needed working examples</td>
-                    <td>Built a system clear enough for others to reference during their own integration</td>
-                    <td>Showed that our architecture and test process were understandable beyond our team</td>
-                    <td>Technical communication</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </section>
-
-          <section class="takeaway-band" aria-labelledby="drone-takeaway-title">
-            <h2 id="drone-takeaway-title">Reviewer takeaway</h2>
-            <p>
-              This project shows that I can lead a physical robotics system where mechanical design,
-              electrical integration, testing, and risk control interact. The fact that many peers used
-              our design and testing approach as a reference makes it a strong signal of engineering
-              clarity, not just course completion.
-            </p>
-          </section>
-        </section>
-      </section>
-    </main>
-  </body>
+<figcaption>Drone final test run</figcaption>
+</figure>
+</section>
+<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="drone-flow-title" class="case-module">
+<h2 id="drone-flow-title">Engineering flow</h2>
+<div aria-label="Drone engineering flow" class="system-flow">
+<article class="flow-step">
+<span>01</span>
+<strong>Define the mission system</strong>
+<p>Connected ball transfer, airframe layout, payload placement, and flight stability.</p>
+</article>
+<article class="flow-step">
+<span>02</span>
+<strong>Validate propulsion margin</strong>
+<p>Used thrust-to-throttle testing to understand motor, propeller, ESC, and battery behavior.</p>
+</article>
+<article class="flow-step">
+<span>03</span>
+<strong>Debug integration risks</strong>
+<p>Separated signal-chain, controller, vibration, and structural causes during tests.</p>
+</article>
+<article class="flow-step">
+<span>04</span>
+<strong>Prepare final execution</strong>
+<p>Planned spare parts, rule checks, and fallback responses for limited attempts.</p>
+</article>
+</div>
+</section><section aria-labelledby="drone-table-title" class="case-module">
+<h2 id="drone-table-title">Technical decision table</h2>
+<div class="decision-table-wrap">
+<table class="decision-table">
+<thead>
+<tr>
+<th>Constraint</th>
+<th>Decision</th>
+<th>Why it mattered</th>
+<th>Skill demonstrated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Payload affected mass distribution</td>
+<td>Treated airframe and transfer mechanism as one system</td>
+<td>Reduced the chance of stable frame design failing after payload integration</td>
+<td>System architecture</td>
+</tr>
+<tr>
+<td>Flight behavior depended on propulsion margin</td>
+<td>Ran thrust-to-throttle testing before final flights</td>
+<td>Converted motor uncertainty into usable design information</td>
+<td>Experimental validation</td>
+</tr>
+<tr>
+<td>Instability had multiple possible causes</td>
+<td>Separated signal, controller, vibration, and structural issues</td>
+<td>Prevented the team from treating every problem as a tuning issue</td>
+<td>Integration debugging</td>
+</tr>
+<tr>
+<td>Peer teams needed working examples</td>
+<td>Built a system clear enough for others to reference during their own integration</td>
+<td>Showed that our architecture and test process were understandable beyond our team</td>
+<td>Technical communication</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section></details></section>
+</section>
+</main>
+</body>
 </html>
