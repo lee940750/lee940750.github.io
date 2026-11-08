@@ -8,11 +8,11 @@
 <meta content="First-author CACS 2026 paper by Cheng-Hsuan Lee on gait-guided quadruped sim-to-real transfer. Best Student Paper Award Honorable Mention and in-person English oral presentation." name="description"/>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
 <body class="project-page publication-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
-<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#skills">Capabilities</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
 <section class="project-hero">
@@ -42,6 +42,21 @@
 <p>2026 International Automatic Control Conference (CACS 2026), IEEE conference proceedings.</p>
 <p>As first author, I brought the laboratory investigation into a research paper and communicated the method, physical failure evidence, and transfer results through an English oral presentation. The study builds on my hands-on work across actuator hardware, motor control, training records, and sim-to-real debugging.</p>
 </section>
+<div id="technical-details"><section aria-labelledby="question-title" class="case-module">
+<h2 id="question-title">A policy can walk in simulation and still fail before its first real gait cycle.</h2>
+<p>The pure-RL controller produced a repeatable simulated gait with a mean swing peak of 7.54 cm. On hardware, front-foot displacement reached only 2.57–3.53 cm before protection; the front-right thigh measured 46.98 A within 0.675 s of command onset. No complete walking cycle formed in the analyzed failure record.</p>
+<p>Our interpretation was a feasibility mismatch: simulated task success allowed motions that the real mechanism could not reliably execute. Backlash, drivetrain loss, assembly differences, contact, sensing, and actuator limits narrowed the physical motion region.</p>
+</section></div>
+<section aria-labelledby="method-title" class="case-module">
+<h2 id="method-title">Verify physical feasibility before asking the policy to optimize.</h2>
+<p>We adapted a gait generator to the robot's link dimensions, joint conventions, and inverse kinematics. Direct execution on hardware provided a qualitative feasibility check before the reference was introduced into PPO through joint-position, joint-velocity, and foot-position rewards. Task rewards continued to optimize tracking, stabilization, contact, smoothness, and effort.</p>
+<ol aria-label="Research workflow" class="publication-flow">
+<li><strong>Diagnose</strong><span>Compare simulated swing, real foot motion, tracking error, and actuator current.</span></li>
+<li><strong>Verify</strong><span>Execute the robot-specific gait reference directly on the physical platform.</span></li>
+<li><strong>Guide learning</strong><span>Use a kinematic motion prior to constrain PPO toward executable trajectories.</span></li>
+<li><strong>Measure transfer</strong><span>Evaluate six hardware recordings using consistent foot, joint, and current metrics.</span></li>
+</ol>
+</section>
 <section aria-labelledby="results-title" class="case-module">
 <h2 id="results-title">Repeated hardware trials, with the remaining gap made explicit.</h2>
 <p>Both gait-guided controllers sustained forward walking in all three recordings per controller. To compare foot motion consistently, we reconstructed simulation and hardware trajectories from joint positions using the same forward-kinematics model.</p>
@@ -66,7 +81,7 @@
 <h2 id="award-title">From student-paper finalist to Honorable Mention.</h2>
 <p>The paper was selected as one of <strong>11 finalists</strong> for the CACS 2026 Best Student Paper Award and subsequently received an <strong>Honorable Mention</strong>. I attended the conference in person and delivered the <strong>English oral presentation</strong> as the paper's first author.</p>
 <figure class="publication-certificate">
-<a href="assets/documents/cacs-2026-award-certificate.pdf" rel="noopener" target="_blank"><img alt="Official CACS 2026 certificate: Best Student Paper Award Honorable Mention, paper 1275, Cheng-Hsuan Lee and coauthors" decoding="async" height="953" loading="lazy" src="assets/photos/cacs-2026-award.jpg" width="1347"/></a>
+<a href="assets/documents/cacs-2026-award-certificate.pdf" rel="noopener" target="_blank"><img alt="Official CACS 2026 certificate: Best Student Paper Award Honorable Mention, paper 1275, Cheng-Hsuan Lee and coauthors" loading="lazy" src="assets/photos/cacs-2026-award.jpg"/></a>
 <figcaption>Official award certificate · <a href="assets/documents/cacs-2026-award-certificate.pdf" rel="noopener" target="_blank">Open certificate PDF</a></figcaption>
 </figure>
 <p><a href="https://cacs2026.github.io/cacs2026-program/" rel="noopener" target="_blank">Official conference program</a> · Paper #1275, Best Student Paper Contest.</p>
@@ -79,20 +94,7 @@
 <figure class="media-placeholder conference-placeholder"><div><strong>Conference experience</strong><span>On-site photographs · Taichung, Taiwan</span></div></figure>
 </div>
 </section>
-<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="question-title" class="case-module">
-<h2 id="question-title">A policy can walk in simulation and still fail before its first real gait cycle.</h2>
-<p>The pure-RL controller produced a repeatable simulated gait with a mean swing peak of 7.54 cm. On hardware, front-foot displacement reached only 2.57–3.53 cm before protection; the front-right thigh measured 46.98 A within 0.675 s of command onset. No complete walking cycle formed in the analyzed failure record.</p>
-<p>Our interpretation was a feasibility mismatch: simulated task success allowed motions that the real mechanism could not reliably execute. Backlash, drivetrain loss, assembly differences, contact, sensing, and actuator limits narrowed the physical motion region.</p>
-</section><section aria-labelledby="method-title" class="case-module">
-<h2 id="method-title">Verify physical feasibility before asking the policy to optimize.</h2>
-<p>We adapted a gait generator to the robot's link dimensions, joint conventions, and inverse kinematics. Direct execution on hardware provided a qualitative feasibility check before the reference was introduced into PPO through joint-position, joint-velocity, and foot-position rewards. Task rewards continued to optimize tracking, stabilization, contact, smoothness, and effort.</p>
-<ol aria-label="Research workflow" class="publication-flow">
-<li><strong>Diagnose</strong><span>Compare simulated swing, real foot motion, tracking error, and actuator current.</span></li>
-<li><strong>Verify</strong><span>Execute the robot-specific gait reference directly on the physical platform.</span></li>
-<li><strong>Guide learning</strong><span>Use a kinematic motion prior to constrain PPO toward executable trajectories.</span></li>
-<li><strong>Measure transfer</strong><span>Evaluate six hardware recordings using consistent foot, joint, and current metrics.</span></li>
-</ol>
-</section></details></div>
+</div>
 </section>
 </main>
 <footer class="site-footer"><p>CHENG-HSUAN LEE · Robotics Systems Portfolio</p><a href="index.html#publication">Back to portfolio</a></footer>

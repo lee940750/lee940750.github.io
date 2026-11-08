@@ -186,6 +186,9 @@
 .focused-home .education-band { background: #f1f5f4; }
 .education-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 .education-summary > p { margin: 0; }
+.education-coursework h3 { margin-top: 0; }
+.education-coursework .disclosure-body { padding: 0; }
+.education-coursework p:first-child { margin-top: 0; }
 .focused-home .awards-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .focused-home .award-list { border: 0; border-radius: 0; background: none; padding: 0; }
 .focused-home .award-list h3 { margin-top: 0; }
@@ -223,11 +226,6 @@
 .focused-case .fact-strip article { min-height: 0; padding: 18px; }
 .focused-case .fact-strip { top: 100px; }
 .focused-case .fact-strip strong { font-size: 0.95rem; }
-.focused-case .narrative-disclosure { margin-top: 4px; }
-.focused-case .narrative-disclosure p { padding-bottom: 12px; }
-.focused-case .technical-disclosure > summary { font-size: 1.2rem; }
-.focused-case .technical-disclosure .case-module:first-of-type { border-top: 0; }
-.focused-case .technical-disclosure .case-module { padding-block: 24px; }
 .focused-case .publication-highlights { margin-block: 20px; }
 .focused-case .publication-highlights li { font-size: 0.95rem; padding: 8px 12px; }
 

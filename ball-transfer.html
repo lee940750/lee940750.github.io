@@ -7,11 +7,11 @@
 <title>Foldable Ball Transfer Mechanism | CHENG-HSUAN LEE</title>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
 <body class="project-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
-<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#skills">Capabilities</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
 <section class="project-hero">
@@ -42,23 +42,32 @@
 <section class="detail-layout" id="case-evidence">
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Packaging-driven mechanism design</h2>
-<p>Led concept selection around compact storage, deployment, and transfer requirements. Folding architecture made the packaging constraint part of the mechanism design.</p>
-<details class="evidence-disclosure narrative-disclosure"><summary>Design &amp; debugging notes</summary><p>
+<h2>Treated packaging as the main engineering problem.</h2>
+<p>
+                The mechanism had to pick up, transport, and release a ball while staying inside a fixed
+                envelope. I treated size limits, folding, deployment motion, lock-up stiffness, and repair
+                access as primary design requirements rather than details to solve later.
+              </p>
+<p>
                 This shifted the project from simply making a transfer path to designing a compact
                 machine that could repeatedly move from storage state to working state.
-              </p></details></div>
+              </p>
+</div>
 <div aria-label="Mechanism packaging media area" class="feature-media">
 <figure class="media-photo media-primary">
-<img alt="CAD rendering of the long-distance ball-transfer mechanism spanning two platforms" decoding="async" height="1115" loading="lazy" src="assets/photos/mechanism-top.jpg" width="1674"/>
+<img alt="CAD rendering of the long-distance ball-transfer mechanism spanning two platforms" src="assets/photos/mechanism-top.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature reverse">
 <div class="detail-text">
-<h2>Buildable, repairable hardware</h2>
-<p>Used hinges, latch hardware, MDF, and 3D-printed parts to balance reliable locking, fabrication speed, and repair access.</p>
-<details class="evidence-disclosure"><summary>Implementation checkpoints</summary><div class="decision-grid">
+<h2>Used simple hardware to improve reliability.</h2>
+<p>
+                Early folding concepts were not dependable enough. I matched MDF, 3D-printed parts,
+                hinges, latch hardware, and assembly order to the tools we had, then adapted that hardware
+                into a clearer folding module with a more predictable motion path and more stable locked state.
+              </p>
+<div class="decision-grid">
 <div class="decision-item">
 <strong>Fold motion</strong>
 <p>Moved smoothly from compact storage to working configuration.</p>
@@ -71,18 +80,22 @@
 <strong>Fabrication</strong>
 <p>Used accessible materials to speed repair and iteration.</p>
 </div>
-</div></details>
+</div>
 </div>
 <div aria-label="Mechanism hardware media area" class="feature-media">
 <figure class="media-photo media-primary">
-<img alt="Hands-on fabrication and adjustment of the ball-transfer mechanism" decoding="async" height="1800" loading="lazy" src="assets/photos/mechanism-middle.jpg" width="1350"/>
+<img alt="Hands-on fabrication and adjustment of the ball-transfer mechanism" src="assets/photos/mechanism-middle.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Deployment &amp; transfer testing</h2>
-<p>Repeated builds and motion checks refined the mechanism toward stable deployment and ball transfer in the final test.</p>
+<h2>Balanced ideal motion with buildable mechanics.</h2>
+<p>
+                The final design emphasized practical reliability over unnecessary complexity. It
+                performed dependably in final evaluation and strengthened my ability to connect mechanism
+                architecture with fabrication, assembly order, and test behavior.
+              </p>
 <ul class="compact-list">
 <li>Packaging constraints can dominate mechanism architecture.</li>
 <li>Off-the-shelf hardware can solve serious design problems when used carefully.</li>
@@ -91,7 +104,7 @@
 </div>
 <div aria-label="Mechanism demo media area" class="feature-media">
 <figure class="media-photo media-primary">
-<img alt="Final testing setup for the ball-transfer mechanism with the team present" decoding="async" height="1350" loading="lazy" src="assets/photos/mechanism-bottom.jpg" width="1800"/>
+<img alt="Final testing setup for the ball-transfer mechanism with the team present" src="assets/photos/mechanism-bottom.jpg"/>
 </figure>
 </div>
 </article>
@@ -105,7 +118,7 @@
 <figcaption>Foldable mechanism final test run</figcaption>
 </figure>
 </section>
-<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="mechanism-flow-title" class="case-module">
+<div id="technical-details"><section aria-labelledby="mechanism-flow-title" class="case-module">
 <h2 id="mechanism-flow-title">Engineering flow</h2>
 <div aria-label="Mechanism engineering flow" class="system-flow">
 <article class="flow-step">
@@ -129,7 +142,8 @@
 <p>Iterated toward a final mechanism that deployed and transferred reliably.</p>
 </article>
 </div>
-</section><section aria-labelledby="mechanism-table-title" class="case-module">
+</section></div>
+<section aria-labelledby="mechanism-table-title" class="case-module">
 <h2 id="mechanism-table-title">Technical decision table</h2>
 <div class="decision-table-wrap">
 <table class="decision-table">
@@ -163,7 +177,17 @@
 </tbody>
 </table>
 </div>
-</section></details></section>
+</section>
+<section aria-labelledby="mechanism-takeaway-title" class="takeaway-band">
+<h2 id="mechanism-takeaway-title">Reviewer takeaway</h2>
+<p>
+              This project demonstrates engineering judgment in a less glamorous but very important area:
+              making mechanisms fit, deploy, lock, and survive real fabrication constraints. That judgment
+              transfers directly to robot hardware design, where packaging and serviceability often decide
+              whether a system can be tested enough to improve.
+            </p>
+</section>
+</section>
 </section>
 </main>
 </body>

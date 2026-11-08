@@ -7,11 +7,11 @@
 <title>Quadcopter Ball-Transfer Drone | CHENG-HSUAN LEE</title>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
 <body class="project-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
-<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#skills">Capabilities</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
 <section class="project-hero">
@@ -42,26 +42,38 @@
 <section class="detail-layout" id="case-evidence">
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Mission architecture &amp; integration</h2>
-<p>Coordinated airframe, payload, power, propulsion, and electronics decisions as one ball-transfer mission. Many peer teams referenced our architecture and testing approach.</p>
-<details class="evidence-disclosure narrative-disclosure"><summary>Design &amp; debugging notes</summary><p>
+<h2>Defined the drone as a system, not a collection of parts.</h2>
+<p>
+                The ball-transfer mission forced every design decision to interact: payload placement
+                changed mass distribution, frame stiffness affected vibration, and power choices affected
+                control margin. I coordinated the team around the full mission rather than isolated
+                subsystem progress.
+              </p>
+<p>
                 That systems view helped us prioritize the decisions that mattered most for stable
                 testing: airframe geometry, mechanism placement, electronics layout, and spare assemblies.
-              </p><p>
+              </p>
+<p>
                 The drone became a reference point for many peer teams, who looked to our architecture,
                 testing approach, and integration decisions while developing their own builds.
-              </p></details></div>
+              </p>
+</div>
 <div aria-label="Drone system media area" class="feature-media">
 <figure class="media-photo media-primary">
-<img alt="CAD rendering of the quadcopter frame and ball-transfer payload mechanism" decoding="async" height="390" loading="lazy" src="assets/photos/drone-top.jpg" width="534"/>
+<img alt="CAD rendering of the quadcopter frame and ball-transfer payload mechanism" src="assets/photos/drone-top.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature reverse">
 <div class="detail-text">
-<h2>Propulsion &amp; signal-chain debugging</h2>
-<p>Used thrust-to-throttle tests and signal checks to separate propulsion, SBUS, controller, vibration, and structural causes of unstable flight.</p>
-<details class="evidence-disclosure"><summary>Implementation checkpoints</summary><div class="decision-grid">
+<h2>Used testing to separate flight problems from design problems.</h2>
+<p>
+                We used thrust-to-throttle testing to understand propulsion margin before final flights.
+                During integration, we separated motor behavior, SBUS setup, controller configuration,
+                vibration, and structural resonance instead of blaming every issue on tuning. That habit
+                turned failure symptoms into design decisions the whole team could act on.
+              </p>
+<div class="decision-grid">
 <div class="decision-item">
 <strong>Propulsion</strong>
 <p>Measured thrust behavior to guide safer design and flight decisions.</p>
@@ -74,21 +86,25 @@
 <strong>Structure</strong>
 <p>Treated vibration and resonance as stability risks, not side effects.</p>
 </div>
-</div></details>
+</div>
 </div>
 <div aria-label="Drone test media area" class="feature-media detail-media-stack drone-test-stack">
 <figure class="media-photo media-primary">
-<img alt="Drone thrust test setup used to measure motor and propeller behavior" decoding="async" height="578" loading="lazy" src="assets/photos/drone-middle.jpg" width="456"/>
+<img alt="Drone thrust test setup used to measure motor and propeller behavior" src="assets/photos/drone-middle.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="Drone arm stress analysis in Autodesk Inventor showing deformation under load" decoding="async" height="938" loading="lazy" src="assets/photos/drone-arm-stress-analysis.jpg" width="1744"/>
+<img alt="Drone arm stress analysis in Autodesk Inventor showing deformation under load" src="assets/photos/drone-arm-stress-analysis.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Final-test execution</h2>
-<p>Prepared spare parts, rule checks, and fallback responses for limited evaluation attempts. The team earned full marks and an A+ course grade.</p>
+<h2>Prepared for a final evaluation with little room for failure.</h2>
+<p>
+                The final run demanded reliability under limited formal attempts. I helped the team
+                prepare spare parts, check rules, and plan likely failure responses so the build could
+                survive pressure instead of relying on a perfect single attempt.
+              </p>
 <ul class="compact-list">
 <li>Stable flight depended on structure, signals, power, and tuning working together.</li>
 <li>Spare parts and fallback plans turned uncertainty into controlled risk.</li>
@@ -97,10 +113,10 @@
 </div>
 <div aria-label="Drone demo media area" class="feature-media detail-media-stack drone-demo-stack">
 <figure class="media-photo media-primary">
-<img alt="Completed quadcopter builds during final drone testing" decoding="async" height="1350" loading="lazy" src="assets/photos/drone-bottom.jpg" width="1800"/>
+<img alt="Completed quadcopter builds during final drone testing" src="assets/photos/drone-bottom.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="Completed ball-transfer drone staged in the test area with tennis balls" decoding="async" height="530" loading="lazy" src="assets/photos/drone-final-test.jpg" width="594"/>
+<img alt="Completed ball-transfer drone staged in the test area with tennis balls" src="assets/photos/drone-final-test.jpg"/>
 </figure>
 </div>
 </article>
@@ -114,7 +130,7 @@
 <figcaption>Drone final test run</figcaption>
 </figure>
 </section>
-<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="drone-flow-title" class="case-module">
+<div id="technical-details"><section aria-labelledby="drone-flow-title" class="case-module">
 <h2 id="drone-flow-title">Engineering flow</h2>
 <div aria-label="Drone engineering flow" class="system-flow">
 <article class="flow-step">
@@ -138,7 +154,8 @@
 <p>Planned spare parts, rule checks, and fallback responses for limited attempts.</p>
 </article>
 </div>
-</section><section aria-labelledby="drone-table-title" class="case-module">
+</section></div>
+<section aria-labelledby="drone-table-title" class="case-module">
 <h2 id="drone-table-title">Technical decision table</h2>
 <div class="decision-table-wrap">
 <table class="decision-table">
@@ -178,7 +195,17 @@
 </tbody>
 </table>
 </div>
-</section></details></section>
+</section>
+<section aria-labelledby="drone-takeaway-title" class="takeaway-band">
+<h2 id="drone-takeaway-title">Reviewer takeaway</h2>
+<p>
+              This project shows that I can lead a physical robotics system where mechanical design,
+              electrical integration, testing, and risk control interact. The fact that many peers used
+              our design and testing approach as a reference makes it a strong signal of engineering
+              clarity, not just course completion.
+            </p>
+</section>
+</section>
 </section>
 </main>
 </body>

@@ -7,11 +7,11 @@
 <title>FIRST Robotics Competition | CHENG-HSUAN LEE</title>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
 <body class="project-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
-<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#skills">Capabilities</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
 <section class="project-hero">
@@ -42,23 +42,33 @@
 <section class="detail-layout" id="case-evidence">
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Programming connected to the real robot</h2>
-<p>Worked across autonomous logic, selected teleop behavior, mechanism discussions, driver needs, and repair constraints so software decisions matched the physical robot.</p>
-<details class="evidence-disclosure narrative-disclosure"><summary>Design &amp; debugging notes</summary><p>
+<h2>Learned robotics as a complete competition system.</h2>
+<p>
+                FRC taught me that software cannot be separated from robot behavior, driver needs,
+                mechanism limits, repair speed, and match strategy. My work expanded from programming
+                into strategy and scouting because good decisions required understanding the full system
+                and communicating clearly under event pressure.
+              </p>
+<p>
                 Even when my formal role was software-focused, I joined build-season prototyping and
                 mechanism discussions so the programs matched the real robot.
-              </p></details></div>
+              </p>
+</div>
 <div aria-label="FRC robot media area" class="feature-media">
 <figure class="media-photo media-primary">
-<img alt="FRC competition robot on the field during a match" decoding="async" height="773" loading="lazy" src="assets/photos/frc-top.jpg" width="1101"/>
+<img alt="FRC competition robot on the field during a match" src="assets/photos/frc-top.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature reverse">
 <div class="detail-text">
-<h2>Scouting &amp; strategy under match pressure</h2>
-<p>Led scouting workflows and supported mobile data collection. Excel-based analysis helped compare robot performance and inform alliance selection and match strategy.</p>
-<details class="evidence-disclosure"><summary>Implementation checkpoints</summary><div class="decision-grid">
+<h2>Turned match pressure into usable strategy data.</h2>
+<p>
+                I led scouting work and supported tools for live match data collection. I also built
+                Excel-based analysis workflows so the team could compare robots, support alliance
+                selection, and make strategy decisions with evidence.
+              </p>
+<div class="decision-grid">
 <div class="decision-item">
 <strong>Autonomous logic</strong>
 <p>Prepared autonomous-period actions and selected teleop logic.</p>
@@ -71,21 +81,25 @@
 <strong>Excel analysis</strong>
 <p>Converted large match datasets into faster strategic choices.</p>
 </div>
-</div></details>
+</div>
 </div>
 <div aria-label="FRC strategy media area" class="feature-media detail-media-row frc-strategy-media">
 <figure class="media-photo media-primary">
-<img alt="Mobile scouting interface used for collecting FRC match data" decoding="async" height="1800" loading="lazy" src="assets/photos/frc-middle.jpg" width="831"/>
+<img alt="Mobile scouting interface used for collecting FRC match data" src="assets/photos/frc-middle.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="Autonomous routine planning sheet used to select FRC game-piece locations" decoding="async" height="2340" loading="lazy" src="assets/photos/frc-auto-sheet.jpg" width="1080"/>
+<img alt="Autonomous routine planning sheet used to select FRC game-piece locations" src="assets/photos/frc-auto-sheet.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Competition experience &amp; recognition</h2>
-<p>Contributed through programming, strategy, and scouting leadership in a team that qualified for the Houston Championship and earned regional engineering and design awards.</p>
+<h2>Built judgment through awards, travel, and real competition stakes.</h2>
+<p>
+                The team qualified for the Houston Championship and earned engineering awards in Taiwan
+                and the United States. The experience shaped how I think about preparation, data,
+                communication, repair speed, and calm technical decisions when conditions change.
+              </p>
 <ul class="compact-list">
 <li>2022 Sacramento Regional: Finalists and Industrial Design Award.</li>
 <li>2022 New Taipei City x Hon Hai Regional: Engineering Inspiration Award.</li>
@@ -94,10 +108,10 @@
 </div>
 <div aria-label="FRC award media area" class="feature-media detail-media-stack frc-award-stack">
 <figure class="media-photo media-primary">
-<img alt="FRC team discussion during competition near the field" decoding="async" height="720" loading="lazy" src="assets/photos/frc-bottom.jpg" width="1079"/>
+<img alt="FRC team discussion during competition near the field" src="assets/photos/frc-bottom.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="FRC robot operating near scoring structures during a competition match" decoding="async" height="645" loading="lazy" src="assets/photos/frc-match-robot.jpg" width="974"/>
+<img alt="FRC robot operating near scoring structures during a competition match" src="assets/photos/frc-match-robot.jpg"/>
 </figure>
 </div>
 </article>
@@ -111,7 +125,7 @@
 <figcaption>FRC autonomous period run</figcaption>
 </figure>
 </section>
-<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="frc-flow-title" class="case-module">
+<div id="technical-details"><section aria-labelledby="frc-flow-title" class="case-module">
 <h2 id="frc-flow-title">Engineering flow</h2>
 <div aria-label="FRC engineering flow" class="system-flow">
 <article class="flow-step">
@@ -135,7 +149,8 @@
 <p>Used analysis to support match strategy and alliance selection discussions.</p>
 </article>
 </div>
-</section><section aria-labelledby="frc-table-title" class="case-module">
+</section></div>
+<section aria-labelledby="frc-table-title" class="case-module">
 <h2 id="frc-table-title">Technical decision table</h2>
 <div class="decision-table-wrap">
 <table class="decision-table">
@@ -169,7 +184,17 @@
 </tbody>
 </table>
 </div>
-</section></details></section>
+</section>
+<section aria-labelledby="frc-takeaway-title" class="takeaway-band">
+<h2 id="frc-takeaway-title">Reviewer takeaway</h2>
+<p>
+              FRC gave me early exposure to the pressure of public robot performance: a design either
+              works on the field or it does not. The experience trained me to connect hardware, software,
+              data, and team communication, which is exactly the kind of systems thinking robotics
+              research needs.
+            </p>
+</section>
+</section>
 </section>
 </main>
 </body>

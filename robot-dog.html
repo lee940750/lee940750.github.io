@@ -7,11 +7,11 @@
 <title>Quadruped Robot Dog | CHENG-HSUAN LEE</title>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-focused" rel="stylesheet"/></head>
+<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
 <body class="project-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
-<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#projects">Projects</a><a href="index.html#skills">Capabilities</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
+<nav aria-label="Primary navigation" class="nav-links"><a href="index.html#laboratory">Laboratory</a><a href="index.html#publication">Publication</a><a href="index.html#skills">Capabilities</a><a href="index.html#projects">Projects</a><a href="index.html#materials">CV/PDF</a><a href="index.html#contact">Contact</a></nav>
 </header>
 <main>
 <section class="project-hero">
@@ -42,26 +42,36 @@
 <section class="detail-layout" id="case-evidence">
 <article class="detail-feature">
 <div class="detail-text">
-<h2>Serviceable mechanical design</h2>
-<p>Designed body and leg modules around servo replacement, wire routing, battery placement, and repair access. The 3D-printed structure supported repeated calibration and testing.</p>
-<details class="evidence-disclosure narrative-disclosure"><summary>Design &amp; debugging notes</summary><p>
+<h2>Designed for integration, not just appearance.</h2>
+<p>
+                I treated the body as a serviceable robot platform: servo replacement, wire routing,
+                battery placement, center-of-gravity position, and repeated testing all influenced the
+                3D-printed structure. That made the robot easier to repair when hardware and software
+                debugging overlapped.
+              </p>
+<p>
                 The design goal was practical reliability: a repairable platform that let the team keep
                 calibrating, testing, and improving instead of stopping at the first hardware mismatch.
-              </p></details></div>
+              </p>
+</div>
 <div aria-label="Robot dog build media area" class="feature-media detail-media-stack robot-build-stack">
 <figure class="media-photo media-primary">
-<img alt="Underside view of the robot dog electronics, batteries, and servo wiring" decoding="async" height="1108" loading="lazy" src="assets/photos/robot-dog-top.jpg" width="1477"/>
+<img alt="Underside view of the robot dog electronics, batteries, and servo wiring" src="assets/photos/robot-dog-top.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="English wiring diagram showing the robot dog battery, voltage regulators, ESP32, PCA9685 driver, and servos" loading="lazy" src="assets/photos/robot-dog-wiring-diagram.svg"/>
+<img alt="English wiring diagram showing the robot dog battery, voltage regulators, ESP32, PCA9685 driver, and servos" src="assets/photos/robot-dog-wiring-diagram.svg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature reverse">
 <div class="detail-text">
-<h2>From gait simulation to servo output</h2>
-<p>Used MATLAB to check gait and inverse-kinematics behavior, then implemented calibrated servo output on ESP32 and PCA9685 hardware.</p>
-<details class="evidence-disclosure"><summary>Implementation checkpoints</summary><div class="decision-grid">
+<h2>Connected gait simulation to embedded servo output.</h2>
+<p>
+                I used MATLAB to reason about gait trajectories and reachable workspace before translating
+                the logic into Arduino code for ESP32 and the PCA9685 servo driver. The hardest part was
+                making simulated leg motion match real servo directions, offsets, and timing.
+              </p>
+<div class="decision-grid">
 <div class="decision-item">
 <strong>Calibration</strong>
 <p>Matched servo direction, neutral angle, and mechanical geometry leg by leg.</p>
@@ -74,21 +84,25 @@
 <strong>Control structure</strong>
 <p>Separated gait update, inverse kinematics, and servo output for debugging.</p>
 </div>
-</div></details>
+</div>
 </div>
 <div aria-label="Robot dog control media area" class="feature-media detail-media-stack">
 <figure class="media-photo media-primary">
-<img alt="Robot dog gait simulation plot used for inverse-kinematics reasoning" decoding="async" height="378" loading="lazy" src="assets/photos/robot-dog-middle.jpg" width="746"/>
+<img alt="Robot dog gait simulation plot used for inverse-kinematics reasoning" src="assets/photos/robot-dog-middle.jpg"/>
 </figure>
 <figure class="media-photo media-secondary">
-<img alt="Full robot dog CAD assembly showing the body frame, servo placement, and leg linkage geometry" decoding="async" height="539" loading="lazy" src="assets/photos/robot-dog-cad-assembly.jpg" width="924"/>
+<img alt="Full robot dog CAD assembly showing the body frame, servo placement, and leg linkage geometry" src="assets/photos/robot-dog-cad-assembly.jpg"/>
 </figure>
 </div>
 </article>
 <article class="detail-feature text-only">
 <div class="detail-text">
-<h2>Demonstrated robot behaviors</h2>
-<p>The completed course robot demonstrated walking, standing, sitting, waving, and rocking, earning an A+ result.</p>
+<h2>Produced a robot that demonstrated system-level execution.</h2>
+<p>
+                The final robot completed forward walking, standing, sitting, waving, and rocking. The
+                project made the relationship between geometry, stiffness, calibration, power layout, and
+                timing concrete rather than theoretical.
+              </p>
 <ul class="compact-list">
 <li>Mechanical geometry and control software were validated together.</li>
 <li>Repairable hardware accelerated integration testing.</li>
@@ -143,7 +157,7 @@
 </figure>
 </div>
 </section>
-<details class="evidence-disclosure technical-disclosure" id="technical-details"><summary>Technical details, decisions &amp; methods</summary><section aria-labelledby="robot-flow-title" class="case-module">
+<div id="technical-details"><section aria-labelledby="robot-flow-title" class="case-module">
 <h2 id="robot-flow-title">Engineering flow</h2>
 <div aria-label="Robot dog engineering flow" class="system-flow">
 <article class="flow-step">
@@ -167,7 +181,8 @@
 <p>Used repeated testing to tune timing, offsets, and behavior sequencing.</p>
 </article>
 </div>
-</section><section aria-labelledby="robot-table-title" class="case-module">
+</section></div>
+<section aria-labelledby="robot-table-title" class="case-module">
 <h2 id="robot-table-title">Technical decision table</h2>
 <div class="decision-table-wrap">
 <table class="decision-table">
@@ -201,7 +216,17 @@
 </tbody>
 </table>
 </div>
-</section></details></section>
+</section>
+<section aria-labelledby="robot-takeaway-title" class="takeaway-band">
+<h2 id="robot-takeaway-title">Reviewer takeaway</h2>
+<p>
+              This project is evidence that I can work across the full legged-robot stack: structure,
+              actuation, kinematics, embedded control, and real hardware iteration. It became a practical
+              bridge into my current ASR Lab focus on 12-DoF quadruped locomotion, Isaac Lab robot
+              learning, actuator design, and sim-to-real debugging.
+            </p>
+</section>
+</section>
 </section>
 </main>
 </body>
