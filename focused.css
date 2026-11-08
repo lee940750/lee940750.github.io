@@ -126,6 +126,7 @@
 }
 
 .focused-home .publication-layout { gap: 36px; }
+.publication-highlights { display: grid; grid-template-columns: minmax(0, 1fr); }
 .focused-home .publication-highlights { gap: 8px; }
 .focused-home .publication-highlights li { padding: 8px 12px; font-size: 0.95rem; }
 .focused-home .publication-metrics { padding-block: 14px; gap: 12px; }
