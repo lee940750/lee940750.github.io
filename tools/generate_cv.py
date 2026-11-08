@@ -15,14 +15,14 @@ MUTED = colors.HexColor('#4d5960')
 ACCENT = colors.HexColor('#0b4f4a')
 WIDTH = 7.4 * inch
 
-body = ParagraphStyle('Body', fontName='Helvetica', fontSize=9.4, leading=12, textColor=INK, spaceAfter=4)
+body = ParagraphStyle('Body', fontName='Helvetica', fontSize=9.4, leading=12, textColor=INK, spaceAfter=3)
 title = ParagraphStyle('Name', parent=body, fontName='Helvetica-Bold', fontSize=22, leading=25, alignment=TA_CENTER, spaceAfter=4)
 contact = ParagraphStyle('Contact', parent=body, fontSize=9.2, leading=12, alignment=TA_CENTER, textColor=MUTED, spaceAfter=3)
 portfolio = ParagraphStyle('Portfolio', parent=contact, fontName='Helvetica-Bold', fontSize=10.5, leading=13, textColor=ACCENT, spaceAfter=4)
-heading = ParagraphStyle('Section', parent=body, fontName='Helvetica-Bold', fontSize=11.5, leading=14, spaceBefore=10, spaceAfter=4, keepWithNext=True)
-role = ParagraphStyle('Role', parent=body, fontName='Helvetica-Bold', fontSize=10, leading=12.5, spaceBefore=4, spaceAfter=2, keepWithNext=True)
+heading = ParagraphStyle('Section', parent=body, fontName='Helvetica-Bold', fontSize=11.5, leading=14, spaceBefore=8, spaceAfter=4, keepWithNext=True)
+role = ParagraphStyle('Role', parent=body, fontName='Helvetica-Bold', fontSize=10, leading=12.5, spaceBefore=3, spaceAfter=2, keepWithNext=True)
 meta = ParagraphStyle('Meta', parent=body, fontName='Helvetica-Oblique', fontSize=9, leading=11.2, textColor=MUTED, spaceAfter=4, keepWithNext=True)
-bullet = ParagraphStyle('Bullet', parent=body, leftIndent=10, firstLineIndent=-7, spaceAfter=4)
+bullet = ParagraphStyle('Bullet', parent=body, leftIndent=10, firstLineIndent=-7, spaceAfter=3)
 
 
 def p(text, style=body):
@@ -109,22 +109,26 @@ def build_story():
     story.append(p('Self-Built Simple Robot Dog | Team Lead, Mechanical Designer, Controls Developer', role))
     story.append(p('Microprocessor Controlled Systems | Course-built eight-servo platform, distinct from the ASR Lab research robot', meta))
     story += bullets([
-        '<b>Led mechanical and embedded integration:</b> designed a serviceable 3D-printed body, servo layout, wiring, and battery placement; '
-        'translated MATLAB gait and inverse-kinematics reasoning into ESP32/PCA9685 control with calibrated servo output.',
-        '<b>A+ result:</b> demonstrated walking, standing, sitting, waving, and rocking through repeated hardware testing and repair.',
+        '<b>Mechanical design and integration:</b> led an eight-servo quadruped build; designed body and leg modules around servo placement, '
+        'wire routing, battery balance, and repair access, using a serviceable 3D-printed structure for repeated gait tests.',
+        '<b>Gait-to-hardware implementation:</b> translated MATLAB trajectory and inverse-kinematics reasoning into ESP32/PCA9685 control; '
+        'calibrated servo directions and neutral angles, separated gait timing from servo output, and demonstrated walking, standing, sitting, waving, and rocking <b>(A+)</b>.',
     ])
     story.append(p('Quadcopter Ball-Transfer Drone | Team Lead and Systems Integrator', role))
     story.append(p('Practice of Mechanical Engineering | Full marks and A+ course grade', meta))
     story += bullets([
-        '<b>Led a complete flying-robot mission:</b> coordinated airframe, payload mechanism, propulsion, electronics, SBUS signal debugging, '
-        'spare parts, and final-run preparation; used thrust-to-throttle tests and vibration checks to guide integration.',
-        '<b>Peer influence:</b> many peer teams referenced our system architecture, testing approach, and integration decisions during their builds.',
+        '<b>Mission-level system design:</b> led integration of the airframe, ball-transfer payload, propulsion, power, and flight electronics; '
+        'balanced payload placement and flight stability while coordinating subsystem tests and final-run preparation.',
+        '<b>Testing and debugging:</b> used thrust-to-throttle measurements, SBUS signal checks, and vibration/drift diagnosis to isolate '
+        'propulsion, controller, and structural issues. Earned <b>full marks / A+</b>; many peer teams referenced our architecture and testing approach.',
     ])
     story.append(p('Foldable Ball Transfer Mechanism | Team Lead', role))
     story.append(p('Machine Design Theory | Packaging-constrained deployable mechanism', meta))
     story += bullets([
-        '<b>Led concept selection and fabrication planning:</b> developed folding architecture and evaluated hinges, latches, stiffness, '
-        'assembly sequence, and repair access to achieve reliable deployment and ball transfer within storage constraints.',
+        '<b>Packaging-driven mechanism design:</b> led concept selection and folding architecture to reconcile compact storage with '
+        'deployed reach, structural stiffness, and ball-transfer motion.',
+        '<b>Fabrication and validation:</b> combined hinges, latch hardware, MDF, and 3D-printed parts; evaluated locking, assembly '
+        'sequence, tolerance, and repair access through repeated builds, achieving reliable deployment and ball transfer in the final test.',
     ])
 
     story += section('LEADERSHIP AND TEAM EXECUTION')
@@ -144,13 +148,14 @@ def build_story():
         '<b>2022 FRC New Taipei City x Hon Hai Regional:</b> Engineering Inspiration Award; qualified for Houston Championship.',
         '<b>2023 FRC Los Angeles and San Diego Regionals:</b> Excellence in Engineering Award at each regional.',
         '<b>2nd ISS Kibo Robot Programming Challenge, Taiwan Preliminary:</b> Merit Award.',
-        '<b>58th Hsinchu County Science Fair, Biology:</b> Second Place.',
     ])
 
     story += section('TECHNICAL SKILLS')
     for text in [
         '<b>Mechanical:</b> CAD, engineering drawings, 3D printing, machining, mechanism design, cycloidal/planetary reducers, actuator packaging, and tolerance/assembly planning.',
-        '<b>Learning and control:</b> Isaac Lab / Isaac Sim, PPO/DWAQ workflows, imitation learning, reward design, ROS 2, rosbag, TensorBoard, URDF, Pinocchio, MATLAB/Simulink.',
+        '<b>Reinforcement Learning (RL):</b> PPO/DWAQ workflows, gait-reference-guided learning, imitation learning, reward shaping, '
+        'observation/action mapping, and sim-to-real policy evaluation in Isaac Lab / Isaac Sim.',
+        '<b>Robotics and control:</b> ROS 2, rosbag, TensorBoard, URDF, Pinocchio, MATLAB/Simulink, and motor calibration.',
         '<b>Embedded and software:</b> Python, C++, Arduino, ESP32, Teensy, ODrive, PCA9685, RS485, UART, I2C, PWM, Linux, and Git/GitHub.',
         '<b>Experiments:</b> motor feedback analysis, servo calibration, thrust testing, signal-chain debugging, failure isolation, and technical reporting.',
     ]:
