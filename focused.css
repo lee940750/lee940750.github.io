@@ -199,8 +199,10 @@
   flex-direction: column;
   align-items: stretch;
   gap: 20px;
-  padding: 24px 0;
-  border-bottom: 0;
+  padding: 22px;
+  border: 1px solid #8c9e9a;
+  border-radius: 6px;
+  background: #fff;
 }
 .focused-home .project-feature .project-text { flex: 1; }
 .focused-home .project-feature .text-link { margin-top: auto; }
@@ -300,6 +302,7 @@
   .contribution-rows article { grid-template-columns: 1fr; gap: 10px; }
   .contribution-rows article > a { grid-column: auto; }
   .focused-home .project-feature .feature-media { height: 200px; }
+  .focused-home .project-feature { padding: 18px; }
   .focused-home .project-feature .media-photo img { max-height: 200px; }
   .focused-home .publication-metrics { grid-template-columns: 1fr; }
   .focused-case .project-hero h1 { font-size: 2rem; }
