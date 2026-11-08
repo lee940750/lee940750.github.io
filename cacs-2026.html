@@ -8,7 +8,7 @@
 <meta content="First-author CACS 2026 paper by Cheng-Hsuan Lee on gait-guided quadruped sim-to-real transfer. Best Student Paper Award Honorable Mention and in-person English oral presentation." name="description"/>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261109-stacked-highlights" rel="stylesheet"/></head>
+<link href="focused.css?v=20261109-research-figure" rel="stylesheet"/></head>
 <body class="project-page publication-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
@@ -74,6 +74,10 @@
 <figcaption>Gait-guided hardware walking trial</figcaption>
 </figure>
 <p>Both gait-guided controllers sustained forward walking in all three recordings per controller. To compare foot motion consistently, we reconstructed simulation and hardware trajectories from joint positions using the same forward-kinematics model.</p>
+<figure class="cacs-research-figure">
+<a href="assets/photos/cacs-feasibility-mismatch.png" target="_blank" rel="noopener" aria-label="Open the full-size feasibility mismatch diagram"><img src="assets/photos/cacs-feasibility-mismatch.png" width="1281" height="720" loading="lazy" decoding="async" alt="Conceptual comparison of pure RL and gait-guided RL: a gait prior narrows the policy-search region toward motions executable by the physical robot."/></a>
+<figcaption>Conceptual hypothesis: gait guidance directs policy search toward hardware-feasible motion. Regions are schematic, not measured boundaries. <a href="assets/photos/cacs-feasibility-mismatch.png" target="_blank" rel="noopener">View full-size figure</a></figcaption>
+</figure>
 <div aria-label="Guided controller results, scroll horizontally if needed" class="publication-table-wrap" role="region" tabindex="0">
 <table class="decision-table">
 <caption>Level-ground walking at a 0.4 m/s forward command; three hardware recordings per controller.</caption>

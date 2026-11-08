@@ -165,6 +165,9 @@
 .cacs-portrait-video { justify-items: center; }
 .cacs-portrait-video video { width: auto; max-width: 100%; max-height: 380px; }
 .cacs-results-video { max-width: 760px; margin: 22px auto; }
+.cacs-research-figure { margin: 24px 0; }
+.cacs-research-figure img { display: block; width: 100%; height: auto; border: 0; }
+.cacs-research-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
 .cacs-conference-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
 .cacs-conference-photos .media-photo img { width: 100%; height: auto; max-height: 520px; object-fit: contain; }
 
