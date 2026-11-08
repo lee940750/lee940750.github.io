@@ -180,7 +180,7 @@
 
 .contribution-rows article {
   display: grid;
-  grid-template-columns: minmax(200px, 1fr) minmax(0, 1.5fr) minmax(170px, 0.6fr);
+  grid-template-columns: minmax(220px, 0.85fr) minmax(0, 1.8fr);
   align-items: center;
   gap: 28px;
   padding-block: 22px;
@@ -191,7 +191,7 @@
 .contribution-rows span { color: var(--accent-dark); font-size: 0.78rem; font-weight: 750; text-transform: uppercase; }
 .contribution-rows h3 { margin: 4px 0 0; }
 .contribution-rows p { margin: 0; color: var(--muted); }
-.contribution-rows a { color: var(--accent-dark); font-size: 0.95rem; font-weight: 650; }
+.contribution-rows p strong { color: var(--ink); }
 
 .focused-home .project-showcase { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px; }
 .focused-home .project-feature {
@@ -278,7 +278,6 @@
   .focused-home .publication-layout { grid-template-columns: 1fr; }
   .focused-home .publication-media { max-width: 650px; }
   .contribution-rows article { grid-template-columns: 1fr 1.3fr; gap: 14px 24px; }
-  .contribution-rows article > a { grid-column: 2; }
 }
 
 @media (max-width: 640px) {
@@ -300,7 +299,6 @@
   :is(.focused-home, .focused-case) h2 { font-size: 1.65rem; }
   .focused-home .project-showcase, .education-summary, .focused-home .awards-layout { grid-template-columns: 1fr; }
   .contribution-rows article { grid-template-columns: 1fr; gap: 10px; }
-  .contribution-rows article > a { grid-column: auto; }
   .focused-home .project-feature .feature-media { height: 200px; }
   .focused-home .project-feature { padding: 18px; }
   .focused-home .project-feature .media-photo img { max-height: 200px; }
