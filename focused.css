@@ -134,9 +134,45 @@
 .focused-home .publication-note { font-size: 0.95rem; }
 .focused-home .publication-media { gap: 16px; }
 
-.media-reserve-disclosure { margin: 0; }
-.media-reserve-disclosure summary { color: var(--muted); cursor: pointer; font-size: 0.95rem; }
-.media-reserve-disclosure .media-placeholder { margin-top: 16px; }
+.focused-home .publication-media .conference-portrait img {
+  width: auto;
+  max-width: 100%;
+  max-height: 390px;
+  justify-self: center;
+  object-fit: contain;
+}
+
+.cacs-media-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 28px;
+}
+
+.cacs-video { display: grid; gap: 10px; margin: 0; min-width: 0; }
+.cacs-video video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 460px;
+  object-fit: contain;
+  background: #111;
+  border: 0;
+  border-radius: 6px;
+}
+.cacs-video figcaption { color: var(--muted); font-size: 0.95rem; line-height: 1.5; }
+.cacs-portrait-video { justify-items: center; }
+.cacs-portrait-video video { width: auto; max-width: 100%; max-height: 380px; }
+.cacs-results-video { max-width: 760px; margin: 22px auto; }
+.cacs-conference-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: center; }
+.cacs-conference-photos .media-photo img { width: 100%; height: auto; max-height: 520px; object-fit: contain; }
+
+@media (max-width: 1100px) {
+  .cacs-media-layout { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .cacs-conference-photos { grid-template-columns: 1fr; }
+}
 
 .contribution-rows article {
   display: grid;

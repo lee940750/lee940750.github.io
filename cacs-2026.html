@@ -8,7 +8,7 @@
 <meta content="First-author CACS 2026 paper by Cheng-Hsuan Lee on gait-guided quadruped sim-to-real transfer. Best Student Paper Award Honorable Mention and in-person English oral presentation." name="description"/>
 <link href="site.css?v=20261108-focused" rel="stylesheet"/>
 <link href="project.css?v=20261108-focused" rel="stylesheet"/>
-<link href="focused.css?v=20261108-expanded-cases" rel="stylesheet"/></head>
+<link href="focused.css?v=20261109-cacs-media" rel="stylesheet"/></head>
 <body class="project-page publication-page focused-case">
 <header class="site-header">
 <a aria-label="CHENG-HSUAN LEE home" class="brand" href="index.html#home">CHL</a>
@@ -24,7 +24,7 @@
 <li>English Oral Presentation</li>
 <li class="publication-award-highlight">Best Student Paper Award — Honorable Mention</li>
 </ul>
-<a class="text-link" href="assets/documents/cacs-2026-quadruped-paper.pdf" rel="noopener" target="_blank">Read the full paper (PDF)</a>
+<div class="publication-actions"><a class="text-link" href="assets/documents/cacs-2026-quadruped-paper.pdf" rel="noopener" target="_blank">Read the full paper (PDF)</a><a class="text-link" href="assets/documents/cacs-2026-presentation-slides.pdf" rel="noopener" target="_blank">View presentation slides (PDF)</a></div>
 <div aria-label="Case study navigation" class="case-jump-links"><a href="#case-evidence">Key evidence</a><a href="#technical-details">Technical details</a></div></section>
 <section aria-label="Research at a glance" class="case-glance"><article><span>Authorship</span><strong>First author · English oral presenter</strong></article><article><span>Award</span><strong>Best Student Paper Award · Honorable Mention</strong></article><article><span>Repeatability</span><strong>6 / 6 guided hardware trials walked</strong></article><article><span>Transfer</span><strong>84.9–90.0% swing-amplitude retention</strong></article></section>
 <section class="project-detail-shell">
@@ -44,12 +44,22 @@
 </section>
 <div id="technical-details"><section aria-labelledby="question-title" class="case-module">
 <h2 id="question-title">A policy can walk in simulation and still fail before its first real gait cycle.</h2>
+<div class="cacs-media-layout"><div>
 <p>The pure-RL controller produced a repeatable simulated gait with a mean swing peak of 7.54 cm. On hardware, front-foot displacement reached only 2.57–3.53 cm before protection; the front-right thigh measured 46.98 A within 0.675 s of command onset. No complete walking cycle formed in the analyzed failure record.</p>
 <p>Our interpretation was a feasibility mismatch: simulated task success allowed motions that the real mechanism could not reliably execute. Backlash, drivetrain loss, assembly differences, contact, sensing, and actuator limits narrowed the physical motion region.</p>
+</div><figure class="cacs-video">
+<video controls playsinline preload="none" poster="assets/photos/cacs-pure-rl-failure-poster.jpg" width="1280" height="720" aria-label="Pure-RL hardware deployment failure"><source src="assets/videos/cacs-pure-rl-failure.mp4" type="video/mp4"/><a href="assets/videos/cacs-pure-rl-failure.mp4">Open the deployment video</a></video>
+<figcaption>Pure-RL hardware deployment</figcaption>
+</figure></div>
 </section></div>
 <section aria-labelledby="method-title" class="case-module">
 <h2 id="method-title">Verify physical feasibility before asking the policy to optimize.</h2>
+<div class="cacs-media-layout"><div>
 <p>We adapted a gait generator to the robot's link dimensions, joint conventions, and inverse kinematics. Direct execution on hardware provided a qualitative feasibility check before the reference was introduced into PPO through joint-position, joint-velocity, and foot-position rewards. Task rewards continued to optimize tracking, stabilization, contact, smoothness, and effort.</p>
+</div><figure class="cacs-video cacs-portrait-video">
+<video controls playsinline preload="none" poster="assets/photos/cacs-gait-feasibility-poster.jpg" width="720" height="1280" aria-label="Direct gait-reference execution on the physical quadruped"><source src="assets/videos/cacs-gait-feasibility.mp4" type="video/mp4"/><a href="assets/videos/cacs-gait-feasibility.mp4">Open the gait verification video</a></video>
+<figcaption>Hardware gait-feasibility check</figcaption>
+</figure></div>
 <ol aria-label="Research workflow" class="publication-flow">
 <li><strong>Diagnose</strong><span>Compare simulated swing, real foot motion, tracking error, and actuator current.</span></li>
 <li><strong>Verify</strong><span>Execute the robot-specific gait reference directly on the physical platform.</span></li>
@@ -59,6 +69,10 @@
 </section>
 <section aria-labelledby="results-title" class="case-module">
 <h2 id="results-title">Repeated hardware trials, with the remaining gap made explicit.</h2>
+<figure class="cacs-video cacs-results-video">
+<video controls playsinline preload="none" poster="assets/photos/cacs-guided-hardware-trial-poster.jpg" width="1280" height="720" aria-label="Gait-guided quadruped hardware walking trial"><source src="assets/videos/cacs-guided-hardware-trial.mp4" type="video/mp4"/><a href="assets/videos/cacs-guided-hardware-trial.mp4">Open the hardware trial video</a></video>
+<figcaption>Gait-guided hardware walking trial</figcaption>
+</figure>
 <p>Both gait-guided controllers sustained forward walking in all three recordings per controller. To compare foot motion consistently, we reconstructed simulation and hardware trajectories from joint positions using the same forward-kinematics model.</p>
 <div aria-label="Guided controller results, scroll horizontally if needed" class="publication-table-wrap" role="region" tabindex="0">
 <table class="decision-table">
@@ -88,10 +102,9 @@
 </section>
 <section aria-labelledby="conference-title" class="case-module">
 <h2 id="conference-title">Presenting the research in person.</h2>
-<div class="conference-gallery">
-<figure class="media-placeholder conference-placeholder"><div><strong>English oral presentation</strong><span>CACS 2026 · Research talk</span></div></figure>
-<figure class="media-placeholder conference-placeholder"><div><strong>Award ceremony</strong><span>Best Student Paper Award · Honorable Mention</span></div></figure>
-<figure class="media-placeholder conference-placeholder"><div><strong>Conference experience</strong><span>On-site photographs · Taichung, Taiwan</span></div></figure>
+<div class="conference-gallery cacs-conference-photos">
+<figure class="media-photo"><img alt="Cheng-Hsuan Lee delivering his English oral presentation at CACS 2026" decoding="async" width="1108" height="1477" loading="lazy" src="assets/photos/cacs-oral-presentation.jpg"/></figure>
+<figure class="media-photo"><img alt="Cheng-Hsuan Lee presenting his quadruped sim-to-real research at the conference lectern" decoding="async" width="1108" height="1477" loading="lazy" src="assets/photos/cacs-research-talk.jpg"/></figure>
 </div>
 </section>
 </div>
