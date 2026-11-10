@@ -60,6 +60,7 @@
 }
 
 .focused-home .hero .eyebrow { color: #c5e6e0; }
+.focused-home .hero-laboratories { margin: 0 0 14px; color: #c5e6e0; font-size: 1.06rem; }
 
 .focused-home .hero-position {
   margin: 0 0 8px;
@@ -228,6 +229,9 @@
 .focused-home .education-band { background: #f1f5f4; }
 .education-summary { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; }
 .education-summary > p { margin: 0; }
+.education-background > p { margin-top: 0; }
+.education-background h3 { margin: 20px 0 8px; }
+.education-laboratories { margin: 0; padding-left: 20px; }
 .education-coursework h3 { margin-top: 0; }
 .education-coursework .disclosure-body { padding: 0; }
 .education-coursework p:first-child { margin-top: 0; }
